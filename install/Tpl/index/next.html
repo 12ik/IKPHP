@@ -1,4 +1,4 @@
-<?php include 'header.html'; ?>
+<include file="header" />
 
 <style>
 .main{
@@ -56,6 +56,9 @@ p, li, dd, dt {
     font-size: 12px;
     margin-bottom: 9px;
     padding: 10px;
+}
+.form-table td.w1{
+	width:200px;
 }
 .form-table th {
     border-bottom: 8px solid #FFFFFF;
@@ -122,7 +125,7 @@ p, li, dd, dt {
     background-color: #C3FF88;
     border-color: #8DFF1C !important;
 }
-.message {
+.error_msg {
     background-color: #FFFFE0;
     border: 1px solid #E6DB55;
     margin: 5px 0 15px;
@@ -136,40 +139,43 @@ p, li, dd, dt {
 
 <div class="main">
 
-<form action="index.php?install=result" method="post">
+<form action="{:U('next')}" method="post">
 	<p>请在下方输入数据库相关信息。若您不清楚，请咨询主机提供商。</p>
+	<present name="error_msg">
+    <div class="error_msg">{$error_msg}</div>
+    </present>
 	<table class="form-table">
 		<tbody><tr>
 			<th scope="row"><label for="dbname">数据库名</label></th>
-			<td><input type="text" value="12ik" size="25" id="dbname" name="name"></td>
-			<td>您希望 12IK 使用哪个数据库运行？</td>
+			<td class="w1"><input type="text" value="{$dbname}" size="25" id="dbname" name="dbname"></td>
+			<td>您希望 {:L('name')} 使用哪个数据库运行？</td>
 		</tr>
 		<tr>
-			<th scope="row"><label for="uname">用户名</label></th>
-			<td><input type="text" value="root" size="25" id="uname" name="user"></td>
+			<th scope="row"><label for="dbuser">用户名</label></th>
+			<td><input type="text" value="{$dbuser}" size="25" id="dbuser" name="dbuser"></td>
 			<td>您的 MySQL 用户名</td>
 		</tr>
 		<tr>
-			<th scope="row"><label for="pwd">密码</label></th>
-			<td><input type="text" value="" size="25" id="pwd" name="pwd"></td>
+			<th scope="row"><label for="dbpwd">密码</label></th>
+			<td><input type="text" value="{$dbpwd}" size="25" id="dbpwd" name="dbpwd"></td>
 			<td>... 以及 MySQL 密码。</td>
 		</tr>
 		<tr>
 			<th scope="row"><label for="dbhost">数据库主机</label></th>
-			<td><input type="text" value="localhost" size="25" id="dbhost" name="host"></td>
+			<td><input type="text" value="{$dbhost}" size="25" id="dbhost" name="dbhost"></td>
 			<td>通常情况下，应填写 <code>localhost</code>，若测试连接失败，请联系主机提供商咨询。</td>
 		</tr>
 		
 		<tr>
 			<th scope="row"><label for="dbport">端口</label></th>
-			<td><input type="text" value="3306" size="25" id="dbport" name="port"></td>
+			<td><input type="text" value="{$dbport}" size="25" id="dbport" name="dbport"></td>
 			<td>默认3306</td>
 		</tr>
 		
 		<tr>
 			<th scope="row"><label for="prefix">表名前缀</label></th>
-			<td><input type="text" size="25" value="ik_" id="prefix" name="pre"></td>
-			<td>若您希望在一个数据库中存放多个 12IK 的数据，请修改本项以做区分。</td>
+			<td><input type="text" size="25" value="{$dbprefix}" id="dbprefix" name="dbprefix"></td>
+			<td>若您希望在一个数据库中存放多个 {:L('name')} 的数据，请修改本项以做区分。</td>
 		</tr>
 	</tbody></table>
 	
@@ -179,26 +185,24 @@ p, li, dd, dt {
 		<tbody>
 		<tr>
 			<th scope="row"><label for="site_title">网站标题：</label></th>
-			<td><input type="text" value="爱客网" size="25" name="site_title"></td>
+			<td class="w1"><input type="text" value="{$site_title}" size="25" name="site_title"></td>
 			<td>也是你的网站名称</td>
 		</tr>
 		
 		<tr>
 			<th scope="row"><label for="site_subtitle">网站副标题：</label></th>
-			<td><input type="text" value="又一个爱客社区" size="25" name="site_subtitle"></td>
+			<td><input type="text" value="{$site_subtitle}" size="25" name="site_subtitle"></td>
 			<td>用于首页副标题，紧跟网站标题之后</td>
 		</tr>
 		
 		<tr>
 			<th scope="row"><label for="site_url">网站URL：</label></th>
-			<td><input type="text" value="<?php echo $site_url; ?>" size="25" name="site_url"></td>
+			<td><input type="text" value="{$site_url}" size="25" name="site_url"></td>
 			<td>正确填写，http://开头，/结尾</td>
 		</tr>
 		
 	</tbody>
 	</table>
-
-
 
 <p>请在下面输入管理员信息</p>
 
@@ -206,19 +210,19 @@ p, li, dd, dt {
 		<tbody>
 		<tr>
 			<th scope="row"><label for="email">登录Email：</label></th>
-			<td><input type="text" value="admin@admin.com" size="25" name="email"></td>
+			<td class="w1"><input type="text" value="{$admin_email}" size="25" name="admin_email"></td>
 			<td>你用来登录和最高管理的账户</td>
 		</tr>
 		
 		<tr>
 			<th scope="row"><label for="password">登录密码：</label></th>
-			<td><input type="text" value="000000" size="25" name="password"></td>
+			<td><input type="text" value="{$admin_password}" size="25" name="admin_password"></td>
 			<td>您的登录密码</td>
 		</tr>
 		
 		<tr>
-			<th scope="row"><label for="username">用户名：</label></th>
-			<td><input type="text" value="admin" size="25" name="username"></td>
+			<th scope="row"><label for="admin_username">用户名：</label></th>
+			<td><input type="text" value="{$admin_username}" size="25" name="admin_username"></td>
 			<td>你的用户名</td>
 		</tr>
 		
@@ -230,21 +234,24 @@ p, li, dd, dt {
 		<tbody>
 		<tr>
 			<th scope="row"><label for="sql">选择连接方式：</label></th>
-			<td><select name="sql">
+			<td class="w1"><select name="sql">
 			<option value="mysql">MySQL</option>
 			</select></td>
-			<td><!-- 选择pdo_mysql需要php支持pdo_mysql扩展 --></td>
+			<td></td>
 		</tr>
 		
 	</tbody>
 	</table>
 	
-		<p class="step"><button class="button"  onclick="javascript:history.go(-1);return false;" href="#" >上一步</button>&nbsp;&nbsp;&nbsp;<input type="submit" class="button" value="确认安装" name="submit"></p>
+		<p class="step">
+        <input type="button" class="button"  onclick="javascript:history.go(-1);return false;" href="javascript:;" value="上一步">&nbsp;&nbsp;&nbsp;
+        <input type="submit" class="button" value="确认安装" name="submit">
+        </p>
 </form>
 
 </div>
 
 </div>
 
-<?php include 'footer.html'; ?>
+<include file="footer" />
 

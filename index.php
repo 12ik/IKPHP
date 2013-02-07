@@ -5,17 +5,18 @@
 * @author 小麦
 * @Email:160780470@qq.com
 */
-
-//定义网站根目录,APP目录,DATA目录，核心目录
 define ( 'IN_IK', true );
+/* 当前IKPHP程序版本 */
+define('IKPHP_VERSION', '1.5');
+define('IKPHP_YEAR', '2012-2050');
+define('IKPHP_SITENAME', 'IKPHP');
+define('IKPHP_SITEURL', 'http://www.ikphp.com');
+
 if (!is_file('./data/install.lock')) {
 	header('Location: ./install.php');
 	exit;
 }
-/* 当前IKPHP程序版本 */
-define('IK_VERSION', '1.0');
-/* 当前PinPHP程序Release */
-define('IK_RELEASE', '20130201');
+
 /* 应用名称*/
 define('APP_NAME', 'app');
 /* 应用目录*/

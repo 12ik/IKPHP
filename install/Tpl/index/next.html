@@ -131,7 +131,8 @@ p, li, dd, dt {
     margin: 5px 0 15px;
     padding: 0.3em 0.6em;
 }
-
+.field_tip{}
+.field_tip input{ margin-top:4px; float:left; margin-left:10px}
 </style>
 
 <!--main-->
@@ -148,7 +149,7 @@ p, li, dd, dt {
 		<tbody><tr>
 			<th scope="row"><label for="dbname">数据库名</label></th>
 			<td class="w1"><input type="text" value="{$dbname}" size="25" id="dbname" name="dbname"></td>
-			<td>您希望 {:L('name')} 使用哪个数据库运行？</td>
+			<td><span class="field_tip">{$database_name_tip}</span></td>
 		</tr>
 		<tr>
 			<th scope="row"><label for="dbuser">用户名</label></th>

@@ -1,10 +1,14 @@
-#Wed Feb 06 16:38:03 CST 2013
+#Tue Feb 19 17:09:04 CST 2013
 eclipse.preferences.version=1
+encoding//app/Tpl/home/default/index/index.html=UTF-8
+encoding//app/Tpl/home/default/public/error.html=UTF-8
 encoding//app/Tpl/home/default/public/footer.html=UTF-8
 encoding//app/Tpl/home/default/public/header.html=UTF-8
+encoding//app/Tpl/home/default/user/register.html=UTF-8
 encoding//install/Tpl/index/error.html=UTF-8
 encoding//install/Tpl/index/footer.html=UTF-8
 encoding//install/Tpl/index/index.html=UTF-8
+encoding//install/Tpl/index/install.html=UTF-8
 encoding//install/Tpl/index/next.html=UTF-8
 encoding//install/Tpl/index/result.html=UTF-8
 encoding//install/Tpl/public/style.css=UTF-8

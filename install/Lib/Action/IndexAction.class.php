@@ -143,14 +143,11 @@ class IndexAction extends Action {
 			}
 		}
 		//添加管理员帐号
-		$salt = md5 ( rand () );
-		$sql = "INSERT INTO `" . $temp_info['dbprefix'] . "user` (`pwd`, `salt`, `email`) VALUES " .
-                "('" . md5 ( $salt . $temp_info['admin_password'] ) . "', '" . $salt . "', '" . $temp_info['admin_email'] . "');";
+		$admin_password = md5($temp_info['admin_password']);
+		$sql = "INSERT INTO `" . $temp_info['dbprefix'] . "admin` (`username`, `password`, `email`, `role_id`) VALUES " .
+				"('" . $temp_info['admin_username'] . "', '" . $admin_password . "', '" . $temp_info['admin_email'] . "', 1);";		
 		$userid = mysql_query( $sql, $conn );
-		
-		$sql = "INSERT INTO `" . $temp_info['dbprefix'] . "user_info` (`userid`,`username`,`email`,`isadmin`,`addtime`,`uptime`) VALUES " .
-                "('" . $userid . "', '" . $temp_info['admin_username'] . "', '" . $temp_info['admin_email'] . "', 1, '" . time () . "','" . time () . "');";
-		$run = mysql_query( $sql, $conn );
+
 		
 		//更改网站信息
 		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "system_options` set `optionvalue`='".$temp_info ['site_title']."' where `optionname`='site_title'", $conn );

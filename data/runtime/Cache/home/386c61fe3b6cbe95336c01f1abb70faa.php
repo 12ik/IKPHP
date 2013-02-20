@@ -17,17 +17,14 @@
   <div class="top_bd">
     
     <div class="top_info">
-        <!--{if $IK_USER[user] == ''}-->
-		<a href="{SITE_URL}{ikUrl('user','login')}">登录</a> | <a href="{SITE_URL}{ikUrl('user','register')}">注册</a>       
-        <!--{else}-->
+        <?php if(empty($visitor)): ?><a href="<?php echo U('user/login');?>">登录</a> | <a href="<?php echo U('user/register');?>">注册</a>       
+        <?php else: ?>
         <a id="newmsg" href="{SITE_URL}{ikUrl('message','ikmail',array(ik=>inbox))}"></a> | 
-        {php $globalUser = aac('user')->getOneUser($IK_USER[user][userid]);}
         <a href="{SITE_URL}{ikUrl('hi','',array('id'=>$globalUser[doname]))}">
-        <?php echo ($globalUser[username]); ?>
+        	<?php echo ($visitor["username"]); ?>
         </a> | 
-        <a href="{SITE_URL}{ikUrl('user','set',array(ik=>base))}">设置</a> | 
-        <a href="{SITE_URL}{ikUrl('user','login',array(ik=>out))}">退出</a>
-        <!--{/if}-->
+        <a href="<?php echo U('user/setting');?>">设置</a> | 
+        <a href="<?php echo U('user/layout');?>">退出</a><?php endif; ?>
     </div>
 
 

@@ -1,7 +1,11 @@
 <?php
-
-class UserModel extends Model
+class userModel extends Model
 {
+
+	protected $_auto = array(
+		    array('password','md5',1,'function')
+	);
+	
 	public function email_exists($email, $id = 0) {
 		$where = "email='" . $email . "' AND userid<>'" . $id . "'";
 		$result = $this->where($where)->count('userid');
@@ -13,9 +17,8 @@ class UserModel extends Model
 		}
 	}
 	public function name_exists($name, $id = 0) {
-		$user_info = D('user_info');
 		$where = "username='" . $name . "' AND userid<>'" . $id . "'";
-		$result = $user_info->where($where)->count('userid');
+		$result = $this->where($where)->count('userid');
 		if ($result) {
 			return true;
 		} else {

@@ -1,6 +1,6 @@
 <?php
 
-class SettingModel extends Model
+class settingModel extends Model
 {
 
     /**

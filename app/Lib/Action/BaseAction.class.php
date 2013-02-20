@@ -11,7 +11,7 @@ class BaseAction extends Action
         Input::noGPC();
         //初始化网站配置
         if (false === $setting = F('setting')) {
-            $setting = D('Setting')->setting_cache();
+            $setting = D('setting')->setting_cache();
         }
         C($setting);
         //发送邮件

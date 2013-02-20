@@ -1,31 +1,33 @@
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `ik_admin`
+--
+
+DROP TABLE IF EXISTS `ik_admin`;
+CREATE TABLE `ik_admin` (
+  `userid` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `username` varchar(50) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `role_id` smallint(5) NOT NULL,
+  `last_ip` varchar(15) NOT NULL,
+  `last_time` int(10) NOT NULL DEFAULT '0',
+  `email` varchar(50) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`userid`),
+  UNIQUE KEY `user_name` (`username`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='管理员' AUTO_INCREMENT=1 ;
+-- --------------------------------------------------------
+--
 -- 表的结构 `ik_user`
 --
 DROP TABLE IF EXISTS `ik_user`;
 CREATE TABLE `ik_user` (
   `userid` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
-  `pwd` char(32) NOT NULL DEFAULT '' COMMENT '用户密码',
-  `salt` char(32) NOT NULL DEFAULT '' COMMENT '加点盐',
-  `email` char(32) NOT NULL DEFAULT '' COMMENT '用户email',
-  `resetpwd` char(32) NOT NULL DEFAULT '' COMMENT '重设密码',
-  PRIMARY KEY (`userid`),
-  UNIQUE KEY `email` (`email`),
-  UNIQUE KEY `pwd` (`pwd`,`email`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户' AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- 表的结构 `ik_user_info`
---
-DROP TABLE IF EXISTS `ik_user_info`;
-CREATE TABLE `ik_user_info` (
-  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
-  `fuserid` int(11) NOT NULL DEFAULT '0' COMMENT '来自邀请用户',
+  `password` char(32) NOT NULL DEFAULT '' COMMENT '用户密码',  
   `username` char(32) NOT NULL DEFAULT '' COMMENT '用户名',
-  `email` char(32) NOT NULL DEFAULT '',
+  `email` char(32) NOT NULL DEFAULT '' COMMENT '用户email',
+  `fuserid` int(11) NOT NULL DEFAULT '0' COMMENT '来自邀请用户',
   `doname` char(32) NOT NULL DEFAULT '',  
   `sex` tinyint(1) NOT NULL DEFAULT '0' COMMENT '性别',
   `phone` char(16) NOT NULL DEFAULT '' COMMENT '电话号码',
@@ -49,8 +51,8 @@ CREATE TABLE `ik_user_info` (
   `verifycode` char(11) NOT NULL DEFAULT '' COMMENT '验证码',
   `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '创建时间',
   `uptime` int(11) DEFAULT '0' COMMENT '登陆时间',
+  PRIMARY KEY (`userid`),
   UNIQUE KEY `email` (`email`),
-  UNIQUE KEY `userid` (`userid`),
   UNIQUE KEY `username` (`username`),
   KEY `qq_openid` (`qq_openid`),
   KEY `fuserid` (`fuserid`)
@@ -86,4 +88,6 @@ INSERT INTO `ik_setting` (`name`, `data`) VALUES
 ('isgzip', '0'),
 ('timezone', 'Asia/Hong_Kong'),
 ('isinvite', '0'),
-('charset', 'UTF-8');
+('charset', 'UTF-8'),
+('integrate_code', 'default'),
+('integrate_config', '');

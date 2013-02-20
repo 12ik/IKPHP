@@ -29,14 +29,14 @@ $(document).ready(function() {
 				email: true,
 				remote: "{:U('check',array('t'=>'email'))}"
 			},
-			pwd: {
+			password: {
 				required: true,
 				minlength: 5
 			},
-			repwd: {
+			repassword: {
 				required: true,
 				minlength: 5,
-				equalTo: "#pwd"
+				equalTo: "#password"
 			},
 			username:{
 				required: true,
@@ -57,11 +57,11 @@ $(document).ready(function() {
 					email: "请输入一个正确的Email地址",
 					remote:jQuery.format("Email已经存在，请更换其他Email")
 			},
-			pwd: {
+			password: {
 				required: "请输入密码",
 				minlength: jQuery.format("至少输入6个字符")
 			},
-			repwd: {
+			repassword: {
 				required: "请重复输入密码",
 				minlength: jQuery.format("两次输入密码不一致"),
 				equalTo: "两次输入密码不一致"
@@ -132,12 +132,12 @@ obj.src = $(obj).attr('url') + '&nowtime=' + new Date().getTime();
 </tr>
 <tr>
 <td class="label"><label>密码：</label></td>
-<td class="field"><input class="uinput" type="password" id="pwd" name="pwd"  /></td>
+<td class="field"><input class="uinput" type="password" id="password" name="password"  /></td>
 <td class="status"></td>
 </tr>
 <tr>
 <td class="label"><label>重复密码：</label></td>
-<td class="field"><input class="uinput" type="password" id="repwd" name="repwd"  /></td>
+<td class="field"><input class="uinput" type="password" id="repassword" name="repassword"  /></td>
 <td class="status"></td>
 </tr>
 

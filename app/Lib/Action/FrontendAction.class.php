@@ -10,8 +10,28 @@ class FrontendAction extends BaseAction {
     
     public function _initialize() {
         parent::_initialize();
- 
+        //网站状态
+        //初始化访问者
+        $this->_init_visitor();
+        //第三方登陆模块
+        //$this->_assign_oauth();
+        //网站导航选中
+        //$this->assign('nav_curr', '');
        
+    }
+    /**
+     * 初始化访问者
+     */
+    private function _init_visitor() {
+    	$this->visitor = new user_visitor();
+    	$this->assign('visitor', $this->visitor->info);
+    }
+    /**
+     * 连接用户中心
+     */
+    protected function _user_server() {
+    	$passport = new passport(C('ik_integrate_code'));
+    	return $passport;
     }
     /**
      * SEO设置

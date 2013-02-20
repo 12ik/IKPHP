@@ -1,6 +1,6 @@
 <?php
 // 本类由系统自动生成，仅供测试用途
-class HiAction extends FrontendAction {
+class PeopleAction extends FrontendAction {
 	public function index() {
 		$this->display ();
 	}

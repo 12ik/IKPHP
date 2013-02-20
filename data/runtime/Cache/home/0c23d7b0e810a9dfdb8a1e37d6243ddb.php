@@ -22,7 +22,7 @@
         <?php if(empty($visitor)): ?><a href="<?php echo U('user/login');?>">登录</a> | <a href="<?php echo U('user/register');?>">注册</a>       
         <?php else: ?>
         <a id="newmsg" href="{SITE_URL}{ikUrl('message','ikmail',array(ik=>inbox))}"></a> | 
-        <a href="{SITE_URL}{ikUrl('hi','',array('id'=>$globalUser[doname]))}">
+        <a href="<?php echo U('people/index', array('userid'=>$visitor['userid']));?>">
         	<?php echo ($visitor["username"]); ?>
         </a> | 
         <a href="<?php echo U('user/setting');?>">设置</a> | 
@@ -92,12 +92,12 @@
 <form method="POST" action="<?php echo U('user/login');?>" id="signupform">
 <table width="100%" border="0" cellspacing="0" cellpadding="0"  class="Tabletext">
 <tr><td class="label">Email：</td><td class="field"><input class="uinput" type="email" name="email" autofocus/></td></tr>
-<tr><td class="label">密码：</td><td class="field"><input class="uinput" type="password" name="pwd" /></td></tr>
+<tr><td class="label">密码：</td><td class="field"><input class="uinput" type="password" name="password" /></td></tr>
 
 <tr>
 <td>&nbsp;</td>
 <td class="field">
-<input type="hidden" name="jump" value="<?php echo ($jump); ?>" />
+<input type="hidden" name="ret_url" value="<?php echo ($ret_url); ?>" />
 <input type="hidden" name="cktime" value="2592000">
 <input class="submit" type="submit" value="登录" style="margin-top:8px"/> 
 &nbsp;&nbsp;<a href="<?php echo U('user/register');?>">还没有帐号？</a> | <a href="<?php echo U('user/forgetpwd');?>">忘记密码</a>

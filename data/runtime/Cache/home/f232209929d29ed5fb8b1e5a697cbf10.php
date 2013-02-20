@@ -8,6 +8,7 @@
 <link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="__STATIC__/theme/blue/base.css" />
 <script src="__STATIC__/public/js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="__STATIC__/theme/blue/user/style.css" />
 </head>
 
 <body>
@@ -81,8 +82,8 @@
 <!--APP NAV-->
 
 </header>
-                    <a href="<?php echo U('user/register');?>">注册</a>
-                    <a href="<?php echo U('user/login');?>">登录</a>
+
+
 <!--footer-->
 <footer>
 <div id="footer">

@@ -43,7 +43,21 @@ class passport
     		$this->_error = $user_mod->getError();
     		return false;
     	}
-    }  
+    } 
+    /**
+     * 登陆验证
+     */
+    public function auth($email, $password) {
+    	$uid = $this->_us->auth($email, $password);
+    	if (!$uid) {
+    		$this->_error = $this->_us->get_error();
+    		return false;
+    	}
+/*     	if (is_array($uid)) {
+    		$uid = $this->_local_sync($result);
+    	} */
+    	return $uid;
+    }
     /**
      * 同步登陆
      */
@@ -57,6 +71,9 @@ class passport
     public function synlogout() {
     	return $this->_us->synlogout();
     } 
+    public function get_error() {
+    	return $this->_error;
+    }
 
    
 }

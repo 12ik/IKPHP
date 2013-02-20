@@ -20,11 +20,11 @@
         <?php if(empty($visitor)): ?><a href="<?php echo U('user/login');?>">登录</a> | <a href="<?php echo U('user/register');?>">注册</a>       
         <?php else: ?>
         <a id="newmsg" href="{SITE_URL}{ikUrl('message','ikmail',array(ik=>inbox))}"></a> | 
-        <a href="{SITE_URL}{ikUrl('hi','',array('id'=>$globalUser[doname]))}">
+        <a href="<?php echo U('people/index', array('userid'=>$visitor['userid']));?>">
         	<?php echo ($visitor["username"]); ?>
         </a> | 
         <a href="<?php echo U('user/setting');?>">设置</a> | 
-        <a href="<?php echo U('user/layout');?>">退出</a><?php endif; ?>
+        <a href="<?php echo U('user/logout');?>">退出</a><?php endif; ?>
     </div>
 
 
@@ -60,76 +60,16 @@
 <div id="header">
     
 	<div class="site_nav">
-    	<!--{if $app == 'group' }-->
-        <div class="site_logo nav_logo">
-            <a href="{SITE_URL}{ikUrl('group','')}">爱客小组</a>
+    	<?php if('<?php echo MODULE_NAME;?>' == 'User'): ?><div class="site_logo nav_logo">
+            <a href="<?php echo U('group');?>">爱客小组</a>
         </div>
-        <!--{else}-->
+        <?php else: ?>
         <div class="site_logo">
-            <a href="{SITE_URL}" title="<?php echo ($IK_SITE[base][site_title]); ?>"><?php echo ($IK_SITE[base][site_title]); ?></a>
-        </div>        
-        <!--{/if}--> 
+            <a href="__ROOT__/" title="<?php echo ($IK_SITE[base][site_title]); ?>"><?php echo ($IK_SITE[base][site_title]); ?></a>
+        </div><?php endif; ?> 
          
          
-        <!--{if $IK_USER[user] == ''}-->
-         
-        <!--{if is_array($IK_SITE[appnav]) && $IK_SITE[appnav][$app] !=''}-->
-        <div class="appnav">
-            <ul id="nav_bar">
-                <!--{loop $IK_SITE[appnav] $key $item}-->
-                <li  {if $app==$key} class="select" {/if} ><a href="{SITE_URL}{ikUrl($key)}"><?php echo ($item); ?></a></li>
-                <!--{/loop}-->
-                <li><a href="{SITE_URL}{ikUrl('home','down')}">源码下载</a></li>
-            </ul>
-           <form action="{SITE_URL}index.php"  method="get" onsubmit="return searchForm(this);">
-           <input type="hidden" name="app" value="search" /><input type="hidden" name="ac" value="q" />
-            <div id="search_bar">
-            	<div class="inp"><input type="text" name="kw"  class="key" value="小组、话题、日志、成员、小站" placeholder="小组、话题、日志、成员、小站"/></div>
-                <div class="inp-btn"><input type="submit"  value="搜索" class="search-button"/></div>
-            </div>
-            </form>
-        </div>
-        <!--{/if}-->
-        <!--{else}-->
-        	<!--{if $app == 'group' }-->
-            <div class="appnav">
-                <ul id="nav_bar">
-                    <li><a href="{SITE_URL}{ikUrl('group','')}">我的小组</a></li>
-                    <li><a href="{SITE_URL}{ikUrl('group','explore')}">发现小组</a></li>
-                    <li><a href="{SITE_URL}{ikUrl('group','explore_topic')}">发现话题</a></li>
-                    <li><a href="{SITE_URL}{ikUrl('group','nearby',array('ik'=>'beijing'))}">北京话题</a></li>
-                </ul>
-               <form action="{SITE_URL}index.php"  method="get" onsubmit="return searchForm(this);">
-               <input type="hidden" name="app" value="search" /><input type="hidden" name="ac" value="q" />
-                <div id="search_bar">
-                    <div class="inp"><input type="text" name="kw"  class="key" value="小组、话题、日志、成员、小站" placeholder="小组、话题、日志、成员、小站"/></div>
-                    <div class="inp-btn"><input type="submit"  value="搜索" class="search-button"/></div>
-                </div>
-                </form>
-            </div>
-            <!--{else}-->
-            <div class="appnav">
-                <ul id="nav_bar">
-                    <li><a href="{SITE_URL}">首页</a></li>
-                    <li><a href="{SITE_URL}{ikUrl('feed')}">友邻广播</a></li>
-                    <li><a href="{SITE_URL}{ikUrl('hi','',array('id'=>$globalUser[doname]))}">我的爱客</a></li>
-                    <li><a href="{SITE_URL}{ikUrl('group')}">我的小组</a></li>
-                    <li><a href="{SITE_URL}{ikUrl('site')}">我的小站</a></li>
-                    <li><a href="{SITE_URL}{ikUrl('article')}">文章</a></li>
-                    <li><a href="{SITE_URL}{ikUrl('tribe')}">部落</a></li>
-                    
-                </ul>
-               <form action="{SITE_URL}index.php"  method="get" onsubmit="return searchForm(this);">
-               <input type="hidden" name="app" value="search" /><input type="hidden" name="ac" value="q" />
-                <div id="search_bar">
-                    <div class="inp"><input type="text" name="kw"  class="key" value="小组、话题、日志、成员、小站" placeholder="小组、话题、日志、成员、小站"/></div>
-                    <div class="inp-btn"><input type="submit"  value="搜索" class="search-button"/></div>
-                </div>
-                </form>
-            </div>            
-            <!--{/if}-->
-                    	
-        <!--{/if}-->
+        <?php if(empty($visitor)): else: endif; ?>
         
         
 		

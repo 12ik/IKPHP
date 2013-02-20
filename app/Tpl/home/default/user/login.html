@@ -17,12 +17,12 @@
 <form method="POST" action="{:U('user/login')}" id="signupform">
 <table width="100%" border="0" cellspacing="0" cellpadding="0"  class="Tabletext">
 <tr><td class="label">Email：</td><td class="field"><input class="uinput" type="email" name="email" autofocus/></td></tr>
-<tr><td class="label">密码：</td><td class="field"><input class="uinput" type="password" name="pwd" /></td></tr>
+<tr><td class="label">密码：</td><td class="field"><input class="uinput" type="password" name="password" /></td></tr>
 
 <tr>
 <td>&nbsp;</td>
 <td class="field">
-<input type="hidden" name="jump" value="{$jump}" />
+<input type="hidden" name="ret_url" value="{$ret_url}" />
 <input type="hidden" name="cktime" value="2592000">
 <input class="submit" type="submit" value="登录" style="margin-top:8px"/> 
 &nbsp;&nbsp;<a href="{:U('user/register')}">还没有帐号？</a> | <a href="{:U('user/forgetpwd')}">忘记密码</a>

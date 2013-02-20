@@ -24,7 +24,7 @@
         <?php if(empty($visitor)): ?><a href="<?php echo U('user/login');?>">登录</a> | <a href="<?php echo U('user/register');?>">注册</a>       
         <?php else: ?>
         <a id="newmsg" href="{SITE_URL}{ikUrl('message','ikmail',array(ik=>inbox))}"></a> | 
-        <a href="{SITE_URL}{ikUrl('hi','',array('id'=>$globalUser[doname]))}">
+        <a href="<?php echo U('people/index', array('userid'=>$visitor['userid']));?>">
         	<?php echo ($visitor["username"]); ?>
         </a> | 
         <a href="<?php echo U('user/setting');?>">设置</a> | 

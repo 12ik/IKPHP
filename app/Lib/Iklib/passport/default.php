@@ -35,7 +35,6 @@ class default_passport
     		return false;
     	}
 
-    	//$salt = md5(rand());
     	return array(
     			'username' => $username,
     			'password' => $password, 
@@ -71,6 +70,18 @@ class default_passport
     	}
     	return true;
     }
+    /**
+     * 登陆验证
+     */
+    public function auth($email, $password) {
+    	$uid = M('user')->where(array('email'=>$email, 'password'=>md5($password)))->getField('userid');
+    	if ($uid) {
+    		return $uid;
+    	} else {
+    		$this->_error = L('auth_failed');
+    		return false;
+    	}
+    }    
     /**
      * 同步登陆
      */

@@ -6,8 +6,9 @@
 <meta name="keywords" content="<?php echo ($seo["keywords"]); ?>" /> 
 <meta name="description" content="<?php echo ($seo["description"]); ?>" /> 
 <link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
-<link rel="stylesheet" type="text/css" href="__STATIC__/theme/blue/base.css" />
+<style>__SITE_THEME_CSS__</style>
 <script src="__STATIC__/public/js/jquery.js"></script>
+<script>var siteUrl = '__SITE_URL__';</script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     <div class="top_info">
         <?php if(empty($visitor)): ?><a href="<?php echo U('user/login');?>">登录</a> | <a href="<?php echo U('user/register');?>">注册</a>       
         <?php else: ?>
-        <a id="newmsg" href="{SITE_URL}{ikUrl('message','ikmail',array(ik=>inbox))}"></a> | 
+        <a id="newmsg" href="<?php echo U('message/inbox');?>">123</a> | 
         <a href="<?php echo U('people/index', array('userid'=>$visitor['userid']));?>">
         	<?php echo ($visitor["username"]); ?>
         </a> | 
@@ -81,29 +82,7 @@
 <!--APP NAV-->
 
 </header>
-<div style="margin:150px auto; width:350px;">
-  <img src="__STATIC__/public/images/ik_error.gif" style="float:left;">
-  <ul style="margin-left:10px; list-style-type:none; list-style-image: none; list-style-position:outside;">
-    <li style="font-size:14px; line-height: 32px; padding-left:30px"><?php echo ($error); ?></li>
-    <li style="color:#666;line-height: 10px;">&nbsp;</li>
 
-    <li style="color:#666;"> 
-        &gt; <span id="f3s">3</span>秒后 <a href="<?php echo ($jumpUrl); ?>">点击返回</a>
-        <script type="text/javascript">
-            (function(){
-                var secs=5,si=setInterval(function(){
-                    if(--secs){
-                        document.getElementById('f3s').innerHTML = secs;
-                    }
-                    else{
-                        location.href="<?php echo ($jumpUrl); ?>";clearInterval(si);
-                    }
-            }, 1000)})();
-        </script>
- 	</li>
-
-  </ul>
-</div>
 <!--footer-->
 <footer>
 <div id="footer">

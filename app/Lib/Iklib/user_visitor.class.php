@@ -62,5 +62,25 @@ class user_visitor {
         session('user_info', null);
         cookie('user_info', null);
     }
+    /**
+     * 获取用户信息
+     */
+    public function get($key = null) {
+    	$info = null;
+    	if (is_null($key) && $this->info['userid']) {
+    		$info = M('user')->find($this->info['userid']);
+    	} else {
+    		if (isset($this->info[$key])) {
+    			return $this->info[$key];
+    		} else {
+    			//获取用户表字段
+    			$fields = M('user')->getDbFields();
+    			if (!is_null(array_search($key, $fields))) {
+    				$info = M('user')->where(array('userid' => $this->info['userid']))->getField($key);
+    			}
+    		}
+    	}
+    	return $info;
+    }
 
 }

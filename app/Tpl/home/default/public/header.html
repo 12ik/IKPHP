@@ -7,11 +7,11 @@
         <empty name="visitor">
 		<a href="{:U('user/login')}">登录</a> | <a href="{:U('user/register')}">注册</a>       
         <else/>
-        <a id="newmsg" href="{SITE_URL}{ikUrl('message','ikmail',array(ik=>inbox))}"></a> | 
+        <a id="newmsg" href="{:U('message/inbox')}">123</a> | 
         <a href="{:U('people/index', array('userid'=>$visitor['userid']))}">
         	{$visitor.username}
         </a> | 
-        <a href="{:U('user/setting')}">设置</a> | 
+        <a href="{:U('user/setbase')}">设置</a> | 
         <a href="{:U('user/logout')}">退出</a>
         </empty>
     </div>
@@ -49,7 +49,7 @@
 <div id="header">
     
 	<div class="site_nav">
-    	<if condition="'{:MODULE_NAME}' eq 'User'">
+    	<if condition="$app eq 'user'">
         <div class="site_logo nav_logo">
             <a href="{:U('group')}">爱客小组</a>
         </div>

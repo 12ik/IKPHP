@@ -1,0 +1,8 @@
+<h1 class="set_tit">用户信息管理</h1>
+<div class="tabnav">
+<ul>
+<volist name="user_menu_list" id="menu">
+<li <if condition="$user_menu_curr eq $key">class="select"</if>><a href="{$menu.url}">{$menu.text}</a></li>
+</volist>
+</ul>
+</div>

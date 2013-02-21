@@ -33,5 +33,6 @@ define('RUNTIME_PATH', IK_DATA_PATH . 'runtime/');
 define('HTML_PATH', IK_DATA_PATH . 'html/');
 /* DEBUG开关*/
 define('APP_DEBUG', true);
+
 //载入核心文件
 require("./core/setup.php");

@@ -91,3 +91,58 @@ INSERT INTO `ik_setting` (`name`, `data`) VALUES
 ('charset', 'UTF-8'),
 ('integrate_code', 'default'),
 ('integrate_config', '');
+
+-- --------------------------------------------------------
+--
+-- 表的结构 `ik_area`
+--
+DROP TABLE IF EXISTS `ik_area`;
+CREATE TABLE `ik_area` (
+  `areaid` int(11) NOT NULL AUTO_INCREMENT,
+  `areaname` varchar(32) NOT NULL DEFAULT '',
+  `zm` char(1) NOT NULL DEFAULT '' COMMENT '首字母',
+  `referid` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`areaid`),
+  KEY `referid` (`referid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='本地化' AUTO_INCREMENT=1 ;
+
+--
+-- 转存表中的数据 `ik_area`
+--
+INSERT INTO `ik_area` (`areaid`, `areaname`, `zm`, `referid`) VALUES
+(1,'广东','G','0'),
+(2,'北京','B','0'),
+(3,'上海','S','0'),
+(4,'江苏','J','0'),
+(5,'浙江','Z','0'),
+(6,'山东','S','0'),
+(7,'四川','S','0'),
+(8,'湖北','H','0'),
+(9,'福建','F','0'),
+(10,'河南','H','0'),
+(11,'辽宁','L','0'),
+(12,'陕西','S','0'),
+(13,'湖南','H','0'),
+(14,'河北','H','0'),
+(15,'安徽','A','0'),
+(16,'黑龙江','H','0'),
+(17,'重庆','C','0'),
+(18,'天津','T','0'),
+(19,'广西','G','0'),
+(20,'山西','S','0'),
+(21,'江西','J','0'),
+(22,'吉林','J','0'),
+(23,'云南','Y','0'),
+(24,'内蒙古','N','0'),
+(25,'贵州','G','0'),
+(26,'甘肃','G','0'),
+(27,'新疆','X','0'),
+(28,'海南','H','0'),
+(29,'宁夏','N','0'),
+(30,'青海','Q','0'),
+(31,'西藏','X','0'),
+(32,'香港','X','0'),
+(33,'澳门','A','0'),
+(34,'台湾','T','0'),
+(35,'钓鱼岛','D','0');
+

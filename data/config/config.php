@@ -15,9 +15,11 @@ return array(
     
     'SHOW_PAGE_TRACE' => false, */
 	
-	'TMPL_ACTION_ERROR' => 'public:error',
+    'TMPL_ACTION_SUCCESS' => 'public:success',
+    'TMPL_ACTION_ERROR' => 'public:error',
 	'LOAD_EXT_CONFIG' => 'url,db', //扩展配置
 	'SHOW_PAGE_TRACE' => false,
+
 
 		'APP_DEBUG'=>true,
 		'DB_FIELD_CACHE'=>false,

@@ -14,6 +14,8 @@ class BaseAction extends Action
             $setting = D('setting')->setting_cache();
         }
         C($setting);
+        //当前app名称
+        //$this->assign('app',strtolower(MODULE_NAME));
         //发送邮件
        // $this->assign('async_sendmail', session('async_sendmail'));
     }

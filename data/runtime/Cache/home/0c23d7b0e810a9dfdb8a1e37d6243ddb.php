@@ -6,10 +6,10 @@
 <meta name="keywords" content="<?php echo ($seo["keywords"]); ?>" /> 
 <meta name="description" content="<?php echo ($seo["description"]); ?>" /> 
 <link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
-<link rel="stylesheet" type="text/css" href="__STATIC__/theme/blue/base.css" />
+<style>__SITE_THEME_CSS__</style>
 <script src="__STATIC__/public/js/jquery.js"></script>
-<link rel="stylesheet" type="text/css" href="__STATIC__/theme/blue/user/style.css" />
-<link rel="stylesheet" type="text/css" href="__STATIC__/theme/blue/user/validate.css" />
+<script>var siteUrl = '__SITE_URL__';</script>
+<link rel="stylesheet" type="text/css" href="__STATIC__/theme/<?php echo C('ik_site_theme');?>/user/validate.css" />
 </head>
 
 <body>
@@ -21,11 +21,11 @@
     <div class="top_info">
         <?php if(empty($visitor)): ?><a href="<?php echo U('user/login');?>">登录</a> | <a href="<?php echo U('user/register');?>">注册</a>       
         <?php else: ?>
-        <a id="newmsg" href="{SITE_URL}{ikUrl('message','ikmail',array(ik=>inbox))}"></a> | 
+        <a id="newmsg" href="<?php echo U('message/inbox');?>">123</a> | 
         <a href="<?php echo U('people/index', array('userid'=>$visitor['userid']));?>">
         	<?php echo ($visitor["username"]); ?>
         </a> | 
-        <a href="<?php echo U('user/setting');?>">设置</a> | 
+        <a href="<?php echo U('user/setbase');?>">设置</a> | 
         <a href="<?php echo U('user/logout');?>">退出</a><?php endif; ?>
     </div>
 

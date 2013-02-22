@@ -1,0 +1,1794 @@
+[ 2013-02-22T17:27:46+08:00 ] 127.0.0.1 /ikphp/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.008024s ]
+INFO: Run load_lang Behavior [ RunTime:0.020095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028364s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.035441s ]
+INFO: [ view_template ] --END-- [ RunTime:0.035586s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 77 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.113018s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.113127s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.013529s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.007863s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.011541s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.018988s ]
+INFO: Run content_replace Behavior [ RunTime:0.008582s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.060962s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.040433s ]
+INFO: [ view_end ] --END-- [ RunTime:0.040568s ]
+
+[ 2013-02-22T17:27:50+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=register
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001390s ]
+INFO: Run load_lang Behavior [ RunTime:0.031572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033204s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002271s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002390s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 80 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: fuserid D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 239 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.032645s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032747s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001467s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001378s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001293s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001354s ]
+INFO: Run content_replace Behavior [ RunTime:0.002744s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008724s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001457s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001561s ]
+
+[ 2013-02-22T17:27:50+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=captcha&a=1361525270
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001031s ]
+INFO: Run load_lang Behavior [ RunTime:0.001723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002974s ]
+NOTIC: [8] Undefined index:  width D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 28 行.
+NOTIC: [8] Undefined index:  height D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 29 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 42 行.
+
+[ 2013-02-22T17:27:52+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=register
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001287s ]
+INFO: Run load_lang Behavior [ RunTime:0.002471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003986s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002300s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002414s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 80 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: fuserid D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 239 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.030537s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030650s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001469s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001311s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001228s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001290s ]
+INFO: Run content_replace Behavior [ RunTime:0.002711s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008377s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001317s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001413s ]
+
+[ 2013-02-22T17:27:52+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=captcha&a=1361525272
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000501s ]
+INFO: Run load_lang Behavior [ RunTime:0.002924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003751s ]
+NOTIC: [8] Undefined index:  width D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 28 行.
+NOTIC: [8] Undefined index:  height D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 29 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 42 行.
+
+[ 2013-02-22T17:30:08+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=register
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000866s ]
+INFO: Run load_lang Behavior [ RunTime:0.001735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002818s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001588s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001700s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 80 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: fuserid D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 239 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.036322s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036430s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001031s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000883s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000791s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000837s ]
+INFO: Run content_replace Behavior [ RunTime:0.002264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006176s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000856s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000950s ]
+
+[ 2013-02-22T17:30:08+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=captcha&a=1361525408
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000834s ]
+INFO: Run load_lang Behavior [ RunTime:0.001564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002619s ]
+NOTIC: [8] Undefined index:  width D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 28 行.
+NOTIC: [8] Undefined index:  height D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 29 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 42 行.
+
+[ 2013-02-22T17:30:35+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=register
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000890s ]
+INFO: Run load_lang Behavior [ RunTime:0.001949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003097s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001591s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001723s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 80 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: fuserid D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 239 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.037241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037347s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000990s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000869s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000787s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000843s ]
+INFO: Run content_replace Behavior [ RunTime:0.002287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006165s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000875s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000970s ]
+
+[ 2013-02-22T17:30:35+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=captcha&a=1361525435
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000865s ]
+INFO: Run load_lang Behavior [ RunTime:0.001612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002711s ]
+NOTIC: [8] Undefined index:  width D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 28 行.
+NOTIC: [8] Undefined index:  height D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 29 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 42 行.
+
+[ 2013-02-22T17:30:36+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000361s ]
+INFO: Run load_lang Behavior [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001558s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001012s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001124s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 78 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.047131s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047234s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000483s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000337s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000331s ]
+INFO: Run content_replace Behavior [ RunTime:0.000939s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002661s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000339s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000424s ]
+
+[ 2013-02-22T17:30:36+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000356s ]
+INFO: Run load_lang Behavior [ RunTime:0.000973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001524s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000462s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000604s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 78 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.014238s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014337s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000418s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000349s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000245s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000319s ]
+INFO: Run content_replace Behavior [ RunTime:0.000918s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002584s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000331s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2013-02-22T17:30:38+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000389s ]
+INFO: Run load_lang Behavior [ RunTime:0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001608s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000415s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000527s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 78 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018669s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000487s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000370s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000271s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000362s ]
+INFO: Run content_replace Behavior [ RunTime:0.000995s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002817s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000358s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000448s ]
+
+[ 2013-02-22T17:30:40+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=register
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000366s ]
+INFO: Run load_lang Behavior [ RunTime:0.000988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001549s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000422s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000532s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 80 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: fuserid D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 239 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.024317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024424s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000501s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000366s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000304s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000353s ]
+INFO: Run content_replace Behavior [ RunTime:0.000985s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002847s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000383s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000474s ]
+
+[ 2013-02-22T17:30:40+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=captcha&a=1361525440
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000369s ]
+INFO: Run load_lang Behavior [ RunTime:0.001121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001706s ]
+NOTIC: [8] Undefined index:  width D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 28 行.
+NOTIC: [8] Undefined index:  height D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 29 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 42 行.
+
+[ 2013-02-22T17:30:41+08:00 ] 127.0.0.1 /ikphp/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000390s ]
+INFO: Run load_lang Behavior [ RunTime:0.001136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001722s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001048s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001176s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 77 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017450s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017557s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000470s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000347s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000285s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000350s ]
+INFO: Run content_replace Behavior [ RunTime:0.001457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003255s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000363s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000452s ]
+
+[ 2013-02-22T17:30:42+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000359s ]
+INFO: Run load_lang Behavior [ RunTime:0.000982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001553s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000398s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000507s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 78 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018294s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018398s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000451s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000361s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000259s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000331s ]
+INFO: Run content_replace Behavior [ RunTime:0.000944s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002665s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000346s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000434s ]
+
+[ 2013-02-22T17:31:15+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000404s ]
+INFO: Run load_lang Behavior [ RunTime:0.001358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001986s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001579s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001707s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 78 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 83 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\0c23d7b0e810a9dfdb8a1e37d6243ddb.php 第 146 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.030378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030491s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000985s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000863s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000760s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000850s ]
+INFO: Run content_replace Behavior [ RunTime:0.002272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006084s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000860s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000952s ]
+
+[ 2013-02-22T17:31:17+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=register
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000398s ]
+INFO: Run load_lang Behavior [ RunTime:0.001021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001642s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001032s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001167s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 80 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: fuserid D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 239 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.024557s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024660s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000477s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000390s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000285s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000372s ]
+INFO: Run content_replace Behavior [ RunTime:0.000993s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002844s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000359s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000446s ]
+
+[ 2013-02-22T17:31:17+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=captcha&a=1361525477
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001293s ]
+INFO: Run load_lang Behavior [ RunTime:0.002036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003535s ]
+NOTIC: [8] Undefined index:  width D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 28 行.
+NOTIC: [8] Undefined index:  height D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 29 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 42 行.
+
+[ 2013-02-22T17:31:23+08:00 ] ERR: (ThinkException) Model:email_exists您所请求的方法不存在！
+[ 2013-02-22T17:31:33+08:00 ] ERR: (ThinkException) Model:name_exists您所请求的方法不存在！
+[ 2013-02-22T17:32:28+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=register
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001401s ]
+INFO: Run load_lang Behavior [ RunTime:0.002439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004070s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002277s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002404s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 80 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: fuserid D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 239 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.030026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030130s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001523s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000869s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001225s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001289s ]
+INFO: Run content_replace Behavior [ RunTime:0.002715s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007971s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001348s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001450s ]
+
+[ 2013-02-22T17:32:28+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=captcha&a=1361525548
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000835s ]
+INFO: Run load_lang Behavior [ RunTime:0.001587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002627s ]
+NOTIC: [8] Undefined index:  width D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 28 行.
+NOTIC: [8] Undefined index:  height D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 29 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 42 行.
+
+[ 2013-02-22T17:32:31+08:00 ] ERR: (ThinkException) Model:name_exists您所请求的方法不存在！
+[ 2013-02-22T17:32:31+08:00 ] ERR: (ThinkException) Model:email_exists您所请求的方法不存在！
+[ 2013-02-22T17:33:23+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=register
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001296s ]
+INFO: Run load_lang Behavior [ RunTime:0.002452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003957s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002245s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002359s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 80 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: fuserid D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 239 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.029712s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029817s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001451s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000624s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001214s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001281s ]
+INFO: Run content_replace Behavior [ RunTime:0.002728s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007659s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001321s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001429s ]
+
+[ 2013-02-22T17:33:24+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=captcha&a=1361525603
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000857s ]
+INFO: Run load_lang Behavior [ RunTime:0.001683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002766s ]
+NOTIC: [8] Undefined index:  width D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 28 行.
+NOTIC: [8] Undefined index:  height D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 29 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 42 行.
+
+[ 2013-02-22T17:33:25+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=check&t=username&username=%E9%BB%84%E6%85%A7
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000385s ]
+INFO: Run load_lang Behavior [ RunTime:0.001496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002075s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.004099s ]
+SQL: SELECT COUNT(userid) AS tp_count FROM `ik_user` WHERE ( username='黄慧' AND userid<>'0' ) LIMIT 1   [ RunTime:0.000921s ]
+
+[ 2013-02-22T17:33:25+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=check&t=email&email=charm_888%40163.com
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001311s ]
+INFO: Run load_lang Behavior [ RunTime:0.002476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003998s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.004002s ]
+SQL: SELECT COUNT(userid) AS tp_count FROM `ik_user` WHERE ( email='charm_888@163.com' AND userid<>'0' ) LIMIT 1   [ RunTime:0.001292s ]
+
+[ 2013-02-22T17:33:32+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=check&t=email&email=charm888%40163.com
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000831s ]
+INFO: Run load_lang Behavior [ RunTime:0.001754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002787s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.003988s ]
+SQL: SELECT COUNT(userid) AS tp_count FROM `ik_user` WHERE ( email='charm888@163.com' AND userid<>'0' ) LIMIT 1   [ RunTime:0.000845s ]
+
+[ 2013-02-22T17:34:05+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=register
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000378s ]
+INFO: Run load_lang Behavior [ RunTime:0.000990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001573s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001066s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001190s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 80 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 85 行.
+NOTIC: [8] Undefined variable: fuserid D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 239 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\1575eea83b5aed81b3b6a9a6345b38b8.php 第 279 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.026237s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026341s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000496s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000357s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000294s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000347s ]
+INFO: Run content_replace Behavior [ RunTime:0.001282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003100s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000352s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000440s ]
+
+[ 2013-02-22T17:34:05+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=captcha&a=1361525645
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000358s ]
+INFO: Run load_lang Behavior [ RunTime:0.001152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001723s ]
+NOTIC: [8] Undefined index:  width D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 28 行.
+NOTIC: [8] Undefined index:  height D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 29 行.
+NOTIC: [8] A session had already been started - ignoring session_start() D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\ORG\Captcha.class.php 第 42 行.
+
+[ 2013-02-22T17:34:10+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=check&t=username&username=%E9%BB%84%E6%85%A7
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000417s ]
+INFO: Run load_lang Behavior [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001619s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.003992s ]
+SQL: SELECT COUNT(userid) AS tp_count FROM `ik_user` WHERE ( username='黄慧' AND userid<>'0' ) LIMIT 1   [ RunTime:0.001090s ]
+
+[ 2013-02-22T17:34:13+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=check&t=email&email=charm888%40163.com
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000388s ]
+INFO: Run load_lang Behavior [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001671s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.004224s ]
+SQL: SELECT COUNT(userid) AS tp_count FROM `ik_user` WHERE ( email='charm888@163.com' AND userid<>'0' ) LIMIT 1   [ RunTime:0.000902s ]
+
+[ 2013-02-22T17:34:14+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=people&a=index&userid=4
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000365s ]
+INFO: Run load_lang Behavior [ RunTime:0.001349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001918s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001288s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001405s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 7 行.
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 78 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 83 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 83 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 83 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 83 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 83 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 83 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 116 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020486s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000461s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000359s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000280s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000353s ]
+INFO: Run content_replace Behavior [ RunTime:0.001545s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003351s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000384s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2013-02-22T17:35:01+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=people&a=index&userid=4
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001312s ]
+INFO: Run load_lang Behavior [ RunTime:0.002050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003567s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002237s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002353s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 7 行.
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 77 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 82 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 82 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f232209929d29ed5fb8b1e5a697cbf10.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.022439s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022541s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001425s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000843s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001429s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001375s ]
+INFO: Run content_replace Behavior [ RunTime:0.002609s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008069s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001296s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001389s ]
+
+[ 2013-02-22T17:35:35+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=setbase
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000866s ]
+INFO: Run load_lang Behavior [ RunTime:0.001784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002885s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.004023s ]
+SQL: SELECT * FROM `ik_user` WHERE ( `userid` = 4 ) LIMIT 1   [ RunTime:0.001032s ]
+SQL: SHOW COLUMNS FROM `ik_area` [ RunTime:0.025423s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 0 ) LIMIT 1   [ RunTime:0.001071s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001394s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001498s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 77 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 127 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 127 行.
+NOTIC: [8] Undefined index:  one D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 127 行.
+NOTIC: [8] Use of undefined constant two - assumed 'two' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 128 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 128 行.
+NOTIC: [8] Undefined index:  two D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 128 行.
+NOTIC: [8] Use of undefined constant three - assumed 'three' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 129 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 129 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.033120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033244s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000467s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000390s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000277s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000350s ]
+INFO: Run content_replace Behavior [ RunTime:0.001300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003111s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000368s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000457s ]
+
+[ 2013-02-22T17:39:11+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=setcity
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000857s ]
+INFO: Run load_lang Behavior [ RunTime:0.001784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002862s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.004765s ]
+SQL: SELECT * FROM `ik_user` WHERE ( `userid` = 4 ) LIMIT 1   [ RunTime:0.001192s ]
+SQL: SHOW COLUMNS FROM `ik_area` [ RunTime:0.004379s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 0 ) LIMIT 1   [ RunTime:0.001119s ]
+SQL: SELECT * FROM `ik_area` WHERE ( referid='0' )  [ RunTime:0.024866s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001875s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001992s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 77 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 166 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 166 行.
+NOTIC: [8] Undefined index:  one D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 166 行.
+NOTIC: [8] Use of undefined constant two - assumed 'two' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 167 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 167 行.
+NOTIC: [8] Undefined index:  two D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 167 行.
+NOTIC: [8] Use of undefined constant three - assumed 'three' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 168 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 168 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.037093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037224s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000999s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000887s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000826s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000878s ]
+INFO: Run content_replace Behavior [ RunTime:0.002322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006297s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000881s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000974s ]
+
+[ 2013-02-22T17:39:13+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=area&ik=two&oneid=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000395s ]
+INFO: Run load_lang Behavior [ RunTime:0.000987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001576s ]
+SQL: SHOW COLUMNS FROM `ik_area` [ RunTime:0.003525s ]
+SQL: SELECT * FROM `ik_area` WHERE ( referid='2' )  [ RunTime:0.001265s ]
+
+[ 2013-02-22T17:39:14+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=area&ik=three&twoid=36
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000356s ]
+INFO: Run load_lang Behavior [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001506s ]
+SQL: SHOW COLUMNS FROM `ik_area` [ RunTime:0.003522s ]
+SQL: SELECT * FROM `ik_area` WHERE ( referid='36' )  [ RunTime:0.001200s ]
+
+[ 2013-02-22T17:39:16+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=setcity
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000373s ]
+INFO: Run load_lang Behavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001567s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.004051s ]
+SQL: UPDATE `ik_user` SET `areaid`=37 WHERE ( `userid` = 4 ) [ RunTime:0.000978s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002054s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002202s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 5 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 6 行.
+NOTIC: [8] Undefined variable: seo D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 7 行.
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 77 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 82 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 82 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\113301e1dfbcac92868475620d2a894e.php 第 136 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.033620s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033728s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000482s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000345s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000288s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000385s ]
+INFO: Run content_replace Behavior [ RunTime:0.000986s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002801s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000374s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2013-02-22T17:39:18+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=setcity
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000390s ]
+INFO: Run load_lang Behavior [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001594s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.004004s ]
+SQL: SELECT * FROM `ik_user` WHERE ( `userid` = 4 ) LIMIT 1   [ RunTime:0.001232s ]
+SQL: SHOW COLUMNS FROM `ik_area` [ RunTime:0.003747s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 37 ) LIMIT 1   [ RunTime:0.001247s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 36 ) LIMIT 1   [ RunTime:0.000426s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 2 ) LIMIT 1   [ RunTime:0.000431s ]
+SQL: SELECT * FROM `ik_area` WHERE ( referid='0' )  [ RunTime:0.000500s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001604s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001719s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 77 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 166 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 166 行.
+NOTIC: [8] Use of undefined constant two - assumed 'two' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 167 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 167 行.
+NOTIC: [8] Use of undefined constant three - assumed 'three' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 168 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 168 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.028195s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028310s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000519s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000389s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000274s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000342s ]
+INFO: Run content_replace Behavior [ RunTime:0.001176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003050s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000359s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000451s ]
+
+[ 2013-02-22T17:39:19+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=setbase
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000436s ]
+INFO: Run load_lang Behavior [ RunTime:0.001016s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001656s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.004192s ]
+SQL: SELECT * FROM `ik_user` WHERE ( `userid` = 4 ) LIMIT 1   [ RunTime:0.001324s ]
+SQL: SHOW COLUMNS FROM `ik_area` [ RunTime:0.003669s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 37 ) LIMIT 1   [ RunTime:0.001114s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 36 ) LIMIT 1   [ RunTime:0.000508s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 2 ) LIMIT 1   [ RunTime:0.000489s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001655s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001770s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 77 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 127 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 127 行.
+NOTIC: [8] Use of undefined constant two - assumed 'two' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 128 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 128 行.
+NOTIC: [8] Use of undefined constant three - assumed 'three' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 129 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 129 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.027784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027892s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000491s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000374s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000310s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000366s ]
+INFO: Run content_replace Behavior [ RunTime:0.000979s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002871s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000390s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2013-02-22T18:03:50+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=setcity
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001311s ]
+INFO: Run load_lang Behavior [ RunTime:0.002450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003968s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.004038s ]
+SQL: SELECT * FROM `ik_user` WHERE ( `userid` = 4 ) LIMIT 1   [ RunTime:0.001086s ]
+SQL: SHOW COLUMNS FROM `ik_area` [ RunTime:0.003544s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 37 ) LIMIT 1   [ RunTime:0.001193s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 36 ) LIMIT 1   [ RunTime:0.000471s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 2 ) LIMIT 1   [ RunTime:0.000475s ]
+SQL: SELECT * FROM `ik_area` WHERE ( referid='0' )  [ RunTime:0.000530s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002310s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002426s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 77 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 82 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 166 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 166 行.
+NOTIC: [8] Use of undefined constant two - assumed 'two' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 167 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 167 行.
+NOTIC: [8] Use of undefined constant three - assumed 'three' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 168 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 168 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaid - assumed 'areaid' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 177 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\b431ac29ce52b69cd534bd59da17fbde.php 第 209 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.033098s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033215s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001451s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001325s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001228s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001305s ]
+INFO: Run content_replace Behavior [ RunTime:0.002688s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008365s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001329s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001424s ]
+
+[ 2013-02-22T18:03:53+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=settag
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001291s ]
+INFO: Run load_lang Behavior [ RunTime:0.002423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003930s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002256s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002367s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 77 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 82 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 82 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fb0f0c229f726c2b77a5c69257bcb978.php 第 114 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.036020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036126s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001587s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001402s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001273s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001307s ]
+INFO: Run content_replace Behavior [ RunTime:0.002678s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008636s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001290s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001384s ]
+
+[ 2013-02-22T18:03:56+08:00 ] 127.0.0.1 /ikphp/index.php?g=home&m=user&a=setbase
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001297s ]
+INFO: Run load_lang Behavior [ RunTime:0.002801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004337s ]
+SQL: SHOW COLUMNS FROM `ik_user` [ RunTime:0.004010s ]
+SQL: SELECT * FROM `ik_user` WHERE ( `userid` = 4 ) LIMIT 1   [ RunTime:0.001079s ]
+SQL: SHOW COLUMNS FROM `ik_area` [ RunTime:0.003695s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 37 ) LIMIT 1   [ RunTime:0.001174s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 36 ) LIMIT 1   [ RunTime:0.000421s ]
+SQL: SELECT * FROM `ik_area` WHERE ( `areaid` = 2 ) LIMIT 1   [ RunTime:0.000383s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002016s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002128s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 77 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 82 行.
+NOTIC: [8] Use of undefined constant one - assumed 'one' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 127 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 127 行.
+NOTIC: [8] Use of undefined constant two - assumed 'two' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 128 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 128 行.
+NOTIC: [8] Use of undefined constant three - assumed 'three' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 129 行.
+NOTIC: [8] Use of undefined constant areaname - assumed 'areaname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 129 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\f1dc542d5ec302649e816ae465156b59.php 第 169 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.031366s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031472s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001438s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001335s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001224s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001287s ]
+INFO: Run content_replace Behavior [ RunTime:0.002711s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008352s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001318s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001417s ]
+
+[ 2013-02-22T18:18:51+08:00 ] ERR: (ThinkException) 模板不存在[./app/Tpl/Admin/Index/index.html]
+[ 2013-02-22T18:21:39+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000850s ]
+INFO: Run load_lang Behavior [ RunTime:0.001615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002666s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001668s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001800s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.038246s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038389s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000936s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000835s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000765s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000874s ]
+INFO: Run content_replace Behavior [ RunTime:0.002104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005848s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001285s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001378s ]
+
+[ 2013-02-22T18:26:36+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000844s ]
+INFO: Run load_lang Behavior [ RunTime:0.001622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002682s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001464s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001578s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./app/Tpl/Admin/public/head.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory D:\APMServ5.2.6\www\htdocs\IKPHP\core\Lib\Template\ThinkTemplate.class.php 第 686 行.
+NOTIC: [2] file_get_contents(./app/Tpl/Admin/public/header.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory D:\APMServ5.2.6\www\htdocs\IKPHP\core\Lib\Template\ThinkTemplate.class.php 第 686 行.
+NOTIC: [2] file_get_contents(./app/Tpl/Admin/public/footer.html) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory D:\APMServ5.2.6\www\htdocs\IKPHP\core\Lib\Template\ThinkTemplate.class.php 第 686 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 24 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 25 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 25 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 25 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 26 行.
+NOTIC: [8] Use of undefined constant email - assumed 'email' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 26 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 26 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 27 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 27 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 27 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 27 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 27 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 27 行.
+NOTIC: [8] Use of undefined constant system - assumed 'system' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 34 行.
+NOTIC: [8] Use of undefined constant server - assumed 'server' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 34 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 34 行.
+NOTIC: [8] Use of undefined constant system - assumed 'system' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 35 行.
+NOTIC: [8] Use of undefined constant phpos - assumed 'phpos' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 35 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 35 行.
+NOTIC: [8] Use of undefined constant system - assumed 'system' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 36 行.
+NOTIC: [8] Use of undefined constant phpversion - assumed 'phpversion' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 36 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 36 行.
+NOTIC: [8] Use of undefined constant system - assumed 'system' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 37 行.
+NOTIC: [8] Use of undefined constant mysql - assumed 'mysql' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 37 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 37 行.
+NOTIC: [8] Use of undefined constant system - assumed 'system' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 39 行.
+NOTIC: [8] Use of undefined constant upload - assumed 'upload' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 39 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 39 行.
+NOTIC: [8] Use of undefined constant system - assumed 'system' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 40 行.
+NOTIC: [8] Use of undefined constant gd - assumed 'gd' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 40 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 40 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016994s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017111s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000975s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000848s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000811s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001311s ]
+INFO: Run content_replace Behavior [ RunTime:0.002584s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006877s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001288s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001401s ]
+
+[ 2013-02-22T18:33:49+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000858s ]
+INFO: Run load_lang Behavior [ RunTime:0.001602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002666s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001487s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001600s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 6 行.
+NOTIC: [8] Use of undefined constant copyright - assumed 'copyright' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 6 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 6 行.
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 7 行.
+NOTIC: [8] Use of undefined constant options - assumed 'options' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 7 行.
+NOTIC: [8] Use of undefined constant appname - assumed 'appname' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 7 行.
+NOTIC: [8] Undefined variable: IK_APP D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 7 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 8 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 8 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 8 行.
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 128 行.
+NOTIC: [8] Undefined variable: skin D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 128 行.
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 131 行.
+NOTIC: [8] Use of undefined constant username - assumed 'username' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 131 行.
+NOTIC: [8] Undefined variable: IK_USER D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 131 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 144 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 144 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 144 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 145 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 145 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 145 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 145 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 145 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 145 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 146 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 146 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 146 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013398s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013519s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000945s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000854s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000784s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000885s ]
+INFO: Run content_replace Behavior [ RunTime:0.002180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006002s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000850s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000945s ]
+
+[ 2013-02-22T18:33:49+08:00 ] 127.0.0.1 /ikphp/index.php?app=system&ac=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000441s ]
+INFO: Run load_lang Behavior [ RunTime:0.001251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001926s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001045s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001158s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: app D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 77 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 82 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant url - assumed 'url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant version - assumed 'version' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant year - assumed 'year' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SOFT D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant base - assumed 'base' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: IK_SITE D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+NOTIC: [8] Undefined variable: runTime D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\home\fd296fa28a1e3de4b4b086da2abdf505.php 第 115 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.019170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019289s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000488s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000356s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000274s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000332s ]
+INFO: Run content_replace Behavior [ RunTime:0.001490s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003264s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000357s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000445s ]
+

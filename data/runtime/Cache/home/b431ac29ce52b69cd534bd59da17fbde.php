@@ -74,7 +74,7 @@ __EXTENDS_JS__
 <div id="header">
     
 	<div class="site_nav">
-    	<?php if('<?php echo MODULE_NAME;?>' == 'User'): ?><div class="site_logo nav_logo">
+    	<?php if($app == 'user'): ?><div class="site_logo nav_logo">
             <a href="<?php echo U('group');?>">爱客小组</a>
         </div>
         <?php else: ?>

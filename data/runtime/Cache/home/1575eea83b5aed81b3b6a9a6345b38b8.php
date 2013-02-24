@@ -47,25 +47,17 @@ __EXTENDS_JS__
 
     <div class="top_items">
         <ul>
-                <li>
-                <a href="{SITE_URL}">爱客</a>
-                </li>             
-                <li>
-                <a href="{SITE_URL}{ikUrl('location')}">同城</a>
-                </li>
-                <li>
-                <a href="{SITE_URL}{ikUrl('group')}">小组</a>
-                </li>
-                <li>
-                <a href="{SITE_URL}{ikUrl('haomiwo')}" target="_blank">好米窝</a>
-                </li> 
-                <li><a href="{SITE_URL}{ikUrl('article')}">文章</a></li>
-<!--                 <li><a href="{SITE_URL}{ikUrl('tribe')}">部落</a></li> -->
-                <li><a href="{SITE_URL}{ikUrl('home','down')}">源码下载</a></li>                                              
+             <li>
+             <a href="__SITE_URL__">爱客</a>
+             </li>             
+
+             <li>
+             <a href="<?php echo U('group/index');?>">小组</a>
+             </li>
+             <li>                                             
 
         </ul>
     </div>
-  
   	<div class="cl"></div>
     
   </div>
@@ -77,8 +69,8 @@ __EXTENDS_JS__
 <div id="header">
     
 	<div class="site_nav">
-    	<?php if($app == 'user'): ?><div class="site_logo nav_logo">
-            <a href="<?php echo U('group');?>">爱客小组</a>
+    	<?php if($module_name == 'group'): ?><div class="site_logo nav_logo">
+            <a href="<?php echo U('group/index');?>">爱客小组</a>
         </div>
         <?php else: ?>
         <div class="site_logo">

@@ -6,12 +6,8 @@
 * @Email:160780470@qq.com
 */
 define ( 'IN_IK', true );
-/* 当前IKPHP程序版本 */
-define('IKPHP_VERSION', '1.5');
-define('IKPHP_YEAR', '2012-2050');
-define('IKPHP_SITENAME', 'IKPHP');
-define('IKPHP_SITEURL', 'http://www.ikphp.com');
-
+//载入版本号
+require_once('version.php');
 if (!is_file('./data/install.lock')) {
 	header('Location: ./install.php');
 	exit;

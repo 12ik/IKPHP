@@ -7,8 +7,21 @@
 <meta name="description" content="<?php echo ($seo["description"]); ?>" /> 
 <link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
 <style>__SITE_THEME_CSS__</style>
-<script src="__STATIC__/public/js/jquery.js"></script>
+<!--[if gte IE 7]><!-->
+    <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
+<!--<![endif]-->
+<!--[if lt IE 7]>
+    <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
+<![endif]-->
 <script>var siteUrl = '__SITE_URL__';</script>
+<script src="__STATIC__/public/js/jquery.js" type="text/javascript"></script>
+<script src="__STATIC__/public/js/common.js" type="text/javascript"></script>
+<script src="__STATIC__/public/js/all.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="__STATIC__/public/js/html5.js"></script>
+<![endif]-->
+<script src="__STATIC__/public/js/dialog/jquery.artDialog.min5.js" type="text/javascript"></script>
+__EXTENDS_JS__
 </head>
 
 <body>
@@ -61,7 +74,7 @@
 <div id="header">
     
 	<div class="site_nav">
-    	<?php if('<?php echo MODULE_NAME;?>' == 'User'): ?><div class="site_logo nav_logo">
+    	<?php if($app == 'user'): ?><div class="site_logo nav_logo">
             <a href="<?php echo U('group');?>">爱客小组</a>
         </div>
         <?php else: ?>

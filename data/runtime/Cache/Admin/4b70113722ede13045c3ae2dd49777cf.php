@@ -3,9 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="author" content="160780470@qq.com" />
-<meta name="Copyright" content="<?php echo ($IK_SOFT[info][copyright]); ?>" />
-<title><?php echo ($title); ?> - <?php echo ($IK_APP[options][appname]); ?> -
-<?php echo ($IK_SITE[base][site_title]); ?></title>
+<meta name="Copyright" content="<?php echo ($ikphp["ikphp_site_name"]); ?>" />
+<title><?php echo ($title); ?> - <?php echo ($site_title); ?></title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/style.css" />
+<script src="__STATIC__/public/js/jquery.js" type="text/javascript"></script>
+
 <style type="text/css">
 html {
 	height: 100%;
@@ -124,31 +126,30 @@ img {
 </head>
 <body>
 <div class="header">
-<div class="logo"><a href="index.php?app=system"><img
-	src="app/<?php echo ($app); ?>/skins/<?php echo ($skin); ?>/logo.gif" alt="爱客(12IK)社区管理" /></a></div>
+<div class="logo"><a href="index.php?app=system">
+<img src="__STATIC__/admin/images/logo.gif" alt="<?php echo ($ikphp["ikphp_site_name"]); ?>" /></a></div>
 <div class="menu">
 <ul>
-	<li>欢迎您，<?php echo ($IK_USER[admin][username]); ?></li>
-	<li><a href="index.php?app=system&ac=main" target="main">首页</a></li>
-	<li><a href="index.php?app=system&ac=options" target="main">系统管理</a></li>
-	<li><a href="index.php?app=system&ac=apps&ik=list" target="main">APP管理</a></li>
-	<li><a href="index.php?app=system&ac=plugin&ik=list&apps=pubs"
-		target="main">插件管理</a></li>
-	<li><a href="index.php" target="_blank">返回前台</a></li>
-	<li><a href="index.php?app=system&ac=login&ik=out">[退出]</a></li>
+	<li>欢迎您，<?php echo ($admin["username"]); ?></li>
+	<li><a href="<?php echo U('main');?>" target="main">首页</a></li>
+	<li><a href="<?php echo U('options/index');?>" target="main">系统管理</a></li>
+	<li><a href="<?php echo U('apps/list');?>" target="main">APP管理</a></li>
+	<li><a href="<?php echo U('plugin/list');?>" target="main">插件管理</a></li>
+	<li><a href="./" target="_blank">返回前台</a></li>
+	<li><a href="<?php echo U('index/logout');?>">[退出]</a></li>
 </ul>
 </div>
 </div>
 
 <div class="footer">
-<p>Copyright (C) <?php echo ($IK_SOFT[info][year]); ?> <a
-	href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a>
-<?php echo ($IK_SOFT[info][version]); ?></p>
+<p>Copyright (C) <?php echo ($ikphp["ikphp_year"]); ?> <a href="<?php echo ($ikphp["ikphp_site_url"]); ?>"><?php echo ($ikphp["ikphp_site_name"]); ?></a>
+ <?php echo ($ikphp["ikphp_version"]); ?></p>
 </div>
 
-<div class="midder"><iframe src="index.php?app=system&ac=main"
-	id="main" name="main" width="100%" height="100%" frameborder="0"
-	scrolling="yes" style="overflow: visible;margin:0;padding:0;"></iframe>
+<div class="midder">
+<iframe src="<?php echo U('index/main');?>" id="main" name="main" width="100%" height="100%" 
+ frameborder="0" scrolling="yes" style="overflow: visible;margin:0;padding:0;">
+ </iframe>
 </div>
 </body>
 </html>

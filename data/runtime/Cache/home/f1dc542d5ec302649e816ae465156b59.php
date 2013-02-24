@@ -51,7 +51,7 @@ __EXTENDS_JS__
                 <a href="{SITE_URL}{ikUrl('location')}">同城</a>
                 </li>
                 <li>
-                <a href="{SITE_URL}{ikUrl('group')}">小组</a>
+                <a href="<?php echo U('group');?>">小组</a>
                 </li>
                 <li>
                 <a href="{SITE_URL}{ikUrl('haomiwo')}" target="_blank">好米窝</a>

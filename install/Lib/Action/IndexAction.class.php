@@ -150,9 +150,9 @@ class IndexAction extends Action {
 
 		
 		//更改网站信息
-		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "system_options` set `optionvalue`='".$temp_info ['site_title']."' where `optionname`='site_title'", $conn );
-		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "system_options` set `optionvalue`='".$temp_info ['site_subtitle']."' where `optionname`='site_subtitle'" , $conn );
-		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "system_options` set `optionvalue`='".$temp_info ['site_url']."' where `optionname`='site_url'" , $conn );
+		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `value`='".$temp_info ['site_title']."' where `name`='site_title'", $conn );
+		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `value`='".$temp_info ['site_subtitle']."' where `name`='site_subtitle'" , $conn );
+		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `value`='".$temp_info ['site_url']."' where `name`='site_url'" , $conn );
 
 		//修改配置文件
 		$config_file = './data/config/db.php';

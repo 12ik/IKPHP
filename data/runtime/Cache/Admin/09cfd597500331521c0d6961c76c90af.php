@@ -5,21 +5,16 @@
 <meta name="author" content="160780470@qq.com" />
 <meta name="Copyright" content="<?php echo ($ikphp["ikphp_site_name"]); ?>" />
 <title><?php echo ($title); ?> - <?php echo ($site_title); ?></title>
-<link rel="stylesheet" type="text/css" href="__STATIC__/admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/admin/style.css" />
 <script src="__STATIC__/public/js/jquery.js" type="text/javascript"></script>
 
-<style>
-.fbox{float:left;width:45%;margin-right:10px;}
-</style>
-<script>
-
-</script>
+<style>.fbox{float:left;width:45%;margin-right:10px;}</style>
 </head>
 <body>
 
 <div class="midder">
 	<?php if(!empty($message)): ?><ul id="message_list">
-    	<?php if(is_array($message)): $i = 0; $__LIST__ = $message;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li class="error"><?php echo ($val["content"]); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
+    	<?php if(is_array($message)): $i = 0; $__LIST__ = $message;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li class="message"><?php echo ($val["content"]); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
     </ul><?php endif; ?>
 <div class="fbox">
 <h2>目录权限</h2>
@@ -48,7 +43,7 @@
     <tr><td width="100">服务器软件：</td><td><?php echo ($system["web_server"]); ?></td></tr>
     <tr><td>操作系统：</td><td><?php echo ($system["server_os"]); ?></td></tr>
     <tr><td>PHP版本：</td><td><?php echo ($system["php_version"]); ?></td></tr>
-    <tr><td>MySQL版本：</td><td><?php echo ($system["mysql_version"]); ?></td></tr>
+    <tr><td>MySQL版本：</td><td><?php echo ($system["mysql_ver"]); ?></td></tr>
     <tr><td>物理路径：</td><td><?php echo ($system["document_root"]); ?></td></tr>
 	 <tr><td>附件上传限制：</td><td><?php echo ($system["upload_max_filesize"]); ?></td></tr>
     <tr><td>图像处理：</td><td><?php echo ($system["gd_info"]); ?> </td></tr>

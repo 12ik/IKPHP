@@ -11,7 +11,15 @@ class IndexAction extends BackendAction {
     	$this->title('首页');
         $this->display();
     }
-    
+    //左侧菜单
+    public function left() {
+    	 
+    	$ik = $this->_get ( 'ik', 'trim' );
+    	if(empty($ik)){ $ik = 'index';}
+    	
+    	$this->assign('ik', $ik);
+    	$this->display();
+    }
     public function main(){
     	// 检测文件夹权限
     	$message = array();
@@ -49,7 +57,7 @@ class IndexAction extends BackendAction {
     			'server_os' => PHP_OS,
     			'web_server' => $_SERVER["SERVER_SOFTWARE"],
     			'php_version' => PHP_VERSION,
-    			'mysql_version' => mysql_get_server_info(),
+    			'mysql_ver' => mysql_get_server_info (),
     			'server_language' => $_SERVER[HTTP_ACCEPT_LANGUAGE],
     			'gd_info' => $gd,
     			'document_root' => $_SERVER[DOCUMENT_ROOT],
@@ -64,5 +72,28 @@ class IndexAction extends BackendAction {
     	$this->display();
 
     }
-
+    //admin 登录
+    public function login() {
+    	if (IS_POST) {
+    		$email = $this->_post('admin_email', 'trim');
+    		$password = $this->_post('admin_password', 'trim');
+    		$admin = M('admin')->where(array('email'=>$email, 'status'=>1))->find();
+    		if (!$admin) {
+    			$this->error(L('admin_not_exist'));
+    		}
+    		if ($admin['password'] != md5($password)) {
+    			$this->error(L('password_error'));
+    		}
+    		session('admin', array(
+    		'userid' => $admin['userid'],
+    		'role_id' => $admin['role_id'],
+    		'username' => $admin['username'],
+    		'email' => $admin['email'],
+    		));
+    		M('admin')->where(array('userid'=>$admin['userid']))->save(array('last_time'=>time(), 'last_ip'=>get_client_ip()));
+    		$this->success(L('login_success'), U('index/index'));
+    	} else {
+    		$this->display();
+    	}
+    }
 }

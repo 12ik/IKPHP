@@ -91,7 +91,27 @@ INSERT INTO `ik_setting` (`name`, `data`) VALUES
 ('charset', 'UTF-8'),
 ('integrate_code', 'default'),
 ('integrate_config', '');
+-- --------------------------------------------------------
 
+--
+-- 表的结构 `ik_nav`
+--
+
+DROP TABLE IF EXISTS `ik_nav`;
+CREATE TABLE `ik_nav` (
+  `id` smallint(4) unsigned NOT NULL AUTO_INCREMENT,
+  `type` varchar(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `alias` varchar(20) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `target` tinyint(1) NOT NULL DEFAULT '1',
+  `ordid` tinyint(3) unsigned NOT NULL DEFAULT '255',
+  `mod` varchar(20) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
 -- --------------------------------------------------------
 --
 -- 表的结构 `ik_area`

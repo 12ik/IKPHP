@@ -1,5 +1,5 @@
 <?php
-class OptionsAction extends BackendAction {
+class SettingAction extends BackendAction {
 
 
 

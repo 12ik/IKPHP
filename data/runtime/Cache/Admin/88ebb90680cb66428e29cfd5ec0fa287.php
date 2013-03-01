@@ -19,13 +19,13 @@
   </tr>
   <tr>
     <th height="35" scope="row">密码：</th>
-    <td><input type="admin_password" name="pwd" class="linput" /></td>
+    <td><input type="password" name="admin_password" class="linput" /></td>
   </tr>
   <tr>
     <th scope="row">&nbsp;</th>
     <td>
-    <input type="hidden" name="cktime" value="2592000" class="linput">
-    <input class="lsubmit" type="submit" value="登录后台" /> <a href="__APP__" class="bh">返回首页</a></td>
+    <input class="lsubmit" type="submit" value="登录后台" /> <a href="__APP__" class="bh">返回首页</a>
+    </td>
   </tr>  
 </table>
 </form>

@@ -6930,3 +6930,994 @@ INFO: [ view_end ] --START--
 INFO: Run ShowPageTrace Behavior [ RunTime:0.001272s ]
 INFO: [ view_end ] --END-- [ RunTime:0.001366s ]
 
+[ 2013-03-01T16:15:58+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000868s ]
+INFO: Run load_lang Behavior [ RunTime:0.001697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002785s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001505s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001642s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.011535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011658s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000963s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000875s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000767s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000870s ]
+INFO: Run content_replace Behavior [ RunTime:0.002122s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005940s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001284s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001431s ]
+
+[ 2013-03-01T16:15:59+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000398s ]
+INFO: Run load_lang Behavior [ RunTime:0.001152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001766s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000408s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000519s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.008863s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008986s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000444s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000352s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000276s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000359s ]
+INFO: Run content_replace Behavior [ RunTime:0.001560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003324s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001086s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001184s ]
+
+[ 2013-03-01T16:16:37+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000862s ]
+INFO: Run load_lang Behavior [ RunTime:0.002082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003154s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002168s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002284s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014936s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001660s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000839s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001209s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001282s ]
+INFO: Run content_replace Behavior [ RunTime:0.002318s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007703s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001571s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001681s ]
+
+[ 2013-03-01T16:16:41+08:00 ] ERR: (ThinkException) 模板不存在[./app/Tpl/Admin/public/success.html]
+[ 2013-03-01T16:16:57+08:00 ] ERR: (ThinkException) 模板不存在[./app/Tpl/Admin/public/success.html]
+[ 2013-03-01T16:17:00+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000631s ]
+INFO: Run load_lang Behavior [ RunTime:0.002296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003147s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002151s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002267s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: admin D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\4b70113722ede13045c3ae2dd49777cf.php 第 67 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.016104s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016205s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001446s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000612s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001238s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001486s ]
+INFO: Run content_replace Behavior [ RunTime:0.002046s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007225s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001086s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001181s ]
+
+[ 2013-03-01T16:17:01+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000420s ]
+INFO: Run load_lang Behavior [ RunTime:0.001355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001993s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001520s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001658s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.013096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013229s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000481s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000345s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000253s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000350s ]
+INFO: Run content_replace Behavior [ RunTime:0.001456s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003176s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001241s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001351s ]
+
+[ 2013-03-01T16:17:01+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000703s ]
+INFO: Run load_lang Behavior [ RunTime:0.002247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003169s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 49 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 60 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 60 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 61 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 67 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002215s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002322s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\09cfd597500331521c0d6961c76c90af.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.023762s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023880s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001413s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000625s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001234s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001448s ]
+INFO: Run content_replace Behavior [ RunTime:0.002569s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007690s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001099s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001197s ]
+
+[ 2013-03-01T16:21:11+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000888s ]
+INFO: Run load_lang Behavior [ RunTime:0.002258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003393s ]
+NOTIC: [8] Undefined variable: admin D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 11 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002504s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002627s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.016162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016302s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001420s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001004s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001522s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001369s ]
+INFO: Run content_replace Behavior [ RunTime:0.002175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007893s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001314s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001411s ]
+
+[ 2013-03-01T16:21:11+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000686s ]
+INFO: Run load_lang Behavior [ RunTime:0.002423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003326s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 51 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 65 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 69 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002224s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002336s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\09cfd597500331521c0d6961c76c90af.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.023342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023458s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001327s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000616s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001960s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001333s ]
+INFO: Run content_replace Behavior [ RunTime:0.001877s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007514s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001071s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001163s ]
+
+[ 2013-03-01T16:21:11+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000997s ]
+INFO: Run load_lang Behavior [ RunTime:0.001844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003067s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001898s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002059s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014571s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014827s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001093s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000827s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000768s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000865s ]
+INFO: Run content_replace Behavior [ RunTime:0.002177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006079s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001306s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001406s ]
+
+[ 2013-03-01T16:21:13+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000666s ]
+INFO: Run load_lang Behavior [ RunTime:0.002081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002972s ]
+NOTIC: [8] Undefined variable: admin D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 11 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002177s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002287s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016015s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001456s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000657s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001241s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001285s ]
+INFO: Run content_replace Behavior [ RunTime:0.001904s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006916s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001066s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001262s ]
+
+[ 2013-03-01T16:21:13+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000733s ]
+INFO: Run load_lang Behavior [ RunTime:0.002301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003248s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 51 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 65 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 69 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002209s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002319s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\09cfd597500331521c0d6961c76c90af.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.024005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024147s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001356s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000591s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001218s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001282s ]
+INFO: Run content_replace Behavior [ RunTime:0.001883s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006673s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001060s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001152s ]
+
+[ 2013-03-01T16:21:13+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000464s ]
+INFO: Run load_lang Behavior [ RunTime:0.001693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002373s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000699s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000808s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.012276s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012390s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000425s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000326s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000242s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000321s ]
+INFO: Run content_replace Behavior [ RunTime:0.001582s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003201s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001059s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001229s ]
+
+[ 2013-03-01T16:21:27+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000736s ]
+INFO: Run load_lang Behavior [ RunTime:0.002144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003137s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002156s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002278s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.016759s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016885s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001436s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000608s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001280s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001346s ]
+INFO: Run content_replace Behavior [ RunTime:0.002526s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007641s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001349s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001471s ]
+
+[ 2013-03-01T16:21:28+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000725s ]
+INFO: Run load_lang Behavior [ RunTime:0.002682s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003637s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 51 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 65 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 69 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.002248s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002360s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\09cfd597500331521c0d6961c76c90af.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.024248s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024379s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001375s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000618s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001208s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001300s ]
+INFO: Run content_replace Behavior [ RunTime:0.001899s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006787s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001182s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001317s ]
+
+[ 2013-03-01T16:21:28+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000929s ]
+INFO: Run load_lang Behavior [ RunTime:0.002252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003403s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001468s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001576s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.013904s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014026s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000950s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000820s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000889s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001025s ]
+INFO: Run content_replace Behavior [ RunTime:0.002211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006369s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000855s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000938s ]
+
+[ 2013-03-01T16:22:59+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000375s ]
+INFO: Run load_lang Behavior [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001719s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000973s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001088s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.011522s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011639s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000442s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000368s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000277s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000339s ]
+INFO: Run content_replace Behavior [ RunTime:0.001483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003247s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001080s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001175s ]
+
+[ 2013-03-01T16:22:59+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000674s ]
+INFO: Run load_lang Behavior [ RunTime:0.001284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002213s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 51 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 65 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 69 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001035s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001144s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\09cfd597500331521c0d6961c76c90af.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.020583s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020713s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000405s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000328s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000252s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000337s ]
+INFO: Run content_replace Behavior [ RunTime:0.001405s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003054s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001049s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001140s ]
+
+[ 2013-03-01T16:22:59+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000430s ]
+INFO: Run load_lang Behavior [ RunTime:0.001327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001966s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000415s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000516s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.010825s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010938s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000430s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000322s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000250s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000322s ]
+INFO: Run content_replace Behavior [ RunTime:0.001410s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003024s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000366s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000444s ]
+
+[ 2013-03-01T16:23:03+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left&ik=setting
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000367s ]
+INFO: Run load_lang Behavior [ RunTime:0.001136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001712s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000733s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000840s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.011821s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011939s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000447s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000329s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000275s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000350s ]
+INFO: Run content_replace Behavior [ RunTime:0.001427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003124s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001070s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001152s ]
+
+[ 2013-03-01T16:23:03+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=setting&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000378s ]
+INFO: Run load_lang Behavior [ RunTime:0.001111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001699s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001214s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001331s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.008448s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008598s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000430s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000419s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000288s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000336s ]
+INFO: Run content_replace Behavior [ RunTime:0.001412s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003218s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001069s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001171s ]
+
+[ 2013-03-01T16:23:05+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left&ik=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000421s ]
+INFO: Run load_lang Behavior [ RunTime:0.001151s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001767s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000723s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000828s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.011700s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011819s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000457s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000388s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000285s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000367s ]
+INFO: Run content_replace Behavior [ RunTime:0.001424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003240s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001055s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001153s ]
+
+[ 2013-03-01T16:23:05+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000426s ]
+INFO: Run load_lang Behavior [ RunTime:0.001154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001796s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 51 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 65 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 69 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000437s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000536s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\09cfd597500331521c0d6961c76c90af.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.018207s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018315s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000399s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000334s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000317s ]
+INFO: Run content_replace Behavior [ RunTime:0.001434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003052s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001064s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001163s ]
+
+[ 2013-03-01T16:23:05+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left&ik=setting
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000394s ]
+INFO: Run load_lang Behavior [ RunTime:0.001100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001683s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000697s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000803s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.011868s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011980s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000407s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000322s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000259s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000330s ]
+INFO: Run content_replace Behavior [ RunTime:0.001403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003018s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001054s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001138s ]
+
+[ 2013-03-01T16:23:05+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=setting&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000378s ]
+INFO: Run load_lang Behavior [ RunTime:0.001123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001706s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001225s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001343s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.008554s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008709s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000442s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000329s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000253s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000339s ]
+INFO: Run content_replace Behavior [ RunTime:0.001444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003144s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001125s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001239s ]
+
+[ 2013-03-01T16:23:05+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left&ik=user
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000382s ]
+INFO: Run load_lang Behavior [ RunTime:0.001179s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001771s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000728s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000842s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.008031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008138s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000401s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000319s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000256s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000348s ]
+INFO: Run content_replace Behavior [ RunTime:0.001416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003020s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001071s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001159s ]
+
+[ 2013-03-01T16:23:06+08:00 ] ERR: (ThinkException) 无法加载模块:User
+[ 2013-03-01T16:23:06+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left&ik=setting
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000360s ]
+INFO: Run load_lang Behavior [ RunTime:0.001105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001652s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000727s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000834s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.011819s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011931s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000438s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000317s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000242s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000327s ]
+INFO: Run content_replace Behavior [ RunTime:0.001389s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002990s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001065s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001159s ]
+
+[ 2013-03-01T16:23:06+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=setting&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000514s ]
+INFO: Run load_lang Behavior [ RunTime:0.001144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001879s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001212s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001332s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.008641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008803s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000443s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000331s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000241s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000317s ]
+INFO: Run content_replace Behavior [ RunTime:0.001501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003150s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001106s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001209s ]
+
+[ 2013-03-01T16:23:07+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left&ik=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000368s ]
+INFO: Run load_lang Behavior [ RunTime:0.001115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001678s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000698s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000817s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.012184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012301s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000412s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000329s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000252s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000317s ]
+INFO: Run content_replace Behavior [ RunTime:0.001792s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003387s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001051s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001135s ]
+
+[ 2013-03-01T16:23:07+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000388s ]
+INFO: Run load_lang Behavior [ RunTime:0.001118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001721s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 51 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 65 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 69 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000441s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000538s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\09cfd597500331521c0d6961c76c90af.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.017515s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017642s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000387s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000318s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000277s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000325s ]
+INFO: Run content_replace Behavior [ RunTime:0.001431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003043s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001062s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001153s ]
+
+[ 2013-03-01T16:23:10+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left&ik=setting
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000391s ]
+INFO: Run load_lang Behavior [ RunTime:0.001303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001915s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000726s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000833s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.012077s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012190s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000455s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000335s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000275s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000338s ]
+INFO: Run content_replace Behavior [ RunTime:0.001768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003469s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001083s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001174s ]
+
+[ 2013-03-01T16:23:10+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=setting&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000358s ]
+INFO: Run load_lang Behavior [ RunTime:0.001099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001654s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001200s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001317s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.008457s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008629s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000406s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000305s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000244s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000318s ]
+INFO: Run content_replace Behavior [ RunTime:0.001432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003022s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001066s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001155s ]
+
+[ 2013-03-01T16:23:44+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left&ik=user
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000893s ]
+INFO: Run load_lang Behavior [ RunTime:0.001651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002773s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001444s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001554s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.013820s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013951s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000915s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000821s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000765s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000836s ]
+INFO: Run content_replace Behavior [ RunTime:0.002327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006018s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001276s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001362s ]
+
+[ 2013-03-01T16:23:44+08:00 ] ERR: (ThinkException) 无法加载模块:User
+[ 2013-03-01T16:23:45+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left&ik=setting
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000396s ]
+INFO: Run load_lang Behavior [ RunTime:0.001325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001973s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000789s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000957s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.012504s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012653s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000481s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000329s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000284s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000337s ]
+INFO: Run content_replace Behavior [ RunTime:0.002061s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003819s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001110s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001201s ]
+
+[ 2013-03-01T16:23:45+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=setting&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000380s ]
+INFO: Run load_lang Behavior [ RunTime:0.001334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001940s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001209s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001327s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.009188s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009339s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000474s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000367s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000305s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000328s ]
+INFO: Run content_replace Behavior [ RunTime:0.001427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003218s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001052s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001141s ]
+
+[ 2013-03-01T16:27:46+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=setting&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000865s ]
+INFO: Run load_lang Behavior [ RunTime:0.001598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002683s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001711s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001845s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 22 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 22 行.
+NOTIC: [8] Use of undefined constant site_subtitle - assumed 'site_subtitle' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 27 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 27 行.
+NOTIC: [8] Use of undefined constant site_key - assumed 'site_key' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 33 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 33 行.
+NOTIC: [8] Use of undefined constant site_desc - assumed 'site_desc' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 39 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 39 行.
+NOTIC: [8] Use of undefined constant site_url - assumed 'site_url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 46 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 46 行.
+NOTIC: [8] Use of undefined constant charset - assumed 'charset' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 51 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 51 行.
+NOTIC: [8] Use of undefined constant site_email - assumed 'site_email' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 56 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 56 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 62 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 62 行.
+NOTIC: [8] Undefined variable: key D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 85 行.
+NOTIC: [8] Undefined variable: item D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 85 行.
+NOTIC: [8] Use of undefined constant thumbwidth - assumed 'thumbwidth' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 97 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 97 行.
+NOTIC: [8] Use of undefined constant thumbheight - assumed 'thumbheight' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 102 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 102 行.
+NOTIC: [8] Use of undefined constant attachmentdir - assumed 'attachmentdir' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 112 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 112 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.027060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027172s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.001024s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000867s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001233s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001320s ]
+INFO: Run content_replace Behavior [ RunTime:0.002642s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007451s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001327s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001434s ]
+
+[ 2013-03-01T18:55:25+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000882s ]
+INFO: Run load_lang Behavior [ RunTime:0.001614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002722s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001826s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001958s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.024135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024256s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000970s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.001059s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001239s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001302s ]
+INFO: Run content_replace Behavior [ RunTime:0.002603s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007560s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001307s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001403s ]
+
+[ 2013-03-01T18:55:25+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000430s ]
+INFO: Run load_lang Behavior [ RunTime:0.001381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002057s ]
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 51 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: Access denied for user 'ODBC'@'localhost' (using password: NO) D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [2] mysql_get_server_info() [<a href='function.mysql-get-server-info'>function.mysql-get-server-info</a>]: A link to the server could not be established D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 62 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_LANGUAGE - assumed 'HTTP_ACCEPT_LANGUAGE' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 63 行.
+NOTIC: [8] Use of undefined constant DOCUMENT_ROOT - assumed 'DOCUMENT_ROOT' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 65 行.
+NOTIC: [8] Use of undefined constant HTTP_ACCEPT_ENCODING - assumed 'HTTP_ACCEPT_ENCODING' D:\APMServ5.2.6\www\htdocs\IKPHP\app\Lib\Action\admin\IndexAction.class.php 第 69 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001671s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001799s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: title D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\09cfd597500331521c0d6961c76c90af.php 第 7 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.037898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038018s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000412s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000324s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001308s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001394s ]
+INFO: Run content_replace Behavior [ RunTime:0.002768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006593s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.002074s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002179s ]
+
+[ 2013-03-01T18:55:25+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001132s ]
+INFO: Run load_lang Behavior [ RunTime:0.001681s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003048s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001456s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001564s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.014148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014264s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000929s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000822s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000757s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000911s ]
+INFO: Run content_replace Behavior [ RunTime:0.002137s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005879s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001268s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001351s ]
+
+[ 2013-03-01T18:55:26+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=index&a=left&ik=setting
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000461s ]
+INFO: Run load_lang Behavior [ RunTime:0.001143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001802s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.001222s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001331s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.012533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012651s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000465s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000321s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001251s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001278s ]
+INFO: Run content_replace Behavior [ RunTime:0.002551s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006164s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001283s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001365s ]
+
+[ 2013-03-01T18:55:26+08:00 ] 127.0.0.1 /ikphp/index.php?g=admin&m=setting&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000376s ]
+INFO: Run load_lang Behavior [ RunTime:0.001128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001709s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000980s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001104s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant site_title - assumed 'site_title' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 22 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 22 行.
+NOTIC: [8] Use of undefined constant site_subtitle - assumed 'site_subtitle' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 27 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 27 行.
+NOTIC: [8] Use of undefined constant site_key - assumed 'site_key' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 33 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 33 行.
+NOTIC: [8] Use of undefined constant site_desc - assumed 'site_desc' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 39 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 39 行.
+NOTIC: [8] Use of undefined constant site_url - assumed 'site_url' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 46 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 46 行.
+NOTIC: [8] Use of undefined constant charset - assumed 'charset' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 51 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 51 行.
+NOTIC: [8] Use of undefined constant site_email - assumed 'site_email' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 56 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 56 行.
+NOTIC: [8] Use of undefined constant site_icp - assumed 'site_icp' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 62 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 62 行.
+NOTIC: [8] Undefined variable: key D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 85 行.
+NOTIC: [8] Undefined variable: item D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 85 行.
+NOTIC: [8] Use of undefined constant thumbwidth - assumed 'thumbwidth' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 97 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 97 行.
+NOTIC: [8] Use of undefined constant thumbheight - assumed 'thumbheight' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 102 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 102 行.
+NOTIC: [8] Use of undefined constant attachmentdir - assumed 'attachmentdir' D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 112 行.
+NOTIC: [8] Undefined variable: strOption D:\APMServ5.2.6\www\htdocs\IKPHP\data\runtime\Cache\Admin\c7511b44fc817d8eb28ef4db727bb6ea.php 第 112 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.035155s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035263s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000459s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000336s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.001255s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.001345s ]
+INFO: Run content_replace Behavior [ RunTime:0.002582s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006321s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.001289s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001384s ]
+

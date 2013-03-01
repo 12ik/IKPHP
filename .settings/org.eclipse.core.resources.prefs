@@ -1,0 +1,16 @@
+#Fri Mar 01 16:25:03 CST 2013
+eclipse.preferences.version=1
+encoding//app/Common/common.php=UTF-8
+encoding//app/Lang/zh-cn/admin=UTF-8
+encoding//app/Lang/zh-cn/home/user.php=UTF-8
+encoding//app/Lib/Action/admin/IndexAction.class.php=UTF-8
+encoding//app/Tpl/admin/index/main.html=UTF-8
+encoding//app/Tpl/home=UTF-8
+encoding//app/Tpl/home/default/user/set_menu.html=UTF-8
+encoding//app/Tpl/home/default/user/setbase.html=UTF-8
+encoding//core/Common=UTF-8
+encoding//core/Conf=UTF-8
+encoding//core/Lang=UTF-8
+encoding//core/Lib=UTF-8
+encoding/<project>=UTF-8
+encoding/data=UTF-8

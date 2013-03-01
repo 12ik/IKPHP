@@ -7,8 +7,10 @@ class IndexAction extends BackendAction {
     }
 
     public function index() {
-		
-    	$this->title('首页');
+    	$admin = array('username'=>$_SESSION['admin']['username'], 'rolename'=>$_SESSION['admin']['role_id']);
+    	$this->assign('admin', $admin);
+    			
+    	$this->title('管理中心');
         $this->display();
     }
     //左侧菜单

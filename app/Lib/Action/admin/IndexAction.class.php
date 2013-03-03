@@ -98,4 +98,10 @@ class IndexAction extends BackendAction {
     		$this->display();
     	}
     }
+    //admin 退出
+    public function logout() {
+    	session('admin', null);
+    	$this->success(L('logout_success'), U('index/login'));
+    	exit;
+    }    
 }

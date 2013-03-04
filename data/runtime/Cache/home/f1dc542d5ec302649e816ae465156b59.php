@@ -100,7 +100,72 @@ __EXTENDS_JS__
 <!--APP NAV-->
 
 </header>
-    
+<!--main-->
+<div class="midder">
+<div class="mc">
+
+<h1 class="set_tit">用户信息管理</h1>
+<div class="tabnav">
+<ul>
+<?php if(is_array($user_menu_list)): $i = 0; $__LIST__ = $user_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i; if($user_menu_curr == $key): ?><li class="select"><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li>
+<?php else: ?>
+<li><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+</ul>
+</div>
+
+    <div class="utable">
+        <form method="POST" action="<?php echo U('user/setbase');?>">
+        <table cellpadding="0" cellspacing="0" width="100%" class="table_1">
+        <tr>
+        <th>登陆Email：</th><td><input class="txt" value="<?php echo ($info["email"]); ?>" disabled="true" /></td>
+        </tr>
+        <tr><th>名 号：</th><td><input class="txt" name="username" value="<?php echo ($info["username"]); ?>"  /></td></tr>
+        
+        <tr><th>性 别：</th><td>
+        
+        <?php if($info["sex"] == '0'): ?><input checked="select" name="sex" type="radio" value="0" />保密 
+        <?php else: ?>
+        <input  name="sex" type="radio" value="0" />保密<?php endif; ?>
+        <?php if($info["sex"] == '1'): ?><input checked="select" name="sex" type="radio" value="1" />男  
+        <?php else: ?>
+        <input  name="sex" type="radio" value="1" />男<?php endif; ?>
+        <?php if($info["sex"] == '2'): ?><input checked="select" name="sex" type="radio" value="2" />女 
+        <?php else: ?>
+        <input name="sex" type="radio" value="2" />女<?php endif; ?>
+        
+        
+        </td></tr>
+        
+        <tr><th>常居地：</th>
+        <td>
+        <?php if(!empty($strarea)): echo ($strarea[one][areaname]); ?> 
+        <?php echo ($strarea[two][areaname]); ?> 
+        <?php echo ($strarea[three][areaname]); endif; ?>
+        </td>
+        </tr>
+        
+        <tr><th>当前所在地：</th><td><input class="txt" name="address" value="<?php echo ($info["address"]); ?>" /></td></tr>
+        
+        <tr><th>登陆IP：</th><td><input class="txt" name="ip" value="<?php echo ($info["ip"]); ?>" disabled="true" /></td></tr>
+        
+        <tr><th>手 机：</th><td><input class="txt" name="phone" value="<?php echo ($info["phone"]); ?>"  /></td></tr>
+        
+        <tr><th>Blog地址：</th><td><input class="txt" name="blog" value="<?php echo ($info["blog"]); ?>"  /></td></tr>
+        
+        <tr><th>自我介绍：</th><td><textarea class="utext" name="about" style="height:70px; width:480px"><?php echo ($info["about"]); ?></textarea></td></tr>
+        
+        <tr><th>签 名：</th><td>
+        <textarea class="utext" name="signed" style="height:70px; width:480px"><?php echo t($info['signed']); ?></textarea>
+        (支持url链接，只需要输入http://www.******.com即可)
+        </td></tr>
+        
+        <tr><th></th><td><input class="submit" type="submit" value="更新个人资料"  /></td></tr>
+        
+        </table>
+        </form>
+    </div>
+</div>
+</div>
 <!--footer-->
 <footer>
 <div id="footer">

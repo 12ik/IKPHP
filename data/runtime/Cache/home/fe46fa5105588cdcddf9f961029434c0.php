@@ -100,7 +100,10 @@ __EXTENDS_JS__
 <!--APP NAV-->
 
 </header>
-    
+<?php var_dump($visitor); ?>
+  <?php if($visitor): ?><div class="create-group">
+<a href="{U('group/create')}"><i>+</i>申请创建小组</a>
+</div><?php endif; ?>              
 <!--footer-->
 <footer>
 <div id="footer">

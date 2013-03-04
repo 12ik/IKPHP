@@ -100,7 +100,31 @@ __EXTENDS_JS__
 <!--APP NAV-->
 
 </header>
+<!--main-->
+<div class="midder">
+<div class="mc">
+
+<h1 class="set_tit">用户信息管理</h1>
+<div class="tabnav">
+<ul>
+<?php if(is_array($user_menu_list)): $i = 0; $__LIST__ = $user_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i; if($user_menu_curr == $key): ?><li class="select"><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li>
+<?php else: ?>
+<li><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+</ul>
+</div>
+    <?php if($info["face"] == ''): ?><div style="font-size:14px; line-height:30px">请上传头像后才可以正常使用浏览网站^_^</div><?php endif; ?>
+    <div class="face_form">
+    <form method="POST" action="<?php echo U('user/setface');?>" enctype="multipart/form-data" >
+        <img alt="<?php echo ($info["username"]); ?>" valign="middle" src="<?php echo ($strUser[face]); ?>?v={php echo rand();}" class="pil" />
+        <div class="file_info">
+            <p>从你的电脑上选择图像文件：(仅支持jpg，gif，png格式的图片)</p>
+            <p><input type="file" name="picfile" style="height:25px; "/>&nbsp;&nbsp;<input class="submit" type="submit" value="上传照片" /></p>
+        </div>    
+    </form>
+    </div>
     
+</div>
+</div>
 <!--footer-->
 <footer>
 <div id="footer">

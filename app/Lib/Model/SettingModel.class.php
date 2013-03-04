@@ -6,7 +6,7 @@ class settingModel extends Model
     /**
      * 获取配置信息写入缓存
      */
-    public function setting_cache() {echo  22;
+    public function setting_cache() {
         $setting = array();
         $res = $this->getField('name,data');
         foreach ($res as $key=>$val) {

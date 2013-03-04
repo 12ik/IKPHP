@@ -9,4 +9,6 @@ return array (
 		'password_error' => '密码错误',
 		'login_success' => '登陆成功',
 		'logout_success' => '退出成功',
+		'operation_success' => '操作成功',
+		'operation_failure' => '操作失败',
 );

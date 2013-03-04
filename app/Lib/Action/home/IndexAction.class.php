@@ -7,6 +7,7 @@
 */
 class IndexAction extends FrontendAction {
 	public function index() {
+		echo sprintf("%09d", 1);
 		$this->_config_seo ();
 		$this->display ();
 	}

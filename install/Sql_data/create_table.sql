@@ -165,3 +165,52 @@ INSERT INTO `ik_area` (`areaid`, `areaname`, `zm`, `referid`) VALUES
 (34,'台湾','T','0'),
 (35,'钓鱼岛','D','0');
 
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_group`
+--
+DROP TABLE IF EXISTS `ik_group`;
+CREATE TABLE `ik_group` (
+  `groupid` int(11) NOT NULL AUTO_INCREMENT COMMENT '小组ID',
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
+  `groupname` char(32) NOT NULL DEFAULT '' COMMENT '群组名字',
+  `groupname_en` char(32) NOT NULL DEFAULT '' COMMENT '小组英文名称',
+  `groupdesc` text NOT NULL COMMENT '小组介绍',
+  `path` char(32) NOT NULL DEFAULT '' COMMENT '图标路径',
+  `groupicon` char(32) DEFAULT '' COMMENT '小组图标',
+  `count_topic` int(11) NOT NULL DEFAULT '0' COMMENT '帖子统计',
+  `count_topic_today` int(11) NOT NULL DEFAULT '0' COMMENT '统计今天发帖',
+  `count_user` int(11) NOT NULL DEFAULT '0' COMMENT '小组成员数',
+  `joinway` tinyint(1) NOT NULL DEFAULT '0' COMMENT '加入方式',
+  `role_leader` char(32) NOT NULL DEFAULT '组长' COMMENT '组长角色名称',
+  `role_admin` char(32) NOT NULL DEFAULT '管理员' COMMENT '管理员角色名称',
+  `role_user` char(32) NOT NULL DEFAULT '成员' COMMENT '成员角色名称',
+  `addtime` int(11) DEFAULT '0' COMMENT '创建时间',
+  `isrecommend` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否推荐',
+  `isopen` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否公开或者私密',
+  `isaudit` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否审核',
+  `ispost` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否允许会员发帖',
+  `isshow` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示',
+  `uptime` int(11) NOT NULL DEFAULT '0' COMMENT '最后更新时间',
+  PRIMARY KEY (`groupid`),
+  KEY `userid` (`userid`),
+  KEY `isshow` (`isshow`),
+  KEY `groupname` (`groupname`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='小组' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_group_users`
+--
+DROP TABLE IF EXISTS `ik_group_users`;
+CREATE TABLE `ik_group_users` (
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
+  `groupid` int(11) NOT NULL DEFAULT '0' COMMENT '群组ID',
+  `isadmin` int(11) NOT NULL DEFAULT '0' COMMENT '是否管理员',
+  `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '加入时间',
+  UNIQUE KEY `userid_2` (`userid`,`groupid`),
+  KEY `userid` (`userid`),
+  KEY `groupid` (`groupid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='群组和用户对应关系'

@@ -100,7 +100,105 @@ __EXTENDS_JS__
 <!--APP NAV-->
 
 </header>
+<div class="midder">
+
+
+    <div class="mc">
     
+   	    <h1><?php echo ($title); ?></h1>
+       
+        <div class="cleft w700">
+
+
+            <div class="group_topics">
+                <table class="olt">
+                    <tbody>
+            <!--{if $arrTopic}-->
+            <!--{loop $arrTopic $key $item}-->
+                            <tr class="pl">
+           <td class="td-subject"><a title="<?php echo ($item[title]); ?>" href="{U('group','topic',array('id'=>$item[topicid]))}">{php echo getsubstrutf8(t($item['title']),0,25)}</a>
+            <!--{if $item[isvideo] == '1'}-->
+            <img src="{SITE_URL}public/images/lc_cinema.png" align="absmiddle" title="[视频]" alt="[视频]" />
+            <!--{/if}-->                
+            <!--{if $item[istop]=='1'}-->
+            <img src="{SITE_URL}app/<?php echo ($app); ?>/skins/<?php echo ($skin); ?>/headtopic_1.gif" title="[置顶]" alt="[置顶]" />
+            <!--{/if}-->
+            <!--{if $item[addtime]>strtotime(date('Y-m-d 00:00:00'))}-->
+            <img src="{SITE_URL}app/<?php echo ($app); ?>/skins/<?php echo ($skin); ?>/topic_new.gif" align="absmiddle"  title="[新帖]" alt="[新帖]" />
+            <!--{/if}--> 
+            <!--{if $item[isphoto]=='1'}-->
+            <img src="{SITE_URL}app/<?php echo ($app); ?>/skins/<?php echo ($skin); ?>/image_s.gif" title="[图片]" alt="[图片]" align="absmiddle" />
+            <!--{/if}--> 
+            <!--{if $item[isattach] == '1'}-->
+            <img src="{SITE_URL}app/<?php echo ($app); ?>/skins/<?php echo ($skin); ?>/attach.gif" title="[附件]" alt="[附件]" />
+            <!--{/if}-->
+            <!--{if $item[isposts] == '1'}-->
+            <img src="{SITE_URL}public/images/posts.gif" title="[精华]" alt="[精华]" />
+            <!--{/if}--></td>
+                                <td class="td-reply" nowrap="nowrap"><!--{if $item[count_comment]>0}--><?php echo ($item[count_comment]); ?> 回应<!--{/if}--></td>
+                                <td class="td-time" nowrap="nowrap">{php echo getTime($item[uptime],time())}</td>
+                                <td align="right"><a href="{U('group','show',array('id'=>$item[groupid]))}">{php echo getsubstrutf8(t($item[group][groupname]),0,10)}</a></td>
+                            </tr>
+             <!--{/loop}-->
+            <!--{/if}-->         
+                </tbody>
+              </table>
+            </div>
+            
+             
+            
+            <div class="clear"></div>
+    
+    
+    	</div>
+    
+        <div class="cright w250" id="cright">   
+              
+			<div class="mod" id="g-user-profile">
+
+    <div class="usercard">
+      <div class="pic">
+            <a href="{U('hi','',array('id'=>$strUser[doname]))}"><img alt="<?php echo ($strUser[username]); ?>" src="<?php echo ($strUser[face]); ?>"></a>
+      </div>
+        <div class="info">
+            <div class="name">
+                <a href="{U('hi','',array('id'=>$strUser[doname]))}"><?php echo ($strUser[username]); ?></a>
+            </div>
+            <!--{if $strArea}-->
+            <?php echo ($strArea[one][areaname]); ?> 
+            <?php echo ($strArea[two][areaname]); ?> 
+            <?php echo ($strArea[three][areaname]); ?> 
+            <!--{else}-->
+            火星
+            <!--{/if}-->                         
+                  <br>
+                 </div>
+             </div>
+               
+    <div class="group-nav">
+     <ul>
+         <li <?php if($action_name == 'my_group_topics'): ?>class="on"<?php endif; ?> ><a href="<?php echo U('group/my_group_topics');?>">我的小组话题</a></li>
+         <li <?php if($action_name == 'my_topics'): ?>class="on"<?php endif; ?> ><a href="<?php echo U('group/my_topics');?>">我发起的话题</a></li>
+         <li <?php if($action_name == 'my_replied_topics'): ?>class="on"<?php endif; ?> ><a href="<?php echo U('group/my_replied_topics');?>">我回应的话题</a></li>
+         <li <?php if($action_name == 'my_collect_topics'): ?>class="on"<?php endif; ?> ><a href="<?php echo U('group/my_collect_topics');?>">我收藏的话题</a></li>
+         <li <?php if($action_name == 'mine'): ?>class="on"<?php endif; ?> ><a href="<?php echo U('group/mine');?>">我管理/加入的小组</a></li>
+     </ul>
+    </div>
+             
+</div> 
+         
+<div class="mod">
+<?php if($visitor): ?><div class="create-group">
+<a href="<?php echo U('group/create');?>"><i>+</i>申请创建小组</a>
+</div><?php endif; ?>
+</div>                 
+        
+        </div>
+    
+    </div><!--//mc-->
+
+
+</div>                
 <!--footer-->
 <footer>
 <div id="footer">

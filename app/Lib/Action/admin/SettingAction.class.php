@@ -11,6 +11,20 @@ class SettingAction extends BackendAction {
 		$this->assign('arrTime', $arrTime);
 		$this->display ();
 	}
+	public function url(){
+		$this->title ( '链接形式' );
+
+		$this->display ();		
+	}
+	public function edit() {
+		$setting = $this->_post('setting', ',');
+		foreach ($setting as $key => $val) {
+			$val = is_array($val) ? serialize($val) : $val;
+			$this->_mod->where(array('name' => $key))->save(array('data' => $val));
+		}
+		$type = $this->_post('type', 'trim', 'index');
+		$this->success(L('operation_success'));
+	}
 	public function getZone() {
 		return array (
 				'-12' => '(GMT -12:00) Eniwetok, Kwajalein',

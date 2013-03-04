@@ -5,7 +5,7 @@ class UserAction extends UserbaseAction {
 		$this->display ();
 	}
 	
-	public function setbase() { 
+	public function setbase() {
 		
 		if (IS_POST) {
 			foreach ( $_POST as $key => $val ) {
@@ -53,9 +53,23 @@ class UserAction extends UserbaseAction {
 	
 	public function setface() {
 		if (IS_POST) {
+			
+			if (! empty ( $_FILES ['picfile'] )) {
+				$data_dir = date ( 'Y/md/H/' );
+				$file_name = md5 ( $this->visitor->info ['userid'] );
+				$result = $this->_upload ( $_FILES ['picfile'], 'face/' . $data_dir, array (
+						'width' => '100',
+						'height' => '100',
+						'remove_origin' => false 
+				), $file_name );
+				var_dump($result);
+			} else {
+			
+			}
 		
 		} else {
-			
+			$info = $this->visitor->get ();
+			$this->assign ( 'info', $info );
 			$this->_config_seo ();
 			$this->display ();
 		}
@@ -72,23 +86,25 @@ class UserAction extends UserbaseAction {
 		if (IS_POST) {
 			
 			$user_mod = D ( 'user' );
-			$oneid = $this->_post ('oneid','intval');
-			$twoid = $this->_post ('twoid','intval');
-			$threeid = $this->_post ('threeid','intval');
+			$oneid = $this->_post ( 'oneid', 'intval' );
+			$twoid = $this->_post ( 'twoid', 'intval' );
+			$threeid = $this->_post ( 'threeid', 'intval' );
 			
-			if($oneid != 0 && $twoid==0 && $threeid==0){
+			if ($oneid != 0 && $twoid == 0 && $threeid == 0) {
 				$areaid = $oneid;
-			}elseif($oneid!=0 && $twoid !=0 && $threeid==0){
+			} elseif ($oneid != 0 && $twoid != 0 && $threeid == 0) {
 				$areaid = $twoid;
-			}elseif($oneid!=0 && $twoid !=0 && $threeid!=0){
+			} elseif ($oneid != 0 && $twoid != 0 && $threeid != 0) {
 				$areaid = $threeid;
-			}else{
+			} else {
 				$areaid = 0;
-			}	
-				
-			if (false !== $user_mod->where ( array ('userid' => $this->visitor->info ['userid']) )->save (array(
-					'areaid'=>$areaid
-					) )) {
+			}
+			
+			if (false !== $user_mod->where ( array (
+					'userid' => $this->visitor->info ['userid'] 
+			) )->save ( array (
+					'areaid' => $areaid 
+			) )) {
 				$this->success ( L ( 'user_area' ) . L ( 'edit_success' ) );
 			} else {
 				$this->error ( L ( 'user_area' ) . L ( 'edit_failed' ) );
@@ -129,16 +145,16 @@ class UserAction extends UserbaseAction {
 			case 'three' :
 				$twoid = $this->_get ( 'twoid' );
 				$arrArea = $area_mod->getReferArea ( $twoid );
-				if($arrArea){
+				if ($arrArea) {
 					echo '<select id="threeid" name="threeid" class="txt">';
 					echo '<option value="0">请选择</option>';
-					foreach($arrArea as $item){
-						echo '<option value="'.$item['areaid'].'">'.$item['areaname'].'</option>';
+					foreach ( $arrArea as $item ) {
+						echo '<option value="' . $item ['areaid'] . '">' . $item ['areaname'] . '</option>';
 					}
 					echo "</select>";
-				}else{
+				} else {
 					echo '';
-				}				
+				}
 				break;
 		}
 	}

@@ -13,7 +13,7 @@
 <!--main-->
 <div class="midder">
 <h2><?php echo ($title); ?></h2>
-<form method="POST" action="index.php?app=system&a=do&ik=options">
+<form method="POST" action="<?php echo U('setting/edit');?>">
 <table cellpadding="0" cellspacing="0">
 
 	<tr>
@@ -48,7 +48,7 @@
 	<tr>
 		<td>网站编码:</td>
 		<td><input style="width: 300px;" name="setting[charset]"
-			value="<?php echo C('ik_charset');?>" readonly /> （默认UTF-8）请勿更改</td>
+			value="<?php echo C('ik_charset');?>" disabled/> （默认UTF-8）请勿更改</td>
 	</tr>    
 	<tr>
 		<td>电子邮件 :</td>
@@ -65,21 +65,21 @@
 	<tr>
 		<td>是否邀请注册 :</td>
 		<td>
-		<input type="radio"  <?php if(C('ik_site_icp') == 0): ?>checked="select"<?php endif; ?> name="isinvite" value="0" />开放注册 
-		<input type="radio"  <?php if(C('ik_site_icp') == 1): ?>checked="select"<?php endif; ?> name="isinvite" value="1" />邀请注册 
-		<input type="radio"  <?php if(C('ik_site_icp') == 2): ?>checked="select"<?php endif; ?> name="isinvite" value="2" />关闭注册
+		<input type="radio"  <?php if(C('ik_isinvite') == 0): ?>checked="select"<?php endif; ?> name="setting[isinvite]" value="0" />开放注册 
+		<input type="radio"  <?php if(C('ik_isinvite') == 1): ?>checked="select"<?php endif; ?> name="setting[isinvite]" value="1" />邀请注册 
+		<input type="radio"  <?php if(C('ik_isinvite') == 2): ?>checked="select"<?php endif; ?> name="setting[isinvite]" value="2" />关闭注册
 		</td>
 	</tr>
 	<tr>
 		<td>Gzip压缩 :</td>
 		<td>
-		<input type="radio" <?php if(C('ik_isgzip') == 0): ?>checked="select"<?php endif; ?> name="isgzip" value="0" />关闭 
-		<input type="radio" <?php if(C('ik_isgzip') == 1): ?>checked="select"<?php endif; ?> name="isgzip" value="1" />开启</td>
+		<input type="radio" <?php if(C('ik_isgzip') == 0): ?>checked="select"<?php endif; ?> name="setting[isgzip]" value="0" />关闭 
+		<input type="radio" <?php if(C('ik_isgzip') == 1): ?>checked="select"<?php endif; ?> name="setting[isgzip]" value="1" />开启</td>
 	</tr>
 
 	<tr>
 		<td>时区:</td>
-		<td><select name="timezone">
+		<td><select name="setting[timezone]">
 			<?php if(is_array($arrTime)): foreach($arrTime as $k=>$vo): ?><option <?php if($k == C('ik_timezone')): ?>selected="selected"<?php endif; ?> value="<?php echo ($k); ?>" ><?php echo ($vo); ?></option><?php endforeach; endif; ?>
 		</select></td>
 	</tr>

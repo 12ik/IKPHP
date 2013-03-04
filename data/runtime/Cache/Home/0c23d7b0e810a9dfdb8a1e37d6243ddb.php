@@ -7,6 +7,7 @@
 <meta name="description" content="<?php echo ($seo["description"]); ?>" /> 
 <link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
 <style>__SITE_THEME_CSS__</style>
+<link href="http://localhost/ikphp/static/theme/blue/group/images/style.css" rel="stylesheet" />
 <!--[if gte IE 7]><!-->
     <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
 <!--<![endif]-->
@@ -74,9 +75,21 @@ __EXTENDS_JS__
         <div class="site_logo">
             <a href="__ROOT__/" title="<?php echo ($IK_SITE[base][site_title]); ?>"><?php echo ($IK_SITE[base][site_title]); ?></a>
         </div><?php endif; ?> 
-         
-         
-        <?php if(empty($visitor)): else: endif; ?>
+		<div class="appnav">
+		    <ul id="nav_bar">
+		        <li><a href="<?php echo U('group/index');?>">我的小组</a></li>
+		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=explore">发现小组</a></li>
+		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=explore_topic">发现话题</a></li>
+		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=nearby&amp;ik=beijing">北京话题</a></li>
+		    </ul>
+		   <form onsubmit="return searchForm(this);" method="get" action="http://www.ik.com/index.php">
+		   <input type="hidden" value="search" name="app"><input type="hidden" value="q" name="ac">
+		    <div id="search_bar">
+		        <div class="inp"><input type="text" placeholder="小组、话题、日志、成员、小站" value="小组、话题、日志、成员、小站" class="key" name="kw"></div>
+		        <div class="inp-btn"><input type="submit" class="search-button" value="搜索"></div>
+		    </div>
+		    </form>
+		</div>
         
         
 		

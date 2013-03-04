@@ -203,3 +203,9 @@ function t($text) {
 	$text = str_replace ( "'", "", $text );
 	return $text;
 }
+function ikupload(){
+	
+}
+function ikimg(){
+	echo 123;
+}

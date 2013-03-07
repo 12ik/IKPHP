@@ -57,22 +57,41 @@ class UserAction extends UserbaseAction {
 			if (! empty ( $_FILES ['picfile'] )) {
 				$data_dir = date ( 'Y/md/H/' );
 				$file_name = md5 ( $this->visitor->info ['userid'] );
-				$result = $this->_upload ( $_FILES ['picfile'], 'face/' . $data_dir, array (
-						'width' => '100',
-						'height' => '100',
-						'remove_origin' => false 
-				), $file_name );
-				var_dump($result);
-			} else {
-			
+				//会员头像规格
+				$avatar_size = explode(',', C('ik_avatar_size'));
+	            //会员头像保存文件夹
+	            $uid = abs(intval($this->visitor->info['userid']));
+	            $suid = sprintf("%09d", $uid);
+	            $dir1 = substr($suid, 0, 3);
+	            $dir2 = substr($suid, 3, 2);
+	            $dir3 = substr($suid, 5, 2);
+	            $avatar_dir = $dir1.'/'.$dir2.'/'.$dir3.'/';
+	            //上传头像
+	            $suffix = '';
+	            foreach ($avatar_size as $size) {
+	                $suffix .= '_'.$size.',';
+	            }
+	            $result = $this->_upload($_FILES['picfile'], 'face/'.$avatar_dir, array(
+	                'width'=>C('ik_avatar_size'), 
+	                'height'=>C('ik_avatar_size'),
+	                'remove_origin'=>true, 
+	                'suffix'=>trim($suffix, ','),
+	                'ext' => 'jpg',
+	            ), md5($uid));
+				
+			    if ($result['error']) {
+	                $this->error($result['info']);
+	            } else {
+					$this->success('头像修改成功！');
+	            }	
 			}
-		
-		} else {
-			$info = $this->visitor->get ();
-			$this->assign ( 'info', $info );
-			$this->_config_seo ();
-			$this->display ();
-		}
+			
+		} 
+		$info = $this->visitor->get ();
+		$this->assign ( 'info', $info );
+		$this->_config_seo ();
+		$this->display ();
+
 	}
 	public function setdoname() {
 		if (IS_POST) {

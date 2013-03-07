@@ -109,22 +109,19 @@ __EXTENDS_JS__
 <div class="infobox">
 
 <div class="bd">
-<img align="left" alt="<?php echo ($strGroup[groupname]); ?>" src="<?php echo ($strGroup[icon_48]); ?>" class="pil mr5 groupicon" valign="top" />
-<div>创建于{php echo date('Y-m-d',$strGroup[addtime])}&nbsp; &nbsp; <?php echo ($strGroup[role_leader]); ?>：<a href="{U('hi','',array('id'=>$strLeader[doname]))}"><?php echo ($strLeader[username]); ?></a><br></div>
-<!--{php echo nl2br($strGroup[groupdesc])}-->
+<img align="left" alt="<?php echo ($strGroup[groupname]); ?>" src="<?php echo attach($strGroup[groupicon], 'group/icon');?>" class="pil mr5 groupicon" valign="top" />
+<div>创建于<?php echo date('Y-m-d',$strGroup[addtime]) ?>&nbsp; &nbsp; <?php echo ($strGroup[role_leader]); ?>：<a href="<?php echo U('people/index');?>"><?php echo ($strLeader[username]); ?></a><br></div>
+<?php echo nl2br($strGroup[groupdesc]); ?>
 <div class="clearfix" style="margin-top: 10px;">
 
-<!--{if $isGroupUser > 0 && $IK_USER[user][userid] != $strGroup[userid]}-->
-<span class="fleft mr5 color-gray">我是这个小组的<?php echo ($strGroup[role_user]); ?> <a class="j a_confirm_link" href="{U('group','do',array('ik'=>'exit','groupid'=>$strGroup['groupid']))}" style="margin-left: 6px;">&gt;退出小组</a></span>
-<!--{elseif $isGroupUser > 0 && $IK_USER[user][userid] == $strGroup[userid]}-->
-<span class="fleft mr5 color-gray">我是这个小组的<?php echo ($strGroup[role_leader]); ?></span>
-<!--{elseif $strGroup[joinway] == '0'}-->
-<span class="fright">
-<a class="button-join" href="{U('group','do',array('ik'=>'join','groupid'=>$strGroup['groupid']))}">申请加入小组</a></span>
+<?php if($isGroupUser && ($strGroup[userid]!=$visitor[userid])): ?><span class="fleft mr5 color-gray">我是这个小组的<?php echo ($strGroup['role_user']); ?> <a class="j a_confirm_link" href="<?php echo U('group/quit',array('id'=>$strGroup['groupid']));?>" style="margin-left: 6px;">&gt;退出小组</a></span>
+<?php elseif($isGroupUser && ($strGroup[userid]==$visitor[userid])): ?>
+<span class="fleft mr5 color-gray">我是这个小组的<?php echo ($strGroup['role_leader']); ?></span>
 
-<!--{else}-->
-<span class="fright">本小组禁止加入</span>
-<!--{/if}-->
+<?php elseif($strGroup[joinway] == 0): ?>
+<span class="fright"><a class="button-join" href="<?php echo U('group/join',array('id'=>$strGroup['groupid']));?>">申请加入小组</a></span>
+<?php else: ?>
+<span class="fright">本小组禁止加入</span><?php endif; ?>
 
 
 </div>
@@ -137,7 +134,7 @@ __EXTENDS_JS__
 <div class="box_content">
 
     <h2 style="margin-top:10px">
-                <a class="rr bn-post" href="{U('group','add',array('groupid'=>$strGroup[groupid]))}"><span>发布帖子</span></a>
+                <a class="rr bn-post" href="<?php echo U('group/add',array('id'=>$strGroup[groupid]));?>"><span>发布帖子</span></a>
         最近小组话题  · · · · · ·
     </h2>
 
@@ -194,41 +191,36 @@ __EXTENDS_JS__
 <div class="cright">
     <div>
         <h2>最新加入成员</h2>
-        <!--{loop $arrGroupUser $key $item}-->
-        <dl class="obu">
+        <?php if(is_array($arrGroupUser)): foreach($arrGroupUser as $key=>$item): ?><dl class="obu">
             <dt>
             <a href="{U('hi','',array('id'=>$item[doname]))}"><img alt="<?php echo ($item[username]); ?>" class="m_sub_img" src="<?php echo ($item[face]); ?>" /></a>
             </dt>
             <dd><?php echo ($item[username]); ?><br>
                 <span class="pl">(<a href="{U('location','area',array(areaid=>$item[area][areaid]))}"><?php echo ($item[area][areaname]); ?></a>)</span>
             </dd>
-     	 </dl>
-        <!--{/loop}-->
+     	 </dl><?php endforeach; endif; ?>
     
         <br clear="all">
     
-        <!--{if $IK_USER[user][userid] == $strGroup[userid]}-->
-        <p class="pl2">&gt; <a href="{U('group','group_user',array(groupid=>$strGroup[groupid]))}">成员管理 (<?php echo ($strGroup[count_user]); ?>)</a></p>
-        
-        <p class="pl2">&gt; <a href="{U('group','edit',array(ik=>base,groupid=>$strGroup[groupid]))}">修改小组设置 </a></p>
-        <p class="pl2">&gt; <a href="{U('group','recovery',array(groupid=>$strGroup[groupid]))}">回收站 (<?php echo ($strGroup[recoverynum]); ?>)</a></p>
-        
-        <!--{else}-->
-        <p class="pl2"><a href="{U('group','group_user',array(groupid=>$strGroup[groupid]))}">浏览所有成员 (<?php echo ($strGroup[count_user]); ?>)</a></p>
-        <!--{/if}-->
+        <?php if($visitor[userid] == $strGroup[userid]): ?><p class="pl2">&gt; <a href="{U('group','group_user',array(groupid=>$strGroup[groupid]))}">成员管理 (<?php echo ($strGroup[count_user]); ?>)</a></p>
+            
+            <p class="pl2">&gt; <a href="{U('group','edit',array(ik=>base,groupid=>$strGroup[groupid]))}">修改小组设置 </a></p>
+            <p class="pl2">&gt; <a href="{U('group','recovery',array(groupid=>$strGroup[groupid]))}">回收站 (<?php echo ($strGroup[recoverynum]); ?>)</a></p>
+            
+            <?php else: ?>
+            <p class="pl2"><a href="{U('group','group_user',array(groupid=>$strGroup[groupid]))}">浏览所有成员 (<?php echo ($strGroup[count_user]); ?>)</a></p><?php endif; ?>
         
        <div class="clear"></div>
 
         
     </div>
     
-	<p class="pl">本页永久链接: <a href="{U('group','show',array(id=>$strGroup[groupid]))}">{U('group','show',array(id=>$strGroup[groupid]))}</a></p>
+	<p class="pl">本页永久链接: <a href="<?php echo U('group/show',array(id=>$strGroup[groupid]));?>"><?php echo U('group/show',array(id=>$strGroup[groupid]));?></a></p>
     
     <p class="pl"><span class="feed"><a href="{U('group','rss',array(groupid=>$strGroup[groupid]))}">feed: rss 2.0</a></span></p>
     
     <div class="clear"></div>
-	{php doAction('group_group_right_footer',$strTopic)}
-
+    
 </div>
 </div>
 </div>

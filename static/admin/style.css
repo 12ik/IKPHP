@@ -82,7 +82,7 @@ a {
 /*导航*/
 .tabnav {
 	height:auto;
-	margin-bottom:1px;
+	margin-bottom:10px;
 }
 
 .tabnav ul {
@@ -140,12 +140,23 @@ cursor:pointer; display:block; float:left}
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+.midder table tr th {
+	border-bottom: 1px solid #eee;
+	height: 32px;
+	line-height: 32px;
+	padding: 0 0px;
+	vertical-align: top;
+	margin: 0;
+	outline: 0 none;
+	text-align:right;
+	width:100px;
+	font-weight:normal;
+}
 .midder table tr td {
 	border-bottom: 1px solid #eee;
 	height: 32px;
 	line-height: 32px;
-	padding: 0 20px;
+	padding: 0 10px;
 	vertical-align: top;
 	margin: 0;
 	outline: 0 none;

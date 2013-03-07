@@ -25,4 +25,32 @@ class userModel extends Model
 			return false;
 		}
 	}
+	//获取一个用户的信息
+	function getOneUser($userid){
+	
+		$strUser = $this->where(array(
+			'userid'=>$userid,
+		))->find();
+		
+		$strUser['face'] = avatar($userid, 48);
+		
+		//地区
+		if($strUser['areaid'] > 0){
+			
+			$strUser['area'] = D('area')->getOneArea($strUser['areaid']);
+		
+		}else{
+			$strUser['area'] = array(
+				'areaid'	=> '0',
+				'areaname' => '火星',
+			);
+		}
+
+		//签名
+		$pattern='/(http:\/\/|https:\/\/|ftp:\/\/)([\w:\/\.\?=&-_]+)/is';
+
+		$strUser['signed'] = hview(preg_replace($pattern, '<a rel="nofollow" target="_blank" href="\1\2">\1\2</a>', $strUser['signed']));
+		
+		return $strUser;
+	}
 }

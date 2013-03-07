@@ -80,19 +80,50 @@ function fdate($time) {
     }
     return $fdate;
 }
+//处理时间的函数
+function getTime($btime, $etime) {
 
+	if ($btime < $etime) {
+		$stime = $btime;
+		$endtime = $etime;
+	} else {
+		$stime = $etime;
+		$endtime = $btime;
+	}
+	$timec = $endtime - $stime;
+	$days = intval ( $timec / 86400 );
+	$rtime = $timec % 86400;
+	$hours = intval ( $rtime / 3600 );
+	$rtime = $rtime % 3600;
+	$mins = intval ( $rtime / 60 );
+	$secs = $rtime % 60;
+	if ($days >= 1) {
+		return $days . ' 天前';
+	}
+	if ($hours >= 1) {
+		return $hours . ' 小时前';
+	}
+
+	if ($mins >= 1) {
+		return $mins . ' 分钟前';
+	}
+	if ($secs >= 1) {
+		return $secs . ' 秒前';
+	}
+
+}
 /**
  * 获取用户头像
  */
 function avatar($uid, $size) {
-    $avatar_size = explode(',', C('pin_avatar_size'));
+    $avatar_size = explode(',', C('ik_avatar_size'));
     $size = in_array($size, $avatar_size) ? $size : '100';
     $avatar_dir = avatar_dir($uid);
     $avatar_file = $avatar_dir . md5($uid) . "_{$size}.jpg";
-    if (!is_file(C('pin_attach_path') . 'avatar/' . $avatar_file)) {
-        $avatar_file = "default_{$size}.jpg";
+    if (!is_file(C('ik_attach_path') . 'face/' . $avatar_file)) {
+        $avatar_file = "user_{$size}.jpg";
     }
-    return __ROOT__ . '/' . C('pin_attach_path') . 'avatar/' . $avatar_file;
+    return __ROOT__ . '/' . C('ik_attach_path') . 'face/' . $avatar_file.'?v='.time();
 }
 
 function avatar_dir($uid) {
@@ -107,7 +138,7 @@ function avatar_dir($uid) {
 function attach($attach, $type) {
     if (false === strpos($attach, 'http://')) {
         //本地附件
-        return __ROOT__ . '/' . C('pin_attach_path') . $type . '/' . $attach;
+        return __ROOT__ . '/' . C('ik_attach_path') . $type . '/' . $attach;
         //远程附件
         //todo...
     } else {
@@ -203,9 +234,19 @@ function t($text) {
 	$text = str_replace ( "'", "", $text );
 	return $text;
 }
-function ikupload(){
-	
+//主要针对输出的内容，对动态脚本，静态html，动态语言全部通吃
+function hview($text) {
+	$text = stripslashes ( $text ); //删除反斜杠
+	$text = nl2br ( $text );
+	return $text;
 }
-function ikimg(){
-	echo 123;
+//utf-8截取
+function getsubstrutf8($string, $start = 0, $sublen, $append = true) {
+	$pa = "/[\x01-\x7f]|[\xc2-\xdf][\x80-\xbf]|\xe0[\xa0-\xbf][\x80-\xbf]|[\xe1-\xef][\x80-\xbf][\x80-\xbf]|\xf0[\x90-\xbf][\x80-\xbf][\x80-\xbf]|[\xf1-\xf7][\x80-\xbf][\x80-\xbf][\x80-\xbf]/";
+	preg_match_all ( $pa, $string, $t_string );
+	if (count ( $t_string [0] ) - $start > $sublen && $append == true) {
+		return join ( '', array_slice ( $t_string [0], $start, $sublen ) ) . "...";
+	} else {
+		return join ( '', array_slice ( $t_string [0], $start, $sublen ) );
+	}
 }

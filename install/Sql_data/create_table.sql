@@ -89,7 +89,13 @@ INSERT INTO `ik_setting` (`name`, `data`) VALUES
 ('isinvite', '0'),
 ('charset', 'UTF-8'),
 ('integrate_code', 'default'),
-('integrate_config', '');
+('integrate_config', ''),
+('avatar_size', '24,32,48,64,100,200'),
+('attr_allow_exts', 'jpg,gif,png,jpeg,swf'),
+('attr_allow_size', '2048'),
+('simg', ''),
+('mimg', ''),
+('bimg', '');
 -- --------------------------------------------------------
 
 --
@@ -177,8 +183,7 @@ CREATE TABLE `ik_group` (
   `groupname` char(32) NOT NULL DEFAULT '' COMMENT '群组名字',
   `groupname_en` char(32) NOT NULL DEFAULT '' COMMENT '小组英文名称',
   `groupdesc` text NOT NULL COMMENT '小组介绍',
-  `path` char(32) NOT NULL DEFAULT '' COMMENT '图标路径',
-  `groupicon` char(32) DEFAULT '' COMMENT '小组图标',
+  `groupicon` char(255) DEFAULT '' COMMENT '小组图标',
   `count_topic` int(11) NOT NULL DEFAULT '0' COMMENT '帖子统计',
   `count_topic_today` int(11) NOT NULL DEFAULT '0' COMMENT '统计今天发帖',
   `count_user` int(11) NOT NULL DEFAULT '0' COMMENT '小组成员数',
@@ -213,4 +218,75 @@ CREATE TABLE `ik_group_users` (
   UNIQUE KEY `userid_2` (`userid`,`groupid`),
   KEY `userid` (`userid`),
   KEY `groupid` (`groupid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='群组和用户对应关系'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='群组和用户对应关系' ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_group_topics`
+--
+DROP TABLE IF EXISTS `ik_group_topics`;
+CREATE TABLE `ik_group_topics` (
+  `topicid` int(11) NOT NULL AUTO_INCREMENT COMMENT '话题ID',
+  `typeid` int(11) NOT NULL DEFAULT '0' COMMENT '帖子分类ID',
+  `groupid` int(11) NOT NULL DEFAULT '0' COMMENT '小组ID',
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
+  `title` char(64) NOT NULL DEFAULT '',
+  `content` text NOT NULL,
+  `count_comment` int(11) NOT NULL DEFAULT '0' COMMENT '回复统计',
+  `count_view` int(11) NOT NULL DEFAULT '0' COMMENT '帖子展示数',
+  `count_collect` int(11) NOT NULL DEFAULT '0' COMMENT '喜欢收藏数',  
+  `count_attach` int(11) NOT NULL DEFAULT '0' COMMENT '统计附件',
+  `istop` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否置顶',
+  `isshow` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示',
+  `iscomment` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否允许评论',
+  `isphoto` tinyint(1) NOT NULL DEFAULT '0',
+  `isattach` tinyint(1) NOT NULL DEFAULT '0',
+  `isnotice` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否通知',
+  `isposts` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否精华帖子',
+  `isvideo` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有视频',
+  `addtime` int(11) DEFAULT '0' COMMENT '创建时间',
+  `uptime` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间',
+  PRIMARY KEY (`topicid`),
+  KEY `groupid` (`groupid`),
+  KEY `userid` (`userid`),
+  KEY `title` (`title`),
+  KEY `groupid_2` (`groupid`,`isshow`),
+  KEY `typeid` (`typeid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='小组话题' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_videos`
+--
+DROP TABLE IF EXISTS `ik_videos`;
+CREATE TABLE `ik_videos` (
+  `videoid` int(11) NOT NULL AUTO_INCREMENT COMMENT '视频id',
+  `seqid` int(11) NOT NULL DEFAULT '0' COMMENT '顺序id',
+  `typeid` int(11) NOT NULL DEFAULT '0' COMMENT '日记ID或帖子id',
+  `type` char(64) NOT NULL DEFAULT '0' COMMENT '日记或帖子或其他组件',
+  `userid` int(11) NOT NULL DEFAULT '0',
+  `url` char(255) NOT NULL DEFAULT '' COMMENT '视频网址',
+  `imgurl` char(255) NOT NULL DEFAULT '' COMMENT '视频截图',
+  `videourl` char(255) NOT NULL DEFAULT '' COMMENT 'swf地址',
+  `title` char(120) NOT NULL DEFAULT '' COMMENT '视频标题',
+  `count_view` int(11) NOT NULL DEFAULT '0',
+  `addtime` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`videoid`),
+  KEY `typeid` (`typeid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_group_topics_collects`
+--
+DROP TABLE IF EXISTS `ik_group_topics_collects`;
+CREATE TABLE `ik_group_topics_collects` (
+  `userid` int(11) NOT NULL DEFAULT '0',
+  `topicid` int(11) NOT NULL DEFAULT '0',
+  `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '收藏时间',
+  UNIQUE KEY `userid_2` (`userid`,`topicid`),
+  KEY `userid` (`userid`),
+  KEY `topicid` (`topicid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='帖子收藏';

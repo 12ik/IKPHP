@@ -7,7 +7,6 @@
 <meta name="description" content="<?php echo ($seo["description"]); ?>" /> 
 <link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
 <style>__SITE_THEME_CSS__</style>
-<link href="http://localhost/ikphp/static/theme/blue/group/images/style.css" rel="stylesheet" />
 <!--[if gte IE 7]><!-->
     <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
 <!--<![endif]-->
@@ -148,7 +147,8 @@ __EXTENDS_JS__
             · <a href="{SITE_URL}{ikUrl('home','privacy')}">隐私申明</a>
         </span>
         <div class="cl"></div>
-        <p>Powered by <a class="softname" href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a> <?php echo ($IK_SOFT[info][version]); ?> <?php echo ($IK_SOFT[info][year]); ?> <?php echo ($IK_SITE[base][site_icp]); ?><br /><span style="font-size:0.83em;">Processed in <?php echo ($runTime); ?> second(s)</span>
+        <p>Powered by <a class="softname" href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a> <?php echo ($IK_SOFT[info][version]); ?> <?php echo ($IK_SOFT[info][year]); ?> <?php echo ($IK_SITE[base][site_icp]); ?> <span style="color:green">ThinkPHP 版本 <?php echo (THINK_VERSION); ?></span><br /><span style="font-size:0.83em;">Processed in <?php echo ($runTime); ?> second(s)</span>
+        
         <!--<script src="http://s21.cnzz.com/stat.php?id=2973516&web_id=2973516" language="JavaScript"></script>-->
         </p>   
     </div>

@@ -76,9 +76,21 @@ __EXTENDS_JS__
         <div class="site_logo">
             <a href="__ROOT__/" title="<?php echo ($IK_SITE[base][site_title]); ?>"><?php echo ($IK_SITE[base][site_title]); ?></a>
         </div><?php endif; ?> 
-         
-         
-        <?php if(empty($visitor)): else: endif; ?>
+		<div class="appnav">
+		    <ul id="nav_bar">
+		        <li><a href="<?php echo U('group/index');?>">我的小组</a></li>
+		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=explore">发现小组</a></li>
+		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=explore_topic">发现话题</a></li>
+		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=nearby&amp;ik=beijing">北京话题</a></li>
+		    </ul>
+		   <form onsubmit="return searchForm(this);" method="get" action="http://www.ik.com/index.php">
+		   <input type="hidden" value="search" name="app"><input type="hidden" value="q" name="ac">
+		    <div id="search_bar">
+		        <div class="inp"><input type="text" placeholder="小组、话题、日志、成员、小站" value="小组、话题、日志、成员、小站" class="key" name="kw"></div>
+		        <div class="inp-btn"><input type="submit" class="search-button" value="搜索"></div>
+		    </div>
+		    </form>
+		</div>
         
         
 		
@@ -268,7 +280,8 @@ obj.src = $(obj).attr('url') + '&nowtime=' + new Date().getTime();
             · <a href="{SITE_URL}{ikUrl('home','privacy')}">隐私申明</a>
         </span>
         <div class="cl"></div>
-        <p>Powered by <a class="softname" href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a> <?php echo ($IK_SOFT[info][version]); ?> <?php echo ($IK_SOFT[info][year]); ?> <?php echo ($IK_SITE[base][site_icp]); ?><br /><span style="font-size:0.83em;">Processed in <?php echo ($runTime); ?> second(s)</span>
+        <p>Powered by <a class="softname" href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a> <?php echo ($IK_SOFT[info][version]); ?> <?php echo ($IK_SOFT[info][year]); ?> <?php echo ($IK_SITE[base][site_icp]); ?> <span style="color:green">ThinkPHP 版本 <?php echo (THINK_VERSION); ?></span><br /><span style="font-size:0.83em;">Processed in <?php echo ($runTime); ?> second(s)</span>
+        
         <!--<script src="http://s21.cnzz.com/stat.php?id=2973516&web_id=2973516" language="JavaScript"></script>-->
         </p>   
     </div>

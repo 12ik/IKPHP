@@ -10,6 +10,12 @@ class areaModel extends Model {
 			return false;
 		}
 	}
+	// 获取单个区域
+	public function getOneArea($areaid){
+		$where = array('areaid'=>$areaid);
+		$result = $this->where ( $where )->find ();
+		return $result;	
+	}
 	// 获取区域下的区域
 	public function getReferArea($areaid) {
 		$where = "referid='" . $areaid . "'";

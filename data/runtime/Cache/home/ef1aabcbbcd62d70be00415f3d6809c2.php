@@ -7,7 +7,6 @@
 <meta name="description" content="<?php echo ($seo["description"]); ?>" /> 
 <link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
 <style>__SITE_THEME_CSS__</style>
-<link href="http://localhost/ikphp/static/theme/blue/group/images/style.css" rel="stylesheet" />
 <!--[if gte IE 7]><!-->
     <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
 <!--<![endif]-->
@@ -113,10 +112,8 @@ __EXTENDS_JS__
             <div class="group_topics">
                 <table class="olt">
                     <tbody>
-            <!--{if $arrTopic}-->
-            <!--{loop $arrTopic $key $item}-->
-                            <tr class="pl">
-           <td class="td-subject"><a title="<?php echo ($item[title]); ?>" href="{U('group','topic',array('id'=>$item[topicid]))}">{php echo getsubstrutf8(t($item['title']),0,25)}</a>
+            <?php if(!empty($arrTopic)): if(is_array($arrTopic)): foreach($arrTopic as $key=>$item): ?><tr class="pl">
+           <td class="td-subject"><a title="<?php echo ($item[title]); ?>" href="{U('group','topic',array('id'=>$item[topicid]))}"><?php echo getsubstrutf8(t($item['title']),0,25); ?></a>
             <!--{if $item[isvideo] == '1'}-->
             <img src="{SITE_URL}public/images/lc_cinema.png" align="absmiddle" title="[视频]" alt="[视频]" />
             <!--{/if}-->                
@@ -136,11 +133,9 @@ __EXTENDS_JS__
             <img src="{SITE_URL}public/images/posts.gif" title="[精华]" alt="[精华]" />
             <!--{/if}--></td>
                                 <td class="td-reply" nowrap="nowrap"><!--{if $item[count_comment]>0}--><?php echo ($item[count_comment]); ?> 回应<!--{/if}--></td>
-                                <td class="td-time" nowrap="nowrap">{php echo getTime($item[uptime],time())}</td>
-                                <td align="right"><a href="{U('group','show',array('id'=>$item[groupid]))}">{php echo getsubstrutf8(t($item[group][groupname]),0,10)}</a></td>
-                            </tr>
-             <!--{/loop}-->
-            <!--{/if}-->         
+                                <td class="td-time" nowrap="nowrap"><?php echo getTime($item[uptime],time()); ?></td>
+                                <td align="right"><a href="{U('group','show',array('id'=>$item[groupid]))}"><?php echo getsubstrutf8(t($item[group][groupname]),0,10); ?></a></td>
+                            </tr><?php endforeach; endif; endif; ?>         
                 </tbody>
               </table>
             </div>
@@ -160,28 +155,32 @@ __EXTENDS_JS__
       <div class="pic">
             <a href="{U('hi','',array('id'=>$strUser[doname]))}"><img alt="<?php echo ($strUser[username]); ?>" src="<?php echo ($strUser[face]); ?>"></a>
       </div>
-        <div class="info">
-            <div class="name">
-                <a href="{U('hi','',array('id'=>$strUser[doname]))}"><?php echo ($strUser[username]); ?></a>
-            </div>
-            <!--{if $strArea}-->
-            <?php echo ($strArea[one][areaname]); ?> 
-            <?php echo ($strArea[two][areaname]); ?> 
-            <?php echo ($strArea[three][areaname]); ?> 
-            <!--{else}-->
-            火星
-            <!--{/if}-->                         
-                  <br>
-                 </div>
-             </div>
+      <div class="info">
+           <div class="name">
+               <a href="{U('hi','',array('id'=>$strUser[doname]))}"><?php echo ($strUser[username]); ?></a>
+           </div>
+                <?php if($strUser[area] != ''): echo ($strUser[area][areaname]); else: ?>火星<?php endif; ?>                        
+                 <br>
+       </div>
+    </div>
                
     <div class="group-nav">
      <ul>
-         <li <?php if($action_name == 'my_group_topics'): ?>class="on"<?php endif; ?> ><a href="<?php echo U('group/my_group_topics');?>">我的小组话题</a></li>
-         <li <?php if($action_name == 'my_topics'): ?>class="on"<?php endif; ?> ><a href="<?php echo U('group/my_topics');?>">我发起的话题</a></li>
-         <li <?php if($action_name == 'my_replied_topics'): ?>class="on"<?php endif; ?> ><a href="<?php echo U('group/my_replied_topics');?>">我回应的话题</a></li>
-         <li <?php if($action_name == 'my_collect_topics'): ?>class="on"<?php endif; ?> ><a href="<?php echo U('group/my_collect_topics');?>">我收藏的话题</a></li>
-         <li <?php if($action_name == 'mine'): ?>class="on"<?php endif; ?> ><a href="<?php echo U('group/mine');?>">我管理/加入的小组</a></li>
+		<?php if($action_name == 'my_group_topics'): ?><li class="on"><a href="<?php echo U('group/my_group_topics');?>">我的小组话题</a></li>
+		<?php else: ?>
+		<li class=""><a href="<?php echo U('group/my_group_topics');?>">我的小组话题</a></li><?php endif; ?>
+		
+		<?php if($action_name == 'my_replied_topics'): ?><li class="on"><a href="<?php echo U('group/my_replied_topics');?>">我回应的话题</a></li>
+		<?php else: ?>
+		<li class=""><a href="<?php echo U('group/my_replied_topics');?>">我回应的话题</a></li><?php endif; ?>
+		
+		<?php if($action_name == 'my_collect_topics'): ?><li class="on"><a href="<?php echo U('group/my_collect_topics');?>">我喜欢的话题</a></li>
+		<?php else: ?>
+		<li class=""><a href="<?php echo U('group/my_collect_topics');?>">我喜欢的话题</a></li><?php endif; ?>
+		
+		<?php if($action_name == 'mine'): ?><li class="on"><a href="<?php echo U('group/mine');?>">我管理/加入的小组</a></li>
+		<?php else: ?>
+		<li class=""><a href="<?php echo U('group/mine');?>">我管理/加入的小组</a></li><?php endif; ?>
      </ul>
     </div>
              
@@ -214,7 +213,8 @@ __EXTENDS_JS__
             · <a href="{SITE_URL}{ikUrl('home','privacy')}">隐私申明</a>
         </span>
         <div class="cl"></div>
-        <p>Powered by <a class="softname" href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a> <?php echo ($IK_SOFT[info][version]); ?> <?php echo ($IK_SOFT[info][year]); ?> <?php echo ($IK_SITE[base][site_icp]); ?><br /><span style="font-size:0.83em;">Processed in <?php echo ($runTime); ?> second(s)</span>
+        <p>Powered by <a class="softname" href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a> <?php echo ($IK_SOFT[info][version]); ?> <?php echo ($IK_SOFT[info][year]); ?> <?php echo ($IK_SITE[base][site_icp]); ?> <span style="color:green">ThinkPHP 版本 <?php echo (THINK_VERSION); ?></span><br /><span style="font-size:0.83em;">Processed in <?php echo ($runTime); ?> second(s)</span>
+        
         <!--<script src="http://s21.cnzz.com/stat.php?id=2973516&web_id=2973516" language="JavaScript"></script>-->
         </p>   
     </div>

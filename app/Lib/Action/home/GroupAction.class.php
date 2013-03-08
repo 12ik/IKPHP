@@ -11,7 +11,12 @@ class GroupAction extends FrontendAction {
 		if (! $this->visitor->is_login && in_array ( ACTION_NAME, array (
 				'add',
 				'join',
-				'my_group_topics' 
+				'my_group_topics',
+				'my_collect_topics',
+				'mine',
+				'my_replied_topics',
+				'create',
+				
 		) )) {
 			$this->redirect ( 'user/login' );
 		} else {
@@ -30,41 +35,109 @@ class GroupAction extends FrontendAction {
 		$this->_config_seo ();
 		$this->display ();
 	}
-	public function my_group_topics() {
+	//我管理的小组
+	public function mine(){
+		$userid = $this->userid;
+		// 用户信息
+		$strUser = $this->user_mod->getOneUser ( $userid );
+		$myGroup = $this->_mod->getUserJoinGroup($userid);
+		//我加入的小组
+		if(is_array($myGroup)){
+			$count_mygroup = 0;
+			foreach($myGroup as $key=>$item){
+				$arrMyGroup[] = $this->_mod->getOneGroup($item['groupid']);
+				$count_mygroup ++;
+			}
+		}
+		$myCreateGroup = $this->_mod->getUserGroup($userid);
+		//我管理的小组
+		if(is_array($myCreateGroup)){
+			$count_Admingroup = 0;
+			foreach($myCreateGroup as $key=>$item){
+		
+				$arrMyAdminGroup[] = $this->_mod->getOneGroup($item['groupid']);
+				$count_Admingroup ++;
+		
+			}
+		}		
+		
+		$this->assign ( 'strUser', $strUser );
+		$this->assign ( 'arrMyGroup', $arrMyGroup );
+		$this->assign ( 'count_mygroup', $count_mygroup );
+		$this->assign ( 'arrMyAdminGroup', $arrMyAdminGroup );
+		$this->assign ( 'count_Admingroup', $count_Admingroup );
+
+		$this->_config_seo (array('title'=>'我管理/加入的小组','subtitle'=>'小组'));
+		$this->display ();
+	}
+	//我收藏喜欢的帖子
+	public function my_collect_topics(){
 		$userid = $this->userid;
 		// 用户信息
 		$strUser = $this->user_mod->getOneUser ( $userid );
 		// 我的小组
-		$myGroup = $this->_mod->getGroupUser ( $userid );
-		if (! empty ( $myGroup )) {
-			
-			//我加入的所有小组的话题
-			if(is_array($myGroup)){
-				foreach($myGroup as $item){
-					$arrGroup[] = $item['groupid'];
-				}
-			}
-			$strGroup = implode(',',$arrGroup);
-			
-			if($strGroup){
-				$arrTopics = $this->group_topics_mod->getTopics($strGroup,80);
-				foreach($arrTopics as $key=>$item){
-					$arrTopic[] = $item;
-					$arrTopic[$key]['user'] = $this->user_mod->getOneUser($item['userid']);
-					$arrTopic[$key]['group'] = $this->_mod->getOneGroup($item['groupid']);
-				}
-			}
-			
-			
-			$this->assign ( 'strUser', $strUser );
-			$this->assign ( 'arrTopic', $arrTopic );
-			$this->_config_seo ();
-			$this->display ();
-		
-		} else {
-			// 发现小组
-			$this->redirect ( 'group/explore' );
+		$arrCollect = $this->group_topics_collects->getUserCollectTopic($userid,80);
+		foreach($arrCollect as $item){
+			$strTopic = $this->group_topics_mod->getOneTopic($item['topicid']);
+			$arrTopics[] = $strTopic;
 		}
+		foreach($arrTopics as $key=>$item){
+			$arrTopic[] = $item;
+			$arrTopic[$key]['user'] = $this->user_mod->getOneUser($item['userid']);
+			$arrTopic[$key]['group'] = $this->_mod->getOneGroup($item['groupid']);
+		}
+		$this->assign ( 'strUser', $strUser );
+		$this->assign ( 'arrTopic', $arrTopic );
+		$this->_config_seo (array('title'=>'我喜欢的话题','subtitle'=>'小组'));
+		$this->display ();
+	}
+	// 我发起的话题
+	public function my_topics(){
+		$userid = $this->userid;
+		// 用户信息
+		$strUser = $this->user_mod->getOneUser ( $userid );
+		//发布的帖子
+		$arrMyTopics = $this->group_topics_mod->getUserTopic($userid,80);
+		foreach($arrMyTopics as $key=>$item){
+			$arrTopic[] = $item;
+			$arrTopic[$key]['user'] = $this->user_mod->getOneUser($item['userid']);
+			$arrTopic[$key]['group'] = $this->_mod->getOneGroup($item['groupid']);
+		}		
+		$this->assign ( 'strUser', $strUser );
+		$this->assign ( 'arrTopic', $arrTopic );
+		$this->_config_seo (array('title'=>'我发起的话题','subtitle'=>'小组'));
+		$this->display ();
+	}
+	// 我的小组话题
+	public function my_group_topics() {
+		$userid = $this->userid;
+		// 用户信息
+		$strUser = $this->user_mod->getOneUser ( $userid );
+		// 我的小组话题
+		$myGroup = $this->_mod->getGroupUser ( $userid );
+		
+		//我加入的所有小组的话题
+		if(is_array($myGroup)){
+			foreach($myGroup as $item){
+				$arrGroup[] = $item['groupid'];
+			}
+		}
+		$strGroup = implode(',',$arrGroup);
+		
+		if($strGroup){
+			$arrTopics = $this->group_topics_mod->getTopics($strGroup,80);
+			foreach($arrTopics as $key=>$item){
+				$arrTopic[] = $item;
+				$arrTopic[$key]['user'] = $this->user_mod->getOneUser($item['userid']);
+				$arrTopic[$key]['group'] = $this->_mod->getOneGroup($item['groupid']);
+			}
+		}
+		
+		
+		$this->assign ( 'strUser', $strUser );
+		$this->assign ( 'arrTopic', $arrTopic );
+		$this->_config_seo (array('title'=>'我的小组话题','subtitle'=>'小组'));
+		$this->display ();
 	
 	}
 	public function create() {
@@ -138,7 +211,16 @@ class GroupAction extends FrontendAction {
 		$isGroupUser = $this->_mod->isGroupUser ( $this->userid, $id );
 		// 获取最新加入会员
 		$arrGroupUser = $this->_mod->getNewGroupUser ( $id, 8 );
+		// 获取最近小组话题 20 条
+		$arrTopics = $this->group_topics_mod->newTopic($id, 20);
+		if( is_array($arrTopics)){
+			foreach($arrTopics as $key=>$item){
+				$arrTopic[] = $item;
+				$arrTopic[$key]['user'] = $this->user_mod->getOneUser($item['userid']);
+			}
+		}
 		
+		$this->assign ( 'arrTopic', $arrTopic );
 		$this->assign ( 'isGroupUser', $isGroupUser );
 		$this->assign ( 'strGroup', $group );
 		$this->assign ( 'strLeader', $strLeader );
@@ -146,6 +228,7 @@ class GroupAction extends FrontendAction {
 		$this->_config_seo ();
 		$this->display ();
 	}
+	// 发布新帖
 	public function add() {
 		$userid = $this->userid;
 		$groupid = $this->_get ( 'id' );
@@ -179,6 +262,7 @@ class GroupAction extends FrontendAction {
 		$this->_config_seo ();
 		$this->display ();
 	}
+	// 执行发布
 	public function publish() {
 		
 		if (IS_POST) {
@@ -187,8 +271,8 @@ class GroupAction extends FrontendAction {
 			$groupid = $this->_post ( 'groupid' );
 			
 			$title = Input::deleteHtmlTags ( $this->_post ( 'title', 'trim' ) );
-			$content = Input::safeHtml ( $this->_post ( 'content', 'trim' ) );
-			$iscomment = $this->_post ( iscomment ); // 是否允许评论
+			$content =  $this->_post ( 'content');
+			$iscomment = $this->_post ( 'iscomment'); // 是否允许评论
 			
 			if ($title == '') {
 				$this->error ( '不要这么偷懒嘛，多少请写一点内容哦^_^' );
@@ -332,4 +416,55 @@ class GroupAction extends FrontendAction {
 	public function quit() {
 	
 	}
+	// 发现小组
+	public function explore(){
+		$tag = $this->_get('tagid', 'trim,urldecode','');
+		if(!empty($tag)){
+			
+		}else{
+			//查询开放
+			$map = array('isopen'=>0);
+			//显示列表
+			$pagesize = 8;
+			$count = $this->_mod->where($map)->order('isrecommend DESC')->count('groupid');
+			$pager = $this->_pager($count, $pagesize);
+			$arrGroups =  $this->_mod->where($map)->order('isrecommend DESC')->limit($pager->firstRow.','.$pager->listRows)->select();
+			
+			foreach($arrGroups as $key=>$item){
+				$arrData[] = $this->_mod->getOneGroup($item['groupid']);
+			}
+			foreach($arrData as $key=>$item){
+				$exploreGroup[] =  $item;
+				$exploreGroup[$key]['groupname'] = getsubstrutf8(t($item[groupname]),0,14);
+				$exploreGroup[$key]['groupdesc'] = getsubstrutf8(t($item['groupdesc']),0,45);
+			}
+			
+			$this->assign('pageUrl', $pager->fshow());
+			$this->assign('list', $exploreGroup);
+			$this->_config_seo (array('title'=>'发现小组','subtitle'=>'小组'));
+			$this->display ();
+		}
+
+	}
+	// 发现话题
+	public function explore_topic(){
+		//查询是否显示
+		$map = array('ishow'=>0);
+		//显示列表
+		$pagesize = 3;
+		$count = $this->group_topics_mod->where($map)->order('addtime DESC')->count('topicid');
+		$pager = $this->_pager($count, $pagesize);
+		$arrTopics =  $this->group_topics_mod->where($map)->order('addtime DESC')->limit($pager->firstRow.','.$pager->listRows)->select();
+			
+		foreach($arrTopics as $key=>$item){
+			$list[] = $item;
+			$list[$key]['group'] = $this->_mod->getOneGroup($item['groupid']);
+		}
+			
+		$this->assign('pageUrl', $pager->fshow());
+		$this->assign('list', $list);
+		$this->_config_seo (array('title'=>'发现话题','subtitle'=>'小组'));
+		$this->display ();		
+	}
+	
 }

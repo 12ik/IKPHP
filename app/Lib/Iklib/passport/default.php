@@ -18,14 +18,7 @@ class default_passport
      * 注册新用户
      */
     public function register($username, $password, $email) {
-    	$expemail = explode('@',$email);
-    	//判断是否存在doname
-    	$ishaveDoname = $this->check_doname($expemail[0]);
-    	if(!$ishaveDoname){
-    		$doname = $expemail[0].'_'.$userid;
-    	}else{
-    		$doname = $expemail[0];
-    	}	
+    	$expemail = explode('@',$email);	
     	if (!$this->check_username($username)) {
     		$this->_error = L('username_exists');
     		return false;
@@ -34,12 +27,20 @@ class default_passport
     		$this->_error = L('email_exists');
     		return false;
     	}
+    	//判断是否存在doname
+    	$ishaveDoname = $this->check_doname($expemail[0]);
+    	if(!$ishaveDoname){
+    		$doname = $expemail[0].'_1';
+    	}else{
+    		$doname = $expemail[0];
+    	}
 
     	return array(
     			'username' => $username,
     			'password' => $password, 
     			'email' => $email,
     			'doname' => $doname,
+    			'addtime' => time(),
     	);
     }
     /**

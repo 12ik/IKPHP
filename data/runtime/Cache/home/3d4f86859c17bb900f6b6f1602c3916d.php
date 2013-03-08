@@ -7,7 +7,6 @@
 <meta name="description" content="<?php echo ($seo["description"]); ?>" /> 
 <link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
 <style>__SITE_THEME_CSS__</style>
-<link href="http://localhost/ikphp/static/theme/blue/group/images/style.css" rel="stylesheet" />
 <!--[if gte IE 7]><!-->
     <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
 <!--<![endif]-->
@@ -35,7 +34,7 @@ __EXTENDS_JS__
         <?php if(empty($visitor)): ?><a href="<?php echo U('user/login');?>">登录</a> | <a href="<?php echo U('user/register');?>">注册</a>       
         <?php else: ?>
         <a id="newmsg" href="<?php echo U('message/inbox');?>">123</a> | 
-        <a href="<?php echo U('people/index', array('userid'=>$visitor['userid']));?>">
+        <a href="<?php echo U('people/index', array('id'=>$visitor['doname']));?>">
         	<?php echo ($visitor["username"]); ?>
         </a> | 
         <a href="<?php echo U('user/setbase');?>">设置</a> | 
@@ -77,9 +76,9 @@ __EXTENDS_JS__
 		<div class="appnav">
 		    <ul id="nav_bar">
 		        <li><a href="<?php echo U('group/index');?>">我的小组</a></li>
-		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=explore">发现小组</a></li>
-		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=explore_topic">发现话题</a></li>
-		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=nearby&amp;ik=beijing">北京话题</a></li>
+		        <li><a href="<?php echo U('group/explore');?>">发现小组</a></li>
+		        <li><a href="<?php echo U('group/explore_topic');?>">发现话题</a></li>
+		        <li><a href="<?php echo U('group/nearby');?>">北京话题</a></li>
 		    </ul>
 		   <form onsubmit="return searchForm(this);" method="get" action="http://www.ik.com/index.php">
 		   <input type="hidden" value="search" name="app"><input type="hidden" value="q" name="ac">
@@ -110,7 +109,7 @@ __EXTENDS_JS__
 
 <div class="bd">
 <img align="left" alt="<?php echo ($strGroup[groupname]); ?>" src="<?php echo attach($strGroup[groupicon], 'group/icon');?>" class="pil mr5 groupicon" valign="top" />
-<div>创建于<?php echo date('Y-m-d',$strGroup[addtime]) ?>&nbsp; &nbsp; <?php echo ($strGroup[role_leader]); ?>：<a href="<?php echo U('people/index');?>"><?php echo ($strLeader[username]); ?></a><br></div>
+<div>创建于<?php echo date('Y-m-d',$strGroup[addtime]) ?>&nbsp; &nbsp; <?php echo ($strGroup[role_leader]); ?>：<a href="<?php echo U('people/index',array('id'=>$strLeader[doname]));?>"><?php echo ($strLeader[username]); ?></a><br></div>
 <?php echo nl2br($strGroup[groupdesc]); ?>
 <div class="clearfix" style="margin-top: 10px;">
 
@@ -140,7 +139,6 @@ __EXTENDS_JS__
 
 <div class="clear"></div>
 
-<!--{if $arrTopic}-->
             <div class="indent">
                 <table class="olt">
                     <tbody>
@@ -150,35 +148,26 @@ __EXTENDS_JS__
                             <td nowrap="nowrap">回应</td>
                             <td align="right" nowrap="nowrap">最后回应</td>
                         </tr>
-            <!--{if $arrTopic}-->
-            <!--{loop $arrTopic $key $item}-->
-                            <tr class="pl">
+            <?php if(!empty($arrTopic)): if(is_array($arrTopic)): foreach($arrTopic as $key=>$item): ?><tr class="pl">
                                 <td>
-             <a title="<?php echo ($item[title]); ?>" href="{U('group','topic',array('id'=>$item[topicid]))}"><?php echo ($item[title]); ?></a>
-            <!--{if $item[isvideo] == '1'}-->
-            <img src="{SITE_URL}public/images/lc_cinema.png" align="absmiddle" title="[视频]" alt="[视频]" />
-            <!--{/if}-->             
-            <!--{if $item[istop]=='1'}-->
-            <img src="{SITE_URL}app/<?php echo ($app); ?>/skins/<?php echo ($skin); ?>/headtopic_1.gif" align="absmiddle" title="[置顶]" alt="[置顶]" />
-            <!--{/if}-->
-            <!--{if $item[addtime]>strtotime(date('Y-m-d 00:00:00'))}-->
-            <img src="{SITE_URL}app/<?php echo ($app); ?>/skins/<?php echo ($skin); ?>/topic_new.gif" align="absmiddle"  title="[新帖]" alt="[新帖]" />
-            <!--{/if}--> 
-            <!--{if $item[isposts] == '1'}-->
-            <img src="{SITE_URL}public/images/posts.gif" align="absmiddle" title="[精华]" alt="[精华]" />
-            <!--{/if}-->
-            </td>
-
-                                <td nowrap="nowrap"><a href="{U('hi','',array('id'=>$item[user][doname]))}"><?php echo ($item[user][username]); ?></a></td>
-                                <td nowrap="nowrap" ><!--{if $item[count_comment]>0}--><?php echo ($item[count_comment]); ?><!--{/if}--></td>
-                                <td nowrap="nowrap" class="time" align="right">{php echo getTime($item[uptime],time())}</td>
-                            </tr>
-             <!--{/loop}-->
-            <!--{/if}-->         
+                                <a title="<?php echo ($item[title]); ?>" href="<?php echo U('group/topic',array('id'=>$item[topicid]));?>">
+                                <?php echo getsubstrutf8(t($item['title']),0,25); ?>
+                                </a>
+                                <?php if($item[isvideo] == 1): ?><img src="__STATIC__/public/images/lc_cinema.png" align="absmiddle" title="[视频]" alt="[视频]" /><?php endif; ?>                
+                                <?php if($item[istop] == 1): ?><img src="__STATIC__/public/images/headtopic_1.gif" title="[置顶]" alt="[置顶]" /><?php endif; ?>
+                                <?php if($item[addtime] > (strtotime(date('Y-m-d 00:00:00')))): ?><img src="__STATIC__/public/images/topic_new.gif" align="absmiddle"  title="[新帖]" alt="[新帖]" /><?php endif; ?> 
+                                <?php if($item[isphoto] == 1): ?><img src="__STATIC__/public/images/image_s.gif" title="[图片]" alt="[图片]" align="absmiddle" /><?php endif; ?> 
+                                <?php if($item[isattach] == 1): ?><img src="__STATIC__/public/images/attach.gif" title="[附件]" alt="[附件]" /><?php endif; ?> 
+                                <?php if($item[isposts] == 1): ?><img src="__SITE_URL__/public/images/posts.gif" title="[精华]" alt="[精华]" /><?php endif; ?>
+            					</td>
+                                <td nowrap="nowrap"><a href="<?php echo U('people/index',array('id'=>$item[user][doname]));?>"><?php echo ($item[user][username]); ?></a></td>
+                                <td nowrap="nowrap" ><?php if($item[count_comment]): echo ($item[count_comment]); endif; ?></td>
+                                <td nowrap="nowrap" class="time" align="right"><?php echo getTime($item[uptime],time()) ?></td>
+                            </tr><?php endforeach; endif; endif; ?>         
                 </tbody>
               </table>
             </div>
-<!--{/if}-->
+
 	<div class="clear"></div>
 	<div class="page"><?php echo ($pageUrl); ?></div>
 
@@ -193,22 +182,22 @@ __EXTENDS_JS__
         <h2>最新加入成员</h2>
         <?php if(is_array($arrGroupUser)): foreach($arrGroupUser as $key=>$item): ?><dl class="obu">
             <dt>
-            <a href="{U('hi','',array('id'=>$item[doname]))}"><img alt="<?php echo ($item[username]); ?>" class="m_sub_img" src="<?php echo ($item[face]); ?>" /></a>
+            <a href="<?php echo U('people/index',array('id'=>$item[doname]));?>"><img alt="<?php echo ($item[username]); ?>" class="m_sub_img" src="<?php echo ($item[face]); ?>" /></a>
             </dt>
             <dd><?php echo ($item[username]); ?><br>
-                <span class="pl">(<a href="{U('location','area',array(areaid=>$item[area][areaid]))}"><?php echo ($item[area][areaname]); ?></a>)</span>
+                <span class="pl">(<a href="<?php echo U('location/area',array(areaid=>$item[area][areaid]));?>"><?php echo ($item[area][areaname]); ?></a>)</span>
             </dd>
      	 </dl><?php endforeach; endif; ?>
     
         <br clear="all">
     
-        <?php if($visitor[userid] == $strGroup[userid]): ?><p class="pl2">&gt; <a href="{U('group','group_user',array(groupid=>$strGroup[groupid]))}">成员管理 (<?php echo ($strGroup[count_user]); ?>)</a></p>
+        <?php if($visitor[userid] == $strGroup[userid]): ?><p class="pl2">&gt; <a href="<?php echo U('group/group_user',array(groupid=>$strGroup[groupid]));?>">成员管理 (<?php echo ($strGroup[count_user]); ?>)</a></p>
             
-            <p class="pl2">&gt; <a href="{U('group','edit',array(ik=>base,groupid=>$strGroup[groupid]))}">修改小组设置 </a></p>
-            <p class="pl2">&gt; <a href="{U('group','recovery',array(groupid=>$strGroup[groupid]))}">回收站 (<?php echo ($strGroup[recoverynum]); ?>)</a></p>
+            <p class="pl2">&gt; <a href="<?php echo U('group/edit',array(ik=>base,groupid=>$strGroup[groupid]));?>">修改小组设置 </a></p>
+            <p class="pl2">&gt; <a href="<?php echo U('group/recovery',array(groupid=>$strGroup[groupid]));?>">回收站 (<?php echo ($strGroup[recoverynum]); ?>)</a></p>
             
             <?php else: ?>
-            <p class="pl2"><a href="{U('group','group_user',array(groupid=>$strGroup[groupid]))}">浏览所有成员 (<?php echo ($strGroup[count_user]); ?>)</a></p><?php endif; ?>
+            <p class="pl2"><a href="<?php echo U('group/group_user',array(groupid=>$strGroup[groupid]));?>">浏览所有成员 (<?php echo ($strGroup[count_user]); ?>)</a></p><?php endif; ?>
         
        <div class="clear"></div>
 
@@ -239,7 +228,8 @@ __EXTENDS_JS__
             · <a href="{SITE_URL}{ikUrl('home','privacy')}">隐私申明</a>
         </span>
         <div class="cl"></div>
-        <p>Powered by <a class="softname" href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a> <?php echo ($IK_SOFT[info][version]); ?> <?php echo ($IK_SOFT[info][year]); ?> <?php echo ($IK_SITE[base][site_icp]); ?><br /><span style="font-size:0.83em;">Processed in <?php echo ($runTime); ?> second(s)</span>
+        <p>Powered by <a class="softname" href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a> <?php echo ($IK_SOFT[info][version]); ?> <?php echo ($IK_SOFT[info][year]); ?> <?php echo ($IK_SITE[base][site_icp]); ?> <span style="color:green">ThinkPHP 版本 <?php echo (THINK_VERSION); ?></span><br /><span style="font-size:0.83em;">Processed in <?php echo ($runTime); ?> second(s)</span>
+        
         <!--<script src="http://s21.cnzz.com/stat.php?id=2973516&web_id=2973516" language="JavaScript"></script>-->
         </p>   
     </div>

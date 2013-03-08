@@ -34,7 +34,7 @@ __EXTENDS_JS__
         <?php if(empty($visitor)): ?><a href="<?php echo U('user/login');?>">登录</a> | <a href="<?php echo U('user/register');?>">注册</a>       
         <?php else: ?>
         <a id="newmsg" href="<?php echo U('message/inbox');?>">123</a> | 
-        <a href="<?php echo U('people/index', array('userid'=>$visitor['userid']));?>">
+        <a href="<?php echo U('people/index', array('id'=>$visitor['doname']));?>">
         	<?php echo ($visitor["username"]); ?>
         </a> | 
         <a href="<?php echo U('user/setbase');?>">设置</a> | 
@@ -76,9 +76,9 @@ __EXTENDS_JS__
 		<div class="appnav">
 		    <ul id="nav_bar">
 		        <li><a href="<?php echo U('group/index');?>">我的小组</a></li>
-		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=explore">发现小组</a></li>
-		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=explore_topic">发现话题</a></li>
-		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=nearby&amp;ik=beijing">北京话题</a></li>
+		        <li><a href="<?php echo U('group/explore');?>">发现小组</a></li>
+		        <li><a href="<?php echo U('group/explore_topic');?>">发现话题</a></li>
+		        <li><a href="<?php echo U('group/nearby');?>">北京话题</a></li>
 		    </ul>
 		   <form onsubmit="return searchForm(this);" method="get" action="http://www.ik.com/index.php">
 		   <input type="hidden" value="search" name="app"><input type="hidden" value="q" name="ac">
@@ -100,6 +100,234 @@ __EXTENDS_JS__
 
 </header>
 
+<div class="midder">
+
+<div class="mc">
+<div class="cleft">
+
+<div id="db-usr-profile">
+<div class="pic">
+<a href="<?php echo U('people/index',array('id'=>$strUser[doname]));?>">
+<img alt="<?php echo ($strUser[username]); ?>" src="<?php echo ($strUser[face]); ?>">
+</a>
+</div>
+<div class="info">
+<h1>
+<?php echo ($strUser[username]); ?>
+</h1>
+
+<ul>
+	<li><a href="<?php echo U('note/index',array('userid'=>$strUser[userid]));?>">日志</a></li>
+    <li><a href="<?php echo U('photo/album',array('userid'=>$strUser[userid]));?>">相册</a></li>
+    <li><a href="<?php echo U('feed/index',array('userid'=>$strUser[userid]));?>">广播</a></li>
+    <?php if($strUser[userid] == $visitor[userid]): ?><li><a href="<?php echo U('message/ikmail',array(ik=>inbox));?>">站内信</a></li>
+    <li><a href="<?php echo U('user/setbase');?>">设置</a></li><?php endif; ?>
+</ul>
+
+</div>
+</div>
+
+
+<div class="clear"></div>
+
+<div id="recs" class="">
+    <h2>
+        <?php if($strUser[userid] == $visitor[userid]): ?>我的发布的帖子
+        <?php else: ?>
+          <?php echo ($strUser[username]); ?>发布的帖子<?php endif; ?>
+         &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+            <!-- <span class="pl">&nbsp;(
+                <a href="#">全部</a>
+            ) </span> -->
+    </h2>
+
+<div class="spacetopic">
+    <?php if(!empty($arrMyTopic)): ?><table width="100%">
+        <?php if(is_array($arrMyTopic)): foreach($arrMyTopic as $key=>$item): ?><tr>
+        <td><img src="__STATIC__/public/images/topic.gif" align="absmiddle"  title="[帖子]" alt="[帖子]" />
+        <a href="<?php echo U('group/topic',array('id'=>$item[topicid]));?>"><?php echo ($item[title]); ?></a>&nbsp;&nbsp;</td>
+        <td><?php if($item[count_comment]): echo ($item[count_comment]); endif; ?></td>
+        <td style="width:120px;text-align:right;color:#999999;"><?php echo date('Y-m-d H:i',$item[addtime]) ?></td>
+        </tr><?php endforeach; endif; ?>
+    </table>
+    <?php else: ?>
+    <div style="padding:50 0;color:#999999;">这个人很懒，什么也不愿意留下！</div><?php endif; ?>
+</div>
+
+<div class="clear"></div>
+</div>
+
+<div id="recs" class="">
+    <h2> 
+        <?php if($strUser[userid] == $visitor[userid]): ?>我回复的帖子
+        <?php else: ?>
+        <?php echo ($strUser[username]); ?>回复的帖子<?php endif; ?>
+         &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+           <!--  <span class="pl">&nbsp;(
+                <a href="#">全部</a>
+            ) </span> -->
+    </h2>
+
+<div class="spacetopic">
+    <?php if(!empty($arrMyComment)): ?><table width="100%">
+    <!--{loop $arrMyComment $key $item}-->
+        <tr>
+        <td><img src="__STATIC__/public/images/topic.gif" align="absmiddle"  title="[帖子]" alt="[帖子]" />
+        <a href="<?php echo U('group/topic',array('id'=>$item[topicid]));?>"><?php echo ($item[title]); ?></a>&nbsp;&nbsp;</td>
+        <td><?php if($item[count_comment]): echo ($item[count_comment]); endif; ?></td>
+        <td style="width:120px;text-align:right;color:#999999;"><?php echo date('Y-m-d H:i',$item[addtime]) ?></td>
+        </tr>
+    <!--{/loop}-->
+    </table>
+    <?php else: ?>
+    <div style="padding:50 0;color:#999999;">这个人很懒，什么也不愿意留下！</div><?php endif; ?>
+</div>
+
+<div class="clear"></div>
+</div>
+
+<div id="recs" class="">
+    <h2>
+        <?php if($strUser[userid] == $visitor[userid]): ?>我喜欢的帖子
+        <?php else: ?>
+        <?php echo ($strUser[username]); ?>喜欢的帖子<?php endif; ?>
+         &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+            <!-- <span class="pl">&nbsp;(
+                <a href="#">全部</a>
+            ) </span> -->
+    </h2>
+
+<div class="spacetopic">
+    <?php if(!empty($arrMyCollect)): ?><table width="100%">
+    <?php if(is_array($arrMyCollect)): foreach($arrMyCollect as $key=>$item): ?><tr>
+        <td><img src="__STATIC__/public/images/topic.gif" align="absmiddle"  title="[帖子]" alt="[帖子]" />
+        <a href="<?php echo U('group/topic',array('id'=>$item[topicid]));?>"><?php echo ($item[title]); ?></a>&nbsp;&nbsp;</td>
+        <td><?php if($item[count_comment]): echo ($item[count_comment]); endif; ?></td>
+        <td style="width:120px;text-align:right;color:#999999;"><?php echo date('Y-m-d H:i',$item[addtime]) ?></td>
+        </tr><?php endforeach; endif; ?>
+    </table>
+    <?php else: ?>
+    <div style="padding:50 0;color:#999999;">这个人很懒，什么也不愿意留下！</div><?php endif; ?>
+</div>
+
+<div class="clear"></div>
+</div>
+
+
+
+<div class="clear"></div>
+
+</div>
+
+<div class="cright">
+
+<div id="profile">
+
+<div class="infobox">
+<div class="ex1"><span></span></div>
+<div class="bd">
+<img alt="" class="userface" src="<?php echo ($strUser[face_160]); ?>">
+
+<div class="user-info">
+常居：&nbsp;<a href="<?php echo U('location/area',array(areaid=>$strUser[area][areaid]));?>"><?php echo ($strUser[area][areaname]); ?></a>
+<br />
+<div class="pl">UID:<?php echo ($strUser[userid]); ?> <br><?php echo date('Y-m-d',$strUser[addtime]); ?> 加入</div>
+<div class="pl">级别:<?php echo ($strUser['rolename']); ?></div>
+<div class="pl">积分:<?php echo ($strUser['count_score']); ?></div>
+
+<?php if($strUser[userid] != $visitor[userid]): ?><div class="user-opt">
+
+    <?php if($strUser[isfollow]): ?><div class="user-group" style="display: block;">
+        <span class="user-cs">已关注</span>
+        <span class="user-rs"><a href="<?php echo U('user/unfollow',array('userid'=>$strUser[userid]));?>">取消关注</a></span>
+    </div>
+    <?php else: ?>
+    <a class="a-btn-add mr10 add_contact" href="<?php echo U('user/follow',array('userid'=>$strUser[userid]));?>">关注此人</a><?php endif; ?>
+    <a href="<?php echo U('message/write',array('touserid'=>$strUser[userid]));?>" rel="nofollow" class="a-btn mr5">发消息</a>
+    <div id="divac"></div>
+</div><?php endif; ?>
+</div>
+
+<div class="sep-line"></div>
+<div class="user-intro">
+
+<div class="j edtext pl" id="edit_intro">
+<span id="intro_display">
+性别：<?php if($strUser[sex] == 0): ?>保密<?php elseif($strUser[sex] == 1): ?>男<?php else: ?>女<?php endif; ?><br />
+<?php if(!empty($strUser[blog])): ?>博客：<?php echo ($strUser[blog]); ?><br /><?php endif; ?>
+<?php if(!empty($strUser[about])): ?>关于：<?php echo ($strUser[about]); ?><br /><?php endif; ?>
+<?php if(!empty($strUser[signed])): ?>签名：<?php echo ($strUser[signed]); ?><br /><?php endif; ?>
+
+<?php if($strUser[userid] == $visitor[userid]): ?>[<a href="<?php echo U('user/setbase');?>">修改基本信息</a>]<?php endif; ?>
+</span>
+</div>
+
+</div>
+
+</div>
+<div class="ex2"><span></span></div>
+</div>
+
+
+</div>
+<div class="clear"></div>
+
+<div id="friend">
+
+<h2>
+<?php if($strUser[userid] == $visitor[userid]): ?>我关注的人
+<?php else: ?>
+<?php echo ($strUser[username]); ?>关注的人<?php endif; ?>
+&nbsp;·&nbsp;·&nbsp;·
+<span class="pl">&nbsp;(
+<a href="{U('user','follow',array(userid=>$strUser[userid]))}">全部<?php echo ($strUser[count_follow]); ?></a>
+) </span>
+</h2>
+
+<!--{loop $arrFollowUser $key $item}-->
+<dl class="obu"><dt><a class="nbg" href="{U('hi','',array('id'=>$item[doname]))}"><img alt="<?php echo ($item[username]); ?>" class="m_sub_img" src="<?php echo ($item[face]); ?>"></a></dt>
+<dd><a href="{U('hi','',array('id'=>$item[doname]))}"><?php echo ($item[username]); ?></a></dd>
+</dl>
+<!--{/loop}-->
+
+<br clear="all">
+
+<a href="{U('user','followed',array(userid=>$strUser[userid]))}">&gt; 被<?php echo ($strUser[count_followed]); ?>人关注</a>
+
+</div>
+
+<div id="group" class="">
+
+<h2>
+<?php if($strUser[userid] == $visitor[userid]): ?>我参加的小组
+<?php else: ?>
+<?php echo ($strUser[username]); ?>参加的小组<?php endif; ?>
+&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+<span class="pl">&nbsp;(
+<a href="{U('group','groups',array('userid'=>$strUser[userid]))}">全部</a>
+) </span>
+</h2>
+
+<!--{loop $arrGroup $key $item}-->
+<dl class="ob"><dt><a href="{U('group','show',array('id'=>$item[groupid]))}"><img alt="<?php echo ($item[groupname]); ?>" class="m_sub_img" src="<?php echo ($item[icon_48]); ?>"></a></dt>
+<dd><a href="{U('group','show',array('id'=>$item[groupid]))}"><?php echo ($item[groupname]); ?></a> <span>(<?php echo ($item[count_user]); ?>)</span>
+</dd></dl>
+<!--{/loop}-->
+
+<div class="clear"></div>
+
+</div>
+<br/>
+<p class="pl">本页永久链接: <a href="<?php echo U('people/index',array('id'=>$strUser[doname]));?>"><?php echo U('people/index',array('id'=>$strUser[doname]));?></a></p>
+<br>
+<p class="pl">订阅<?php echo ($strUser[username]); ?>的收藏 <br>
+<span class="feed"><a href="#"> feed: rss 2.0</a></span>
+</p>
+</div>
+
+
+</div>
+</div>
 
 <!--footer-->
 <footer>

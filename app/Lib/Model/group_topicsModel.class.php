@@ -43,7 +43,7 @@ class group_topicsModel extends Model {
 				'groupid' => $groupid,
 				'isshow' =>0,
 		);
-		$results = $this->where ( $where )->order('addtime')->limit($limit)->select();
+		$results = $this->where ( $where )->order('addtime desc')->limit($limit)->select();
 		foreach($results as $key=>$item){
 			$result[] = $item;
 			$result[$key]['user'] = D('user')->getOneUser($item['userid']);
@@ -54,7 +54,14 @@ class group_topicsModel extends Model {
 	public function getTopics($strgroupid,$limit){
 		$where['groupid'] = array('exp',' IN ('.$strgroupid.') ');
 		$where['isshow'] = 0;
-		$result = $this->where ( $where )->order('uptime')->limit($limit)->select();
+		$result = $this->where ( $where )->order('uptime desc')->limit($limit)->select();
 		return $result;	
+	}
+	// 获取用户发表话题
+	public function getUserTopic($userid, $limit){
+		$where['groupid']  = array('gt',0);
+		$where['userid'] = $userid;
+		$result = $this->where ( $where )->order('addtime desc')->limit($limit)->select();
+		return $result;		
 	}
 }

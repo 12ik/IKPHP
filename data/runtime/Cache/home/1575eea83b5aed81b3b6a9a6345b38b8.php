@@ -37,7 +37,7 @@ __EXTENDS_JS__
         <?php if(empty($visitor)): ?><a href="<?php echo U('user/login');?>">登录</a> | <a href="<?php echo U('user/register');?>">注册</a>       
         <?php else: ?>
         <a id="newmsg" href="<?php echo U('message/inbox');?>">123</a> | 
-        <a href="<?php echo U('people/index', array('userid'=>$visitor['userid']));?>">
+        <a href="<?php echo U('people/index', array('id'=>$visitor['doname']));?>">
         	<?php echo ($visitor["username"]); ?>
         </a> | 
         <a href="<?php echo U('user/setbase');?>">设置</a> | 
@@ -79,9 +79,9 @@ __EXTENDS_JS__
 		<div class="appnav">
 		    <ul id="nav_bar">
 		        <li><a href="<?php echo U('group/index');?>">我的小组</a></li>
-		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=explore">发现小组</a></li>
-		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=explore_topic">发现话题</a></li>
-		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=nearby&amp;ik=beijing">北京话题</a></li>
+		        <li><a href="<?php echo U('group/explore');?>">发现小组</a></li>
+		        <li><a href="<?php echo U('group/explore_topic');?>">发现话题</a></li>
+		        <li><a href="<?php echo U('group/nearby');?>">北京话题</a></li>
 		    </ul>
 		   <form onsubmit="return searchForm(this);" method="get" action="http://www.ik.com/index.php">
 		   <input type="hidden" value="search" name="app"><input type="hidden" value="q" name="ac">

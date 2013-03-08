@@ -33,6 +33,7 @@ class userModel extends Model
 		))->find();
 		
 		$strUser['face'] = avatar($userid, 48);
+		$strUser['face_160'] = avatar($userid, 160);
 		
 		//地区
 		if($strUser['areaid'] > 0){

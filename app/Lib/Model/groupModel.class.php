@@ -15,15 +15,36 @@ class groupModel extends Model {
 					'groupid' => $groupid 
 			);
 			$result = $this->where ( $where )->find ();
+			$result['icon_48'] = attach($result['groupicon'], 'group/icon');
 			return $result;
 		
 		}
 	}
-	// 某用户加入的小组
-	public function getGroupUser($userid){
+	// 某用户创建的小组 
+	public function getUserGroup($userid){
 		$where = array (
 				'userid' => $userid,
 		);
+		$result = $this->where ( $where )->select();
+		return $result;		
+	}
+	// 某用户加入的小组 不包括自己创建的小组
+	public function getUserJoinGroup(){
+		$myCreateGroup = $this->getUserGroup($userid);
+		if(is_array($myCreateGroup)){
+			foreach($myCreateGroup as $item){
+				$arrGroup[] = $item['groupid'];
+			}
+		}
+		$strGroup = implode(',',$arrGroup);
+		$where['userid'] = $userid;
+		$where['groupid']  = array('not in',$strGroup);
+		$result = D('group_users')->where ( $where )->select();
+		return $result;		
+	}
+	// 某用户的小组包括 自己创建的
+	public function getGroupUser($userid){
+		$where = array('userid'=>$userid);
 		$result = D('group_users')->where ( $where )->select();
 		return $result;		
 	}

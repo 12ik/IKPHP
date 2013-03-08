@@ -7,7 +7,6 @@
 <meta name="description" content="<?php echo ($seo["description"]); ?>" /> 
 <link rel="shortcut icon" href="__STATIC__/public/images/fav.ico" type="image/x-icon">
 <style>__SITE_THEME_CSS__</style>
-<link href="http://localhost/ikphp/static/theme/blue/group/images/style.css" rel="stylesheet" />
 <!--[if gte IE 7]><!-->
     <link href="__STATIC__/public/js/dialog/skins5/idialog.css" rel="stylesheet" />
 <!--<![endif]-->
@@ -35,7 +34,7 @@ __EXTENDS_JS__
         <?php if(empty($visitor)): ?><a href="<?php echo U('user/login');?>">登录</a> | <a href="<?php echo U('user/register');?>">注册</a>       
         <?php else: ?>
         <a id="newmsg" href="<?php echo U('message/inbox');?>">123</a> | 
-        <a href="<?php echo U('people/index', array('userid'=>$visitor['userid']));?>">
+        <a href="<?php echo U('people/index', array('id'=>$visitor['doname']));?>">
         	<?php echo ($visitor["username"]); ?>
         </a> | 
         <a href="<?php echo U('user/setbase');?>">设置</a> | 
@@ -77,9 +76,9 @@ __EXTENDS_JS__
 		<div class="appnav">
 		    <ul id="nav_bar">
 		        <li><a href="<?php echo U('group/index');?>">我的小组</a></li>
-		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=explore">发现小组</a></li>
-		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=explore_topic">发现话题</a></li>
-		        <li><a href="http://www.ik.com/index.php?app=group&amp;a=nearby&amp;ik=beijing">北京话题</a></li>
+		        <li><a href="<?php echo U('group/explore');?>">发现小组</a></li>
+		        <li><a href="<?php echo U('group/explore_topic');?>">发现话题</a></li>
+		        <li><a href="<?php echo U('group/nearby');?>">北京话题</a></li>
 		    </ul>
 		   <form onsubmit="return searchForm(this);" method="get" action="http://www.ik.com/index.php">
 		   <input type="hidden" value="search" name="app"><input type="hidden" value="q" name="ac">
@@ -111,7 +110,7 @@ __EXTENDS_JS__
       <div class="topic-content clearfix">
         <div class="user-face"> <a href="<?php echo U('people/index',array('id'=>$strTopic[user][doname]));?>"><img title="<?php echo ($strTopic[user][username]); ?>" alt="<?php echo ($strTopic[user][username]); ?>" src="<?php echo avatar($strTopic['userid'], 48);?>" width="48"></a></div>
         <div class="topic-doc">
-          <h3> <span class="color-green"><?php echo date('Y-m-d H:i:s',$strTopic[addtime]) ?></span> <span class="pl20">来自：<a href="{U('hi','',array('id'=>$strTopic[user][doname]))}"><?php echo ($strTopic[user][username]); ?></a></span> </h3>
+          <h3> <span class="color-green"><?php echo date('Y-m-d H:i:s',$strTopic[addtime]) ?></span> <span class="pl20">来自：<a href="<?php echo U('people/index',array('id'=>$strTopic[user][doname]));?>"><?php echo ($strTopic[user][username]); ?></a></span> </h3>
           <div class="topic-view"><?php echo ($strTopic['content']); ?></div>
           
           <!--签名--> 
@@ -296,7 +295,7 @@ __EXTENDS_JS__
       <h2 class="usf">最新话题</h2>
       <div class="indent newtopic">
         <ul>
-          <?php if(is_array($newTopic)): $i = 0; $__LIST__ = $newTopic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($item[title]); ?>" href="<?php echo U('group/topic', array('id'=>$item[topicid]));?>"><?php echo ($item[title]); ?></a> &nbsp; <span class="pl">(<a href="<?php echo U('hi/index',array('id'=>$item[user][doname]));?>"><?php echo ($item[user][username]); ?></a>) </span> </li><?php endforeach; endif; else: echo "" ;endif; ?>
+          <?php if(is_array($newTopic)): $i = 0; $__LIST__ = $newTopic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><li><a title="<?php echo ($item[title]); ?>" href="<?php echo U('group/topic', array('id'=>$item[topicid]));?>"><?php echo ($item[title]); ?></a> &nbsp; <span class="pl">(<a href="<?php echo U('people/index',array('id'=>$item[user][doname]));?>"><?php echo ($item[user][username]); ?></a>) </span> </li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
       </div>
       <div class="clear"></div>
@@ -319,7 +318,8 @@ __EXTENDS_JS__
             · <a href="{SITE_URL}{ikUrl('home','privacy')}">隐私申明</a>
         </span>
         <div class="cl"></div>
-        <p>Powered by <a class="softname" href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a> <?php echo ($IK_SOFT[info][version]); ?> <?php echo ($IK_SOFT[info][year]); ?> <?php echo ($IK_SITE[base][site_icp]); ?><br /><span style="font-size:0.83em;">Processed in <?php echo ($runTime); ?> second(s)</span>
+        <p>Powered by <a class="softname" href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a> <?php echo ($IK_SOFT[info][version]); ?> <?php echo ($IK_SOFT[info][year]); ?> <?php echo ($IK_SITE[base][site_icp]); ?> <span style="color:green">ThinkPHP 版本 <?php echo (THINK_VERSION); ?></span><br /><span style="font-size:0.83em;">Processed in <?php echo ($runTime); ?> second(s)</span>
+        
         <!--<script src="http://s21.cnzz.com/stat.php?id=2973516&web_id=2973516" language="JavaScript"></script>-->
         </p>   
     </div>

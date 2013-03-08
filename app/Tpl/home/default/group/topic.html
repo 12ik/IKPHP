@@ -17,7 +17,7 @@
       <div class="topic-content clearfix">
         <div class="user-face"> <a href="{:U('people/index',array('id'=>$strTopic[user][doname]))}"><img title="{$strTopic[user][username]}" alt="{$strTopic[user][username]}" src="{:avatar($strTopic['userid'], 48)}" width="48"></a></div>
         <div class="topic-doc">
-          <h3> <span class="color-green"><php> echo date('Y-m-d H:i:s',$strTopic[addtime])</php></span> <span class="pl20">来自：<a href="{U('hi','',array('id'=>$strTopic[user][doname]))}">{$strTopic[user][username]}</a></span> </h3>
+          <h3> <span class="color-green"><php> echo date('Y-m-d H:i:s',$strTopic[addtime])</php></span> <span class="pl20">来自：<a href="{:U('people/index',array('id'=>$strTopic[user][doname]))}">{$strTopic[user][username]}</a></span> </h3>
           <div class="topic-view">{$strTopic['content']}</div>
           
           <!--签名--> 
@@ -202,7 +202,7 @@
       <div class="indent newtopic">
         <ul>
           <volist name="newTopic" id="item">
-          <li><a title="{$item[title]}" href="{:U('group/topic', array('id'=>$item[topicid]))}">{$item[title]}</a> &nbsp; <span class="pl">(<a href="{:U('hi/index',array('id'=>$item[user][doname]))}">{$item[user][username]}</a>) </span> </li>
+          <li><a title="{$item[title]}" href="{:U('group/topic', array('id'=>$item[topicid]))}">{$item[title]}</a> &nbsp; <span class="pl">(<a href="{:U('people/index',array('id'=>$item[user][doname]))}">{$item[user][username]}</a>) </span> </li>
           </volist>
         </ul>
       </div>

@@ -29,6 +29,12 @@ class group_topics_collectsModel extends Model {
 		}
 		return $arrUser;		
 	}
+	//根据用户id 查询他收藏的帖子
+	public function getUserCollectTopic($userid, $limit){
+		$where = array('userid'=>$userid);
+		$result = $this->where ( $where )->order('addtime desc')->limit($limit)->select();
+		return  $result;
+	}
 	//收藏/取消收藏 该帖子
 	public function collectTopic($userid, $topicid){
 		$is_like = $this->where(array('userid'=>$userid, 'topicid'=>$topicid))->count('*');

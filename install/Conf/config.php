@@ -6,6 +6,6 @@ return array (
 		'APP_DEBUG' => true,
 		'DB_FIELD_CACHE' => false,
 		'HTML_CACHE_ON' => false,
-		'URL_CASE_INSENSITIVE' => true,
+		'URL_CASE_INSENSITIVE' => false,
 );
 ?>

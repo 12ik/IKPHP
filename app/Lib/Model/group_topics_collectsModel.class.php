@@ -61,5 +61,11 @@ class group_topics_collectsModel extends Model {
 		}
 		return $arrJson;
 	}
+	//根据topicid删除 收藏
+	public function delCollectTopic($topicid){
+		$where = array('topicid'=>$topicid);
+		$this->where($where)->delete();
+		return true;
+	}
 
 }

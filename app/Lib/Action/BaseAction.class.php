@@ -2,9 +2,9 @@
 /**
  * 控制器基类
  *
- * @author andery
+ * @author 小麦
  */
-class BaseAction extends Action
+class baseAction extends Action
 {
     protected function _initialize() {
         //消除所有的magic_quotes_gpc转义

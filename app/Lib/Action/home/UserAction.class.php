@@ -1,6 +1,21 @@
 <?php
 // 本类由系统自动生成，仅供测试用途
-class UserAction extends UserbaseAction {
+class userAction extends userbaseAction {
+	public function _initialize() {
+		parent::_initialize ();
+		$this->user_mod = D ( 'user' );
+			// 访问者控制
+		if (! $this->visitor->is_login && in_array ( ACTION_NAME, array (
+				'follow',
+			
+
+				
+		) )) {
+			$this->redirect ( 'user/login' );
+		} else {
+			$this->userid = $this->visitor->info ['userid'];
+		}
+	}
 	public function index() {
 		$this->display ();
 	}
@@ -86,12 +101,12 @@ class UserAction extends UserbaseAction {
 	            }	
 			}
 			
+		}else{
+			$info = $this->visitor->get ();
+			$this->assign ( 'info', $info );
+			$this->_config_seo ();
+			$this->display ();			
 		} 
-		$info = $this->visitor->get ();
-		$this->assign ( 'info', $info );
-		$this->_config_seo ();
-		$this->display ();
-
 	}
 	public function setdoname() {
 		if (IS_POST) {
@@ -311,5 +326,23 @@ class UserAction extends UserbaseAction {
 		$synlogout = $passport->synlogout ();
 		// 跳转到退出前页面（执行同步操作）
 		$this->redirect ( 'user/login' );
+	}
+	// 关注某人
+	public function follow(){
+		$userid = $this->userid;
+		$userid_follow = $this->_get('userid');//要关注人的id
+		if(empty($userid_follow)){ $this->error('操作错误！');}
+		$isuser = $this->user_mod->isUser($userid_follow);
+		if(!$isuser){
+			$this->error('不存在该用户！');
+		}
+		$followNum = $this->user_mod->isFollow($userid,$userid_follow);
+		if($followNum>0){
+			$this->error("请不要重复关注同一用户！");
+		}else{
+			
+		}
+		
+		
 	}
 }

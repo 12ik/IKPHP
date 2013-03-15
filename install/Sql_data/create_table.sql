@@ -77,7 +77,7 @@ CREATE TABLE `ik_setting` (
 INSERT INTO `ik_setting` (`name`, `data`) VALUES
 ('site_title', '爱客网(IKPHP)开源社区'),
 ('site_subtitle', '又一个爱客网(IKPHP)开源社区'),
-('site_url', 'http://localhost/ikphp/'),
+('site_url', 'http://'),
 ('site_email', 'admin@admin.com'),
 ('site_icp', '正在备案中'),
 ('site_keywords', '12ik'),
@@ -93,6 +93,7 @@ INSERT INTO `ik_setting` (`name`, `data`) VALUES
 ('avatar_size', '24,32,48,64,100,200'),
 ('attr_allow_exts', 'jpg,gif,png,jpeg,swf'),
 ('attr_allow_size', '2048'),
+('attach_path', 'data/upload/'),
 ('simg', ''),
 ('mimg', ''),
 ('bimg', '');
@@ -237,13 +238,14 @@ CREATE TABLE `ik_group_topics` (
   `count_view` int(11) NOT NULL DEFAULT '0' COMMENT '帖子展示数',
   `count_collect` int(11) NOT NULL DEFAULT '0' COMMENT '喜欢收藏数',  
   `count_attach` int(11) NOT NULL DEFAULT '0' COMMENT '统计附件',
+  `count_recommend` int(11) NOT NULL DEFAULT '0' COMMENT '推荐人数',
   `istop` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否置顶',
   `isshow` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示',
   `iscomment` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否允许评论',
   `isphoto` tinyint(1) NOT NULL DEFAULT '0',
   `isattach` tinyint(1) NOT NULL DEFAULT '0',
   `isnotice` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否通知',
-  `isposts` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否精华帖子',
+  `isdigest` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否精华帖子',
   `isvideo` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有视频',
   `addtime` int(11) DEFAULT '0' COMMENT '创建时间',
   `uptime` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间',
@@ -290,3 +292,96 @@ CREATE TABLE `ik_group_topics_collects` (
   KEY `userid` (`userid`),
   KEY `topicid` (`topicid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='帖子收藏';
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_group_topics_comments`
+--
+DROP TABLE IF EXISTS `ik_group_topics_comments`;
+CREATE TABLE `ik_group_topics_comments` (
+  `commentid` int(11) NOT NULL AUTO_INCREMENT COMMENT '评论ID',
+  `referid` int(11) NOT NULL DEFAULT '0',
+  `topicid` int(11) NOT NULL DEFAULT '0' COMMENT '话题ID',
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
+  `content` text NOT NULL COMMENT '回复内容',
+  `addtime` int(11) DEFAULT '0' COMMENT '回复时间',
+  PRIMARY KEY (`commentid`),
+  KEY `topicid` (`topicid`),
+  KEY `userid` (`userid`),
+  KEY `referid` (`referid`,`topicid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='话题回复/评论' AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_group_topics_recommend`
+--
+DROP TABLE IF EXISTS `ik_group_topics_recommend`;
+CREATE TABLE `ik_group_topics_recommend` (
+  `userid` int(11) NOT NULL DEFAULT '0',
+  `topicid` int(11) NOT NULL DEFAULT '0',
+  `content` char(250) NOT NULL DEFAULT '',  
+  `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '推荐时间',
+  UNIQUE KEY `userid_2` (`userid`,`topicid`),
+  KEY `userid` (`userid`),
+  KEY `topicid` (`topicid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='帖子推荐';
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_attach`
+--
+DROP TABLE IF EXISTS `ik_images`;
+CREATE TABLE `ik_images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `seqid` int(11) NOT NULL DEFAULT '0' COMMENT 'seqid',
+  `typeid` int(11) NOT NULL DEFAULT '0' COMMENT '日记ID或帖子id',
+  `type` char(64) NOT NULL DEFAULT '0' COMMENT '日记或帖子或其他组件',
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户id',
+  `name` char(64) NOT NULL DEFAULT '' COMMENT '文件名',
+  `path` char(32) NOT NULL DEFAULT '' COMMENT '源文件路径',
+  `size` char(32) NOT NULL DEFAULT '',
+  `title` char(120) NOT NULL DEFAULT '' COMMENT '图片描述',
+  `align` char(32) NOT NULL DEFAULT 'C' COMMENT '图片对齐方式',
+  `addtime` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `typeid` (`typeid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_videos`
+--
+DROP TABLE IF EXISTS `ik_videos`;
+CREATE TABLE `ik_videos` (
+  `videoid` int(11) NOT NULL AUTO_INCREMENT COMMENT '视频id',
+  `seqid` int(11) NOT NULL DEFAULT '0' COMMENT '顺序id',
+  `typeid` int(11) NOT NULL DEFAULT '0' COMMENT '日记ID或帖子id',
+  `type` char(64) NOT NULL DEFAULT '0' COMMENT '日记或帖子或其他组件',
+  `userid` int(11) NOT NULL DEFAULT '0',
+  `url` char(255) NOT NULL DEFAULT '' COMMENT '视频网址',
+  `imgurl` char(255) NOT NULL DEFAULT '' COMMENT '视频截图',
+  `videourl` char(255) NOT NULL DEFAULT '' COMMENT 'swf地址',
+  `title` char(120) NOT NULL DEFAULT '' COMMENT '视频标题',
+  `count_view` int(11) NOT NULL DEFAULT '0',
+  `addtime` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`videoid`),
+  KEY `typeid` (`typeid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_user_follow`
+--
+DROP TABLE IF EXISTS `ik_user_follow`;
+CREATE TABLE `ik_user_follow` (
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
+  `userid_follow` int(11) NOT NULL DEFAULT '0' COMMENT '被关注的用户ID',
+  `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '添加时间',
+  UNIQUE KEY `userid_2` (`userid`,`userid_follow`),
+  KEY `userid` (`userid`),
+  KEY `userid_follow` (`userid_follow`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户关注跟随';

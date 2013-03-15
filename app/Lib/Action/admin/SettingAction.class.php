@@ -1,5 +1,5 @@
 <?php
-class SettingAction extends BackendAction {
+class settingAction extends backendAction {
 	public function _initialize() {
 		parent::_initialize ();
 		$this->_mod = D ( 'setting' );

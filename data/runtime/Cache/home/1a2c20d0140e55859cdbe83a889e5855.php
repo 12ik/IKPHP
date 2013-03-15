@@ -105,7 +105,7 @@ __EXTENDS_JS__
     <h1><?php echo ($strTopic[title]); ?></h1>
     <div class="cleft"> 
       
-<!--{if $page == '1'}-->
+<?php if($page==1){ ?>
       
       <div class="topic-content clearfix">
         <div class="user-face"> <a href="<?php echo U('people/index',array('id'=>$strTopic[user][doname]));?>"><img title="<?php echo ($strTopic[user][username]); ?>" alt="<?php echo ($strTopic[user][username]); ?>" src="<?php echo avatar($strTopic['userid'], 48);?>" width="48"></a></div>
@@ -120,9 +120,9 @@ __EXTENDS_JS__
           <?php if(($user[userid] == $strTopic[userid]) OR ($user[userid] == $strGroup[userid]) OR ($strGroupUser[isadmin] == 1) OR ($user[isadmin] == 1) ): ?><div style="text-align:right;"> 
                 <?php if(($user[userid] == $strGroup[userid]) OR ($strGroupUser[isadmin] == 1) OR ($user[isadmin] == 1)): ?>&gt;&nbsp; 
                     <a href="<?php echo U('group/topic',array('d'=>'topic_istop','topicid'=>$strTopic[topicid]));?>"><?php echo ($action[istop]); ?></a> &gt;&nbsp; 
-                    <a href="<?php echo U('group/topic',array('d'=>'isposts','topicid'=>$strTopic[topicid]));?>"><?php echo ($action[isposts]); ?></a> &gt;&nbsp; 
-                    <a href="<?php echo U('group/topic',array('d'=>'isshow','topicid'=>$strTopic[topicid]));?>"><?php echo ($action[isshow]); ?></a> &gt;&nbsp; 
-                    <a href="<?php echo U('group/topic',array('d'=>'topic_move','groupid'=>$strTopic[groupid],'topicid'=>$strTopic[topicid]));?>"><?php echo ($action[move]); ?></a><?php endif; ?>
+                    <a href="<?php echo U('group/topic',array('d'=>'isdigest','topicid'=>$strTopic[topicid]));?>"><?php echo ($action[isdigest]); ?></a> &gt;&nbsp; 
+                    <a href="<?php echo U('group/topic',array('d'=>'isshow','topicid'=>$strTopic[topicid]));?>"><?php echo ($action[isshow]); ?></a>  
+                    <!--&gt;&nbsp;<a href="<?php echo U('group/topic',array('d'=>'topic_move','groupid'=>$strTopic[groupid],'topicid'=>$strTopic[topicid]));?>"><?php echo ($action[move]); ?></a>--><?php endif; ?>
             	&gt;&nbsp; 
             	<a href="<?php echo U('group/topic',array('d'=>'topic_edit','topicid'=>$strTopic[topicid]));?>">编辑</a> &gt;&nbsp; 
             	<a href="<?php echo U('group/topic',array('d'=>'deltopic','topicid'=>$strTopic[topicid]));?>" onclick="return confirm('确定删除?')">删除</a> 
@@ -134,9 +134,9 @@ __EXTENDS_JS__
       <?php if($visitor['userid']): ?><div class="sns-bar">
         	<div class="sns-bar-rec">
                 <span class="rec">
-                    <a class="bn-sharing  i a_share_btn" data-pic="<?php echo ($strTopic[content_photo][0]); ?>" data-title="<?php echo ($strTopic[title]); ?>" data-desc="{php echo getsubstrutf8(t($strTopic[content]),0,150)}" data-url="{U('group','topic',array('id'=>$strTopic[topicid]))}" href="#">分享到</a> &nbsp;&nbsp;
+                    <a class="bn-sharing  i a_share_btn" data-pic="<?php echo ($strTopic[content_photo][0]); ?>" data-title="<?php echo ($strTopic[title]); ?>" data-desc="<?php echo getsubstrutf8(t($strTopic[content]),0,150) ?>" data-url="<?php echo U('group/topic',array('id'=>$strTopic[topicid]));?>" href="#">分享到</a> &nbsp;&nbsp;
                 </span>            
-            	<div class="rec-sec"><a href="<?php echo U('group/topic',array('d'=>'topic_recommend'));?>" title="推荐" class="lnk-sharing i a_recommend_btn"  data-title="{php echo getsubstrutf8(t($strTopic[title]),0,40)}"  data-desc="{php echo getsubstrutf8(t($strTopic[content]),0,100)}"  data-tkind="<?php echo ($strTopic[groupid]); ?>" data-tid="<?php echo ($strTopic[topicid]); ?>" data-tuid="<?php echo ($IK_USER['user']['userid']); ?>" data-url="{U('group','topic',array('id'=>$strTopic[topicid]))}">推荐</a> <span class="rec-num" id="rec-num"><?php echo ($recommendNum); ?>人</span></div>
+            	<div class="rec-sec"><a href="<?php echo U('group/topic',array('d'=>'topic_recommend'));?>" title="推荐" class="lnk-sharing i a_recommend_btn"  data-title="<?php echo getsubstrutf8(t($strTopic[title]),0,40); ?>"  data-desc="<?php echo getsubstrutf8(t($strTopic[content]),0,100) ?>"  data-tkind="<?php echo ($strTopic[groupid]); ?>" data-tid="<?php echo ($strTopic[topicid]); ?>" data-tuid="<?php echo ($IK_USER['user']['userid']); ?>" data-url="<?php echo U('group/topic',array('id'=>$strTopic[topicid]));?>">推荐</a> <span class="rec-num" id="rec-num"><?php echo ($strTopic[count_recommend]); ?>人</span></div>
             </div>
             <div class="sns-bar-fav">
             	<span  class="fav-num"><a href="javascript:;" id="like-num"><?php echo ($strTopic[count_collect]); ?>人</a> 喜欢 </span>
@@ -147,9 +147,7 @@ __EXTENDS_JS__
         </div><?php endif; ?>
       
       <div class="clear"></div>
-      
-      
-      <!--tag标签-->
+
       <div class="tags"> 
         <!--{loop $strTopic[tags] $key $item}--> 
         <a rel="tag" title="" class="post-tag" href="{U('group','topic_tag',array(tagname=>$item[tagname]))}"><?php echo ($item[tagname]); ?></a> 
@@ -161,67 +159,50 @@ __EXTENDS_JS__
           <button type="submit" class="subab" onclick="savaTag(<?php echo ($topicid); ?>)">添加</button>
           <a href="javascript:void(0);" onclick="showTagFrom()">取消</a> </p>
         <!--{/if}--> 
-        
       </div>
       
-<!--{/if}-->
+<?php } ?>
       
       <div class="clear"></div>
       <div> 
-     	 {if $upTopic}上一篇：<a href="{U('group','topic',array('id'=>$upTopic['topicid']))}"><?php echo ($upTopic['title']); ?></a>{/if}
-         {if $downTopic}下一篇：<a href="{U('group','topic',array('id'=>$downTopic['topicid']))}"><?php echo ($downTopic['title']); ?></a>{/if} 
+     	 <?php if(!empty($upTopic)): ?>上一篇：<a href="<?php echo U('group/topic',array('id'=>$upTopic['topicid']));?>"><?php echo ($upTopic['title']); ?></a><?php endif; ?>
+         <?php if(!empty($downTopic)): ?>下一篇：<a href="<?php echo U('group/topic',array('id'=>$downTopic['topicid']));?>"><?php echo ($downTopic['title']); ?></a><?php endif; ?>
       </div>
       
-      <!--{if $page == '1'}-->
+      
       <div class="orderbar"> 
-        <!--{if $sc=='asc'}--> 
-        <a href="{U('group','topic',array('id'=>$topicid,'sc'=>'desc'))}">倒序阅读</a> 
-        <!--{else}--> 
-        <a href="{U('group','topic',array('id'=>$topicid))}">正序阅读</a> 
-        <!--{/if}--> 
+        <?php if(($page == 1) && ($strTopic[count_comment] > 3)): if($sc == 'asc'): ?><a href="<?php echo U('group/topic',array('id'=>$strTopic[topicid],'sc'=>'desc'));?>">倒序阅读</a> 
+        <?php else: ?>
+        <a href="<?php echo U('group/topic',array('id'=>$strTopic[topicid],'sc'=>'asc'));?>">正序阅读</a><?php endif; endif; ?>
       </div>
-      <!--{/if}--> 
       
       <!--comment评论-->
       <ul class="comment" id="comment">
-        <!--{if is_array($arrTopicComment)}--> 
-        <!--{loop $arrTopicComment $key $item}-->
-        <li class="clearfix">
-          <div class="user-face"> <a href="{U('hi','',array('id'=>$item[user][doname]))}"><img title="<?php echo ($item[user][username]); ?>" alt="<?php echo ($item[user][username]); ?>" src="<?php echo ($item[user][face]); ?>"></a> </div>
+       <?php if(!empty($arrTopicComment)): if(is_array($arrTopicComment)): foreach($arrTopicComment as $key=>$item): ?><li class="clearfix">
+          <div class="user-face"> <a href="<?php echo U('people/index',array('id'=>$item[user][doname]));?>"><img title="<?php echo ($item[user][username]); ?>" alt="<?php echo ($item[user][username]); ?>" src="<?php echo ($item[user][face]); ?>"></a> </div>
           <div class="reply-doc">
-            <h4><span class="fr">{php echo $key+1;}F</span><a href="{U('hi','',array('id'=>$item[user][doname]))}"><?php echo ($item[user][username]); ?></a> {php echo date('Y-m-d H:i:s',$item[addtime])}</h4>
+            <h4><span class="fr"></span><a href="<?php echo U('people/index',array('id'=>$item[user][doname]));?>"><?php echo ($item[user][username]); ?></a> <?php echo date('Y-m-d H:i:s',$item[addtime]) ?></h4>
             
-            <!--{if $item[referid] !='0'}-->
-            <div class="recomment"><a href="{U('hi','',array('id'=>$item[recomment][user][doname]))}"><img src="<?php echo ($item[recomment][user][face]); ?>" width="24" align="absmiddle"></a> <strong><a href="{U('hi','',array('id'=>$item[recomment][user][doname]))}"><?php echo ($item[recomment][user][username]); ?></a></strong>：{php echo nl2br($item[recomment][content])}</div>
-            <!--{/if}-->
+            <?php if($item[referid] != 0): ?><div class="recomment"><a href="<?php echo U('people/index',array('id'=>$item[recomment][user][doname]));?>"><img src="<?php echo ($item[recomment][user][face]); ?>" width="24" align="absmiddle"></a> <strong><a href="<?php echo U('people/index',array('id'=>$item[recomment][user][doname]));?>"><?php echo ($item[recomment][user][username]); ?></a></strong>：<?php echo ($item[recomment][content]); ?></div><?php endif; ?>
             
-            <p> {php echo nl2br($item[content])} </p>
+            <p> <?php echo ($item[content]); ?> </p>
             
             <!--签名--> 
-            <!--{if $item[user][signed] != ''}-->
-            <div class="signed"><?php echo ($item[user][signed]); ?></div>
-            <!--{/if}-->
+            <?php if(!empty($item[user][signed])): ?><div class="signed"><?php echo ($item[user][signed]); ?></div><?php endif; ?>
             
             <div class="group_banned"> 
-              <!--{if $isGroupUser != '0'}--> 
-              <span><a href="javascript:void(0)"  onclick="commentOpen(<?php echo ($item[commentid]); ?>,<?php echo ($item[topicid]); ?>)">回复</a></span> 
-              <!--{/if}--> 
-              
-              <!--{if $strTopic['userid'] == $IK_USER[user][userid] || $IK_USER[user][userid] == $strGroup[userid] || $IK_USER[user][userid] == $item[userid] || $strGroupUser[isadmin]==1 || $IK_USER[user][isadmin]==1}--> 
-              <span><a class="j a_confirm_link" href="{SITE_URL}index.php?app=group&a=comment&ik=delete&commentid=<?php echo ($item[commentid]); ?>" rel="nofollow" onclick="return confirm('确定删除?')">删除</a> </span> 
-              <!--{/if}--> 
+              <?php if($isGroupUser != 0): ?><span><a href="javascript:void(0)"  onclick="commentOpen(<?php echo ($item[commentid]); ?>,<?php echo ($item[topicid]); ?>)">回复</a></span><?php endif; ?>
+              <?php if(($strTopic[userid] == $visitor[userid]) OR ($strGroup[userid] == $visitor[userid]) OR ($visitor[userid] == $item[userid]) OR ($strGroupUser[isadmin] == 1) OR ($visitor[userid] == 1)): ?><span><a class="j a_confirm_link" href="<?php echo U('group/topic',array('d'=>'delcomment','commentid'=>$item[commentid]));?>" rel="nofollow" onclick="return confirm('确定删除?')">删除</a> </span><?php endif; ?>
             </div>
             <div id="rcomment_<?php echo ($item[commentid]); ?>" style="display:none; clear:both; padding:0px 10px">
               <textarea style="width:550px;height:50px;font-size:12px; margin:0px auto;" id="recontent_<?php echo ($item[commentid]); ?>" type="text" onkeydown="keyRecomment(<?php echo ($item[commentid]); ?>,<?php echo ($item[topicid]); ?>,event)" class="txt"></textarea>
               <p style=" padding:5px 0px">
-                <button onclick="recomment(<?php echo ($item[commentid]); ?>,<?php echo ($item[topicid]); ?>)" id="recomm_btn_$item[commentid]" class="subab">提交</button>
+                <button onclick="recomment(<?php echo ($item[commentid]); ?>,<?php echo ($item[topicid]); ?>)" id="recomm_btn_<?php echo ($item[commentid]); ?>" class="subab">提交</button>
                 &nbsp;&nbsp;<a href="javascript:;" onclick="$('#rcomment_<?php echo ($item[commentid]); ?>').slideToggle('fast');">取消</a> </p>
             </div>
           </div>
           <div class="clear"></div>
-        </li>
-        <!--{/loop}--> 
-        <!--{/if}-->
+        </li><?php endforeach; endif; endif; ?>
       </ul>
       <div class="page"><?php echo ($pageUrl); ?></div>
       <h2>你的回应&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·</h2>
@@ -232,9 +213,10 @@ __EXTENDS_JS__
         <?php elseif($strTopic[iscomment] == 1 && $strTopic[userid] != $visitor['userid']): ?>
         本帖除作者外不允许任何人评论 
         <?php else: ?>
-        <form method="POST" action="{SITE_URL}index.php?app=group&a=comment&ik=do" onSubmit="return checkComment('#formMini');" id="formMini" enctype="multipart/form-data">
+        <form method="POST" action="<?php echo U('group/topic',array('d'=>'addcomment'));?>" onSubmit="return checkComment('#formMini');" id="formMini" enctype="multipart/form-data">
           <textarea  style="width:100%;height:100px;" id="editor_mini" name="content" class="txt" onkeydown="keyComment('#formMini',event)"></textarea>
           <input type="hidden" name="topicid" value="<?php echo ($strTopic[topicid]); ?>" />
+          <input type="hidden" name="p" value="<?php echo ($page); ?>" />
           <input class="submit" type="submit" value="加上去(Crtl+Enter)" style="margin:10px 0px">
         </form><?php endif; ?>
       </div>
@@ -278,7 +260,7 @@ __EXTENDS_JS__
          <div style="margin-bottom: 10px;overflow: hidden;">
 <?php if(isset($arrCollectUser)): if(is_array($arrCollectUser)): foreach($arrCollectUser as $key=>$item): ?><dl class="obu">
         <dt>
-        	<a href="<?php echo U('people',array('id'=>$item[doname]));?>" title="<?php echo ($item[username]); ?>">
+        	<a href="<?php echo U('people/index',array('id'=>$item[doname]));?>" title="<?php echo ($item[username]); ?>">
         		<img  alt="<?php echo ($item[username]); ?>"  src="<?php echo avatar($item['userid'], 48);?>"class="m_sub_img"  >
             </a>
         </dt>

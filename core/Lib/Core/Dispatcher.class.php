@@ -130,7 +130,7 @@ class Dispatcher {
 
         // 获取分组 模块和操作名称
         if (C('APP_GROUP_LIST')) {
-            define('GROUP_NAME', self::getGroup(C('VAR_GROUP')));
+            define('GROUP_NAME', self::getGroup(C('VAR_GROUP'))); 
             // 分组URL地址
             define('__GROUP__',(!empty($domainGroup) || strtolower(GROUP_NAME) == strtolower(C('DEFAULT_GROUP')) )?__APP__ : __APP__.'/'.GROUP_NAME);
         }
@@ -244,7 +244,7 @@ class Dispatcher {
      * @return string
      */
     static private function getGroup($var) {
-        $group   = (!empty($_GET[$var])?$_GET[$var]:C('DEFAULT_GROUP'));
+        $group   = (!empty($_GET[$var])?$_GET[$var]:C('DEFAULT_GROUP')); 
         unset($_GET[$var]);
         return strip_tags(C('URL_CASE_INSENSITIVE') ?ucfirst(strtolower($group)):$group);
     }

@@ -1,5 +1,5 @@
 <?php
-class IndexAction extends BackendAction {
+class indexAction extends backendAction {
 
     public function _initialize() {
         parent::_initialize();

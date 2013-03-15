@@ -10,9 +10,6 @@
 </h1>
 
 <ul>
-	<li><a href="{:U('note/index',array('userid'=>$strUser[userid]))}">日志</a></li>
-    <li><a href="{:U('photo/album',array('userid'=>$strUser[userid]))}">相册</a></li>
-    <li><a href="{:U('feed/index',array('userid'=>$strUser[userid]))}">广播</a></li>
     <if condition="$strUser[userid] eq $visitor[userid]">
     <li><a href="{:U('message/ikmail',array(ik=>inbox))}">站内信</a></li>
     <li><a href="{:U('user/setbase')}">设置</a></li>

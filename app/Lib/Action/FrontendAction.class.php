@@ -2,9 +2,9 @@
 /**
  * 前台控制器基类
  *
- * @author andery
+ * @author 小麦
  */
-class FrontendAction extends BaseAction {
+class frontendAction extends baseAction {
 
     protected $visitor = null;
     

@@ -99,7 +99,7 @@ class App {
             $module  =  false;
         }else{
             //创建Action控制器实例
-            $group   =  defined('GROUP_NAME') && C('APP_GROUP_MODE')==0 ? GROUP_NAME.'/' : '';
+            $group   =  defined('GROUP_NAME') && C('APP_GROUP_MODE')==0 ? GROUP_NAME.'/' : ''; 
             $module  =  A($group.MODULE_NAME);
         }
 
@@ -117,7 +117,7 @@ class App {
                 }
             }else{
                 // 是否定义Empty模块
-                $module = A($group.'Empty');
+                $module = A($group.'Empty'); 
                 if(!$module){
                     _404(L('_MODULE_NOT_EXIST_').':'.MODULE_NAME);
                 }

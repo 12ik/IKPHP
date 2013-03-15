@@ -3,19 +3,30 @@
  * IKPHP 爱客开源社区 @copyright (c) 2012-3000 IKPHP All Rights Reserved @author 小麦
  * @Email:160780470@qq.com
  */
-class GroupAction extends FrontendAction {
+class groupAction extends frontendAction {
 	
 	public function _initialize() {
 		parent::_initialize ();
 		// 访问者控制
 		if (! $this->visitor->is_login && in_array ( ACTION_NAME, array (
 				'add',
+				'addcomment',
+				'create',
+				'deltopic',
+				'isdigest',
+				'isshow',
 				'join',
+				'mine',				
 				'my_group_topics',
 				'my_collect_topics',
-				'mine',
-				'my_replied_topics',
-				'create',
+				'my_replied_topics',				
+				'my_topics',
+				'publish',
+				'recomment',
+				'topic_edit',
+
+				
+				
 				
 		) )) {
 			$this->redirect ( 'user/login' );
@@ -27,6 +38,7 @@ class GroupAction extends FrontendAction {
 		$this->group_users_mod = D ( 'group_users' );
 		$this->group_topics_mod = D ( 'group_topics' );
 		$this->group_topics_collects = D ( 'group_topics_collects' );
+		$this->group_topics_comments = D ( 'group_topics_comments' );
 	}
 	public function index() {
 		if ($this->visitor->is_login) {
@@ -40,7 +52,7 @@ class GroupAction extends FrontendAction {
 		$userid = $this->userid;
 		// 用户信息
 		$strUser = $this->user_mod->getOneUser ( $userid );
-		$myGroup = $this->_mod->getUserJoinGroup($userid);
+		$myGroup = $this->_mod->getUserJoinGroup( $userid );
 		//我加入的小组
 		if(is_array($myGroup)){
 			$count_mygroup = 0;
@@ -140,6 +152,10 @@ class GroupAction extends FrontendAction {
 		$this->display ();
 	
 	}
+	// 我回应的话题
+	public function my_replied_topics(){
+		
+	}
 	public function create() {
 		if (IS_POST) {
 			foreach ( $_POST as $key => $val ) {
@@ -234,6 +250,9 @@ class GroupAction extends FrontendAction {
 		$groupid = $this->_get ( 'id' );
 		// 是否加入
 		$isGroupUser = $this->_mod->isGroupUser ( $this->userid, $groupid );
+		if(!$isGroupUser){
+			$this->error('只有小组成员才能发言，请先加入小组!');
+		}
 		// 获取小组信息
 		$group = $this->_mod->getOneGroup ( $groupid );
 		// 预先执行添加一条记录
@@ -259,7 +278,7 @@ class GroupAction extends FrontendAction {
 		$this->assign ( 'topic_id', $topic_id );
 		$this->assign ( 'strGroup', $group );
 		$this->assign ( 'isGroupUser', $isGroupUser );
-		$this->_config_seo ();
+		$this->_config_seo (array('title'=>$strGroup['groupname'].'发布帖子','subtitle'=>'小组'));
 		$this->display ();
 	}
 	// 执行发布
@@ -270,7 +289,7 @@ class GroupAction extends FrontendAction {
 			$topic_id = $this->_post ( 'topic_id' );
 			$groupid = $this->_post ( 'groupid' );
 			
-			$title = Input::deleteHtmlTags ( $this->_post ( 'title', 'trim' ) );
+			$title = $this->_post ( 'title', 'trim' );
 			$content =  $this->_post ( 'content');
 			$iscomment = $this->_post ( 'iscomment'); // 是否允许评论
 			
@@ -288,7 +307,7 @@ class GroupAction extends FrontendAction {
 			$arrData = array (
 					'groupid' => $groupid,
 					'userid' => $userid,
-					'title' => $title,
+					'title' => htmlspecialchars($title),
 					'content' => $content,
 					'isvideo' => $isvideo,
 					'iscomment' => $iscomment,
@@ -331,6 +350,46 @@ class GroupAction extends FrontendAction {
 					header ( "Content-Type: application/json", true );
 					echo json_encode ( $arrJson );
 					break;
+				// 发表评论
+				case "addcomment" :
+					$this->addcomment();
+					break;
+				// 回复评论
+				case "recomment" :
+					$this->recomment();
+					break;
+				// 推荐
+				case "topic_recommend" :
+					$this->topic_recommend();
+					break;	
+				// 删除评论
+				case "delcomment" :
+					$this->delcomment();
+					break;
+				// 删除评论
+				case "deltopic" :
+					$this->deltopic();
+					break;					
+				// 置顶帖子
+				case "topic_istop" :
+					$this->topic_istop();
+					break;
+				// 精华帖子
+				case "isdigest" :
+					$this->isdigest();
+					break;
+				// 隐藏帖子
+				case "isshow" :
+					$this->isshow();
+					break;
+				// 移动帖子
+				case "topic_move" :
+					$this->topic_move();
+					break;
+				// 移动帖子
+				case "topic_edit" :
+					$this->topic_edit();
+					break;					
 			}
 		
 		} else {
@@ -347,6 +406,10 @@ class GroupAction extends FrontendAction {
 			$isGroupUser = $this->_mod->isGroupUser ( $this->userid, $strTopic ['groupid'] );
 			// 最新话题
 			$newTopic = $this->group_topics_mod->newTopic ( $strTopic ['groupid'], 6 );
+			//帖子浏览量加 +1
+			if($strTopic ['userid']!=$user['userid']){
+				$this->group_topics_mod->where(array('topicid'=>$topic_id))->setInc('count_view');
+			}
 			// 喜欢收藏的人数
 			$likenum = $this->group_topics_collects->countLike ( $topic_id );
 			$is_Like = $this->group_topics_collects->isLike ( $user ['userid'], $topic_id );
@@ -355,14 +418,46 @@ class GroupAction extends FrontendAction {
 			
 			// 操作
 			$action ['istop'] = $strTopic ['istop'] == 0 ? '置顶' : '取消置顶';
-			$action ['isposts'] = $strTopic ['isposts'] == 0 ? '精华' : '取消精华';
+			$action ['isdigest'] = $strTopic ['isdigest'] == 0 ? '精华' : '取消精华';
 			$action ['isshow'] = $strTopic ['isshow'] == 0 ? '隐藏' : '显示';
 			$action ['move'] = '移动';
 			
 			// 喜欢该帖子的用户
 			$arrCollectUser = $this->group_topics_collects->likeTopicUser ( $topic_id );
 			
+			//上一篇帖子
+			$upTopic = $this->group_topics_mod->where(array('topicid'=>array('lt',$topic_id),'groupid'=>$strTopic ['groupid']))->find();
+			
+			//下一篇帖子
+			$downTopic = $this->group_topics_mod->where(array('topicid'=>array('gt',$topic_id),'groupid'=>$strTopic ['groupid']))->find();
+			
+			//获取评论
+			$page = $this->_get('p','intval',1);
+			$sc = $this->_get('sc','trim','asc');
+
+			//查询条件 是否显示
+			$map = array('topicid'=>$strTopic ['topicid']);
+			//显示列表
+			$pagesize = 3;
+			$count = $this->group_topics_comments->where($map)->order('addtime '.$sc)->count('topicid');
+			$pager = $this->_pager($count, $pagesize);
+			$arrComment =  $this->group_topics_comments->where($map)->order('addtime '.$sc)->limit($pager->firstRow.','.$pager->listRows)->select();
+			foreach($arrComment as $key=>$item){
+				$arrTopicComment[] = $item;
+				$arrTopicComment[$key]['user'] = $this->user_mod->getOneUser($item['userid']); 
+				$arrTopicComment[$key]['content'] = h($item['content']);
+				$recomment = $this->group_topics_mod->recomment($item['referid']);
+				$arrTopicComment[$key]['recomment'] = $recomment;
+			}	
+			
+			$this->assign('pageUrl', $pager->fshow());
+			$this->assign('arrTopicComment', $arrTopicComment);
+						
 			$this->assign ( 'user', $user );
+			$this->assign ( 'page', $page );
+			$this->assign ( 'sc', $sc );
+			$this->assign ( 'upTopic', $upTopic );
+			$this->assign ( 'downTopic', $downTopic );
 			$this->assign ( 'strTopic', $strTopic );
 			$this->assign ( 'newTopic', $newTopic );
 			$this->assign ( 'strGroup', $strGroup );
@@ -466,5 +561,250 @@ class GroupAction extends FrontendAction {
 		$this->_config_seo (array('title'=>'发现话题','subtitle'=>'小组'));
 		$this->display ();		
 	}
+	// 添加评论
+	public function addcomment(){
+		$topicid	= $this->_post('topicid','intval');
+		$content	= $this->_post('content','trim');
+		$page	= $this->_post('p','intval');
+		//添加评论标签
+		//doAction('group_comment_add','',$content,'');
+		if($content==''){
+		
+			$this->error('没有任何内容是不允许你通过滴^_^');
+				
+		}else if(mb_strlen($content,'utf8')>10000){
+				
+			$this->error('发这么多内容干啥,最多只能写1000千个字^_^,回去重写哇！');
+				
+		}else{ 
+			//执行添加
+			$data = array(
+					'topicid'	=> $topicid,
+					'userid'	=> $this->userid,
+					'content'	=> $content,
+					'addtime'	=> time(),
+			);
+			if (false !== $this->group_topics_comments->create ( $data )) {
+				$commentid = $this->group_topics_comments->add ();
+			}
+			if($commentid){
+				//统计评论数
+				$count_comment = $this->group_topics_comments->where(array('topicid'=>$topicid))->count('*');
+				//更新帖子最后回应时间和评论数
+				$uptime = time();
+				$data = array(
+						'uptime'	=> $uptime, //暂时这样
+						'count_comment'	=> $count_comment,
+				);
+				$this->group_topics_mod->where(array('topicid'=>$topicid))->save($data);
+				//积分记录
+				//发送系统消息(通知楼主有人回复他的帖子啦)
+				//feed开始
+				$this->redirect ( 'group/topic', array (
+						'id' => $topicid,
+						'p'  => $page,
+				) );				
+			}
+			
+		}
+		
+	}
+	// 回复评论
+	public function recomment(){
+		$topicid = $this->_post('topicid');
+		$referid = $this->_post('referid');
+		$content = $this->_post('content');		
+		//安全性检查
+		if( mb_strlen($content, 'utf8') > 10000)
+		{
+			echo 1;
+			exit ();
+		}
+		//执行添加
+		$data = array(
+				'topicid'	=> $topicid,
+				'userid'	=> $this->userid,
+				'referid'	=> $referid,
+				'content'	=> htmlspecialchars_decode($content), // ajax 提交过来数据的转一下
+				'addtime'	=> time(),
+		);
+		if (false !== $this->group_topics_comments->create ( $data )) {
+			$commentid = $this->group_topics_comments->add ();
+		}
+		if($commentid){
+			//统计评论数
+			$count_comment = $this->group_topics_comments->where(array('topicid'=>$topicid))->count('*');
+			//更新帖子最后回应时间和评论数
+			$uptime = time();
+			$data = array(
+					'uptime'	=> $uptime, //暂时这样
+					'count_comment'	=> $count_comment,
+			);
+			$this->group_topics_mod->where(array('topicid'=>$topicid))->save($data);
+			//发消息
+			echo 0;
+		}
+		
+		
+	}
+	//推荐帖子
+	public function topic_recommend(){
+		$topicid = $this->_post('tid');
+		$groupid = $this->_post('tkind');
+		$content = $this->_post('content','trim'); //推荐的话
+		
+		if(empty($topicid))
+		{
+			$this->error("非法操作！"); 
+		}
+		
+		$recommendNum = D('group_topics_recommend')->where(array('topicid'=>$topicid))->count();
+		
+		$is_rec = D('group_topics_recommend')->where(array('userid'=>$this->userid, 'topicid'=>$topicid))->count();
+		
+		if($is_rec > 0){
+			//已经推荐过了
+			$arrJson = array('r'=>1, 'html'=>'你已经推荐过该帖子了！');
+		}else{
+			//执行
+			$arrData = array('userid'=>$this->userid, 'topicid'=>$topicid, 'content'=>$content,'addtime'=>time());
+			if (false !== D('group_topics_recommend')->create($arrData)) {
+				D('group_topics_recommend')->add ();
+				//帖子推荐数加1
+				$this->group_topics_mod->where(array('topicid'=>$topicid))->setInc('count_recommend');
+				$arrJson = array('r'=>0, 'num'=>$recommendNum+1);
+			}	
+		}
+		
+		header("Content-Type: application/json", true);
+		echo json_encode($arrJson);
+	}
+	// 删除帖子的某条评论
+	public function delcomment(){
+		$commentid = $this->_get('commentid','intval');
+		$userid = $this->userid;
+		$strComment = D('group_topics_comments')->where(array('commentid'=>$commentid))->find();
+		$strTopic = $this->group_topics_mod->getOneTopic($strComment['topicid']);
+		$strGroup = $this->_mod->getOneGroup($strTopic['groupid']);
+		
+		// 发帖人 小组组长 管理员 可以删除 其他权限不允许删除
+		if($strTopic['userid']==$userid || $strGroup['userid']==$userid ){
+			$this->group_topics_mod->delComment($commentid);
+			$this->redirect ( 'group/topic', array (
+					'id' => $strComment['topicid'],
+			) );			
+		}
+
+	}
+	// 删除帖子
+	public function deltopic(){
+		$topicid = $this->_get('topicid','intval');
+		$user = $this->visitor->get ();
+		
+		$strTopic = $this->group_topics_mod->getOneTopic($topicid);
+		
+		$strGroup = $this->_mod->getOneGroup($strTopic['groupid']);
+		
+		// 发帖人 小组组长 管理员 可以删除 其他权限不允许删除
+		if($strTopic['userid']== $user['userid'] || $strGroup['userid']== $user['userid'] || $user['isadmin'] == 1){
+			$this->group_topics_mod->delTopic($topicid);
+			$this->redirect ( 'group/show', array (
+					'id' => $strGroup['groupid'],
+			) );
+		}else{
+			$this->error('没有帖子可以删除，别瞎搞！');
+		}
+	
+	}	
+	// 置顶帖子
+	public function topic_istop(){
+		$topicid = $this->_get('topicid','intval');
+		$userid = $this->userid;
+		
+		$strTopic = $this->group_topics_mod->getOneTopic($topicid);
+
+		$istop = $strTopic['istop'];
+		
+		$istop == 0 ? $istop = 1 : $istop = 0;
+		
+		$strGroup = $this->_mod->getOneGroup($strTopic['groupid']);
+		//只有组长可以置顶帖子
+		if($userid == $strGroup['userid']){
+			$this->group_topics_mod->where(array('topicid'=>$topicid))->setField('istop',$istop);
+			$this->redirect ( 'group/topic', array (
+					'id' => $topicid,
+			) );
+		}else{
+			$this->error("只有小组组长才能置顶帖子！");
+		}
+	}
+	// 精华帖子
+	public function isdigest(){
+		$topicid = $this->_get('topicid','intval');
+		$userid = $this->userid;
+	
+		$strTopic = $this->group_topics_mod->getOneTopic($topicid);
+	
+		$isdigest = $strTopic['isdigest'];
+	
+		$isdigest == 0 ? $isdigest = 1 : $isdigest = 0;
+	
+		$strGroup = $this->_mod->getOneGroup($strTopic['groupid']);
+		//只有组长可以精华帖子
+		if($userid == $strGroup['userid']){
+			$this->group_topics_mod->where(array('topicid'=>$topicid))->setField('isdigest',$isdigest);
+			$this->redirect ( 'group/topic', array (
+					'id' => $topicid,
+			) );
+		}else{
+			$this->error("只有小组组长才可以设置为精华帖！");
+		}
+	}
+	// 隐藏帖子
+	public function isshow(){
+		$topicid = $this->_get('topicid','intval');
+		$userid = $this->userid;
+	
+		$strTopic = $this->group_topics_mod->getOneTopic($topicid);
+	
+		$isshow = $strTopic['isshow'];
+	
+		$isshow == 0 ? $isshow = 1 : $isshow = 0;
+	
+		$strGroup = $this->_mod->getOneGroup($strTopic['groupid']);
+		//只有组长可以精华帖子
+		if($userid == $strGroup['userid']){
+			$this->group_topics_mod->where(array('topicid'=>$topicid))->setField('isshow',$isshow);
+			$this->redirect ( 'group/topic', array (
+					'id' => $topicid,
+			) );
+		}else{
+			$this->error("只有小组组长才可以设置为隐藏帖！");
+		}
+	}
+	// 编辑帖子
+	public function topic_edit(){
+		$topicid = $this->_get('topicid','intval');
+		$userid = $this->userid;
+		
+		$strTopic = $this->group_topics_mod->getOneTopic($topicid);
+		//$strTopic['content'] = 
+		$strGroup = $this->_mod->getOneGroup($strTopic['groupid']);
+		
+		$groupid = $strGroup['groupid'];
+		// 是否加入
+		$isGroupUser = $this->_mod->isGroupUser ( $userid, $groupid );
+		
+		$this->assign ( 'isGroupUser', $isGroupUser );
+		$this->assign ( 'strTopic', $strTopic );
+		$this->assign ( 'strGroup', $strGroup );
+		$this->assign ( 'topic_id', $topicid );
+		$this->_config_seo (array('title'=>'编辑“'.$strTopic['title'].'”','subtitle'=>'小组'));
+		$this->display ('add');
+	}
+	// 地区的话题 北京话题
+	public 	function nearby(){
+		
+	}	
 	
 }

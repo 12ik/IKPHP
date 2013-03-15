@@ -250,3 +250,13 @@ function getsubstrutf8($string, $start = 0, $sublen, $append = true) {
 		return join ( '', array_slice ( $t_string [0], $start, $sublen ) );
 	}
 }
+/**
+ * 转换为安全的html文本
+ */
+function h($text)
+{
+
+	$text = htmlspecialchars($text, ENT_NOQUOTES, 'UTF-8');
+	$text = nl2br ( $text );
+	return $text;
+}

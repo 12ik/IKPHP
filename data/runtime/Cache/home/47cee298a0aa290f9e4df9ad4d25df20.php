@@ -177,7 +177,11 @@ __EXTENDS_JS__
 		<?php if($action_name == 'my_group_topics'): ?><li class="on"><a href="<?php echo U('group/my_group_topics');?>">我的小组话题</a></li>
 		<?php else: ?>
 		<li class=""><a href="<?php echo U('group/my_group_topics');?>">我的小组话题</a></li><?php endif; ?>
-		
+        
+		<?php if($action_name == 'my_topics'): ?><li class="on"><a href="<?php echo U('group/my_topics');?>">我发起的话题</a></li>
+		<?php else: ?>
+		<li class=""><a href="<?php echo U('group/my_topics');?>">我发起的话题</a></li><?php endif; ?>
+        		
 		<?php if($action_name == 'my_replied_topics'): ?><li class="on"><a href="<?php echo U('group/my_replied_topics');?>">我回应的话题</a></li>
 		<?php else: ?>
 		<li class=""><a href="<?php echo U('group/my_replied_topics');?>">我回应的话题</a></li><?php endif; ?>

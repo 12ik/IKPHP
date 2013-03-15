@@ -173,7 +173,7 @@ function recomment(rid,tid){
 
 	c = $('#recontent_'+rid).val();
 	if(c==''){tips('回复内容不能为空');return false;}
-	var url = siteUrl+'index.php?app=group&a=do&ik=recomment';
+	var url = siteUrl+'index.php?m=group&a=topic&d=recomment';
 	$('#recomm_btn_'+rid).hide();
 	$.post(url,{referid:rid,topicid:tid,content:c} ,function(rs){
 				if(rs == 0)

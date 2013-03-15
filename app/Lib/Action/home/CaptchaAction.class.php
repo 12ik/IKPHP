@@ -1,6 +1,6 @@
 <?php
 
-class CaptchaAction extends FrontendAction {
+class captchaAction extends frontendAction {
 
     public function _empty() {
 		$captcha = new Captcha();

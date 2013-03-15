@@ -117,9 +117,6 @@ __EXTENDS_JS__
 </h1>
 
 <ul>
-	<li><a href="<?php echo U('note/index',array('userid'=>$strUser[userid]));?>">日志</a></li>
-    <li><a href="<?php echo U('photo/album',array('userid'=>$strUser[userid]));?>">相册</a></li>
-    <li><a href="<?php echo U('feed/index',array('userid'=>$strUser[userid]));?>">广播</a></li>
     <?php if($strUser[userid] == $visitor[userid]): ?><li><a href="<?php echo U('message/ikmail',array(ik=>inbox));?>">站内信</a></li>
     <li><a href="<?php echo U('user/setbase');?>">设置</a></li><?php endif; ?>
 </ul>
@@ -170,14 +167,12 @@ __EXTENDS_JS__
 
 <div class="spacetopic">
     <?php if(!empty($arrMyComment)): ?><table width="100%">
-    <!--{loop $arrMyComment $key $item}-->
-        <tr>
+    <?php if(is_array($arrMyComment)): foreach($arrMyComment as $key=>$item): ?><tr>
         <td><img src="__STATIC__/public/images/topic.gif" align="absmiddle"  title="[帖子]" alt="[帖子]" />
         <a href="<?php echo U('group/topic',array('id'=>$item[topicid]));?>"><?php echo ($item[title]); ?></a>&nbsp;&nbsp;</td>
         <td><?php if($item[count_comment]): echo ($item[count_comment]); endif; ?></td>
         <td style="width:120px;text-align:right;color:#999999;"><?php echo date('Y-m-d H:i',$item[addtime]) ?></td>
-        </tr>
-    <!--{/loop}-->
+        </tr><?php endforeach; endif; ?>
     </table>
     <?php else: ?>
     <div style="padding:50 0;color:#999999;">这个人很懒，什么也不愿意留下！</div><?php endif; ?>
@@ -275,13 +270,13 @@ __EXTENDS_JS__
 <div id="friend">
 
 <h2>
-<?php if($strUser[userid] == $visitor[userid]): ?>我关注的人
-<?php else: ?>
-<?php echo ($strUser[username]); ?>关注的人<?php endif; ?>
-&nbsp;·&nbsp;·&nbsp;·
-<span class="pl">&nbsp;(
-<a href="{U('user','follow',array(userid=>$strUser[userid]))}">全部<?php echo ($strUser[count_follow]); ?></a>
-) </span>
+    <?php if($strUser[userid] == $visitor[userid]): ?>我关注的人
+    <?php else: ?>
+    <?php echo ($strUser[username]); ?>关注的人<?php endif; ?>
+    &nbsp;·&nbsp;·&nbsp;·
+    <!--<span class="pl">&nbsp;(
+    <a href="{U('user','follow',array(userid=>$strUser[userid]))}">全部<?php echo ($strUser[count_follow]); ?></a>
+    ) </span>-->
 </h2>
 
 <!--{loop $arrFollowUser $key $item}-->
@@ -296,33 +291,31 @@ __EXTENDS_JS__
 
 </div>
 
-<div id="group" class="">
-
-<h2>
-<?php if($strUser[userid] == $visitor[userid]): ?>我参加的小组
-<?php else: ?>
-<?php echo ($strUser[username]); ?>参加的小组<?php endif; ?>
-&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
-<span class="pl">&nbsp;(
-<a href="{U('group','groups',array('userid'=>$strUser[userid]))}">全部</a>
-) </span>
-</h2>
-
-<!--{loop $arrGroup $key $item}-->
-<dl class="ob"><dt><a href="{U('group','show',array('id'=>$item[groupid]))}"><img alt="<?php echo ($item[groupname]); ?>" class="m_sub_img" src="<?php echo ($item[icon_48]); ?>"></a></dt>
-<dd><a href="{U('group','show',array('id'=>$item[groupid]))}"><?php echo ($item[groupname]); ?></a> <span>(<?php echo ($item[count_user]); ?>)</span>
-</dd></dl>
-<!--{/loop}-->
-
-<div class="clear"></div>
-
-</div>
-<br/>
-<p class="pl">本页永久链接: <a href="<?php echo U('people/index',array('id'=>$strUser[doname]));?>"><?php echo U('people/index',array('id'=>$strUser[doname]));?></a></p>
-<br>
-<p class="pl">订阅<?php echo ($strUser[username]); ?>的收藏 <br>
-<span class="feed"><a href="#"> feed: rss 2.0</a></span>
-</p>
+    <div id="group" class="">
+    
+        <h2>
+            <?php if($strUser[userid] == $visitor[userid]): ?>我参加的小组
+            <?php else: ?>
+            <?php echo ($strUser[username]); ?>参加的小组<?php endif; ?>
+            &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+            <!--<span class="pl">&nbsp;(
+            <a href="<?php echo U('group/mygroups',array('userid'=>$strUser[userid]));?>">全部</a>
+            ) </span>
+            -->
+        </h2>
+    
+        <?php if(is_array($arrMyGroup)): foreach($arrMyGroup as $key=>$item): ?><dl class="ob"><dt><a href="<?php echo U('group/show',array('id'=>$item[groupid]));?>"><img alt="<?php echo ($item[groupname]); ?>" class="m_sub_img" src="<?php echo ($item[icon_48]); ?>"></a></dt>
+            <dd><a href="<?php echo U('group/show',array('id'=>$item[groupid]));?>"><?php echo ($item[groupname]); ?></a> <span>(<?php echo ($item[count_user]); ?>)</span></dd>
+            </dl><?php endforeach; endif; ?>
+    
+        <div class="clear"></div>
+    </div>
+	<br/>
+	<p class="pl">本页永久链接: <a href="<?php echo U('people/index',array('id'=>$strUser[doname]));?>"><?php echo U('people/index',array('id'=>$strUser[doname]));?></a></p>
+	<br>
+    <p class="pl">订阅<?php echo ($strUser[username]); ?>的收藏 <br>
+        <span class="feed"><a href="#"> feed: rss 2.0</a></span>
+    </p>
 </div>
 
 

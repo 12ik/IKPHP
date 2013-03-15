@@ -3,7 +3,7 @@
 <foreach name="arrCollectUser" item="item">
 <dl class="obu">
         <dt>
-        	<a href="{:U('people',array('id'=>$item[doname]))}" title="{$item[username]}">
+        	<a href="{:U('people/index',array('id'=>$item[doname]))}" title="{$item[username]}">
         		<img  alt="{$item[username]}"  src="{:avatar($item['userid'], 48)}"class="m_sub_img"  >
             </a>
         </dt>

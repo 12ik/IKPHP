@@ -9,6 +9,18 @@ class groupModel extends Model {
 			return false;
 		}
 	}
+	public function getNewGroup($limit){
+		$where = array (
+				'isshow' => 0,
+		);
+		$arrGroup = $this->field('groupid')->where ( $where )->order('addtime desc')->limit($limit)->select();
+		if(is_array($arrGroup)){
+			foreach($arrGroup as $item){
+				$result[] = $this->getOneGroup($item['groupid']);
+			}
+		}
+		return $result;
+	}
 	public function getOneGroup($groupid) {
 		if ($this->isGroup ( $groupid )) {
 			$where = array (
@@ -29,7 +41,7 @@ class groupModel extends Model {
 		return $result;		
 	}
 	// 某用户加入的小组 不包括自己创建的小组
-	public function getUserJoinGroup(){
+	public function getUserJoinGroup($userid){
 		$myCreateGroup = $this->getUserGroup($userid);
 		if(is_array($myCreateGroup)){
 			foreach($myCreateGroup as $item){
@@ -97,4 +109,5 @@ class groupModel extends Model {
 		}
 		return $result;
 	}
+
 }

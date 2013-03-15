@@ -14,20 +14,20 @@
             
             <strong>爱客社区</strong>
             <div>
-            <b>12ik创新社区新体验，内容互动性强，交流更方便</b><br><em>简单</em><em>快捷</em><em>方便</em><em>建设本地化，垂直型社区；目前已有<cite>{$count_user}</cite>位用户加入！</em>
+            <b>爱客网开源社区程序，内容互动性强，交流更方便</b><br><em>简单</em><em>快捷</em><em>方便</em><em>建设本地化，垂直型社区；目前已有<cite>{$count_user}</cite>位用户加入！</em>
             </div>
-            <a class="submit" href="{U('user','register')}">加入我们</a>
+            <a class="submit" href="{:U('user/register')}">加入我们</a>
             </div>
             
             <div class="login">
-            <form action="{U('user','login',array('ik'=>'do'))}" method="post" name="lzform" id="lzform">
+            <form action="{:U('user/login')}" method="post" name="lzform" id="lzform">
             <fieldset>
             <legend>登录</legend>
             <div class="item">
             <label>Email：</label><input type="email" tabindex="1" value="" name="email" class="txt">
             </div>
             <div class="item">
-            <label>密码：</label><input type="password" tabindex="2" class="txt" name="pwd" > <a href="{SITE_URL}index.php?app=user&a=forgetpwd">忘记密码？</a>
+            <label>密码：</label><input type="password" tabindex="2" class="txt" name="password" > <a href="{:U('user/forgetpwd')}">忘记密码？</a>
             </div>
             
             <div class="item1">
@@ -35,6 +35,7 @@
             </div>
             <div class="item1">
             <input type="hidden" name="cktime" value="2592000" />
+            <input type="hidden" name="ret_url" value="{$ret_url}" />
             <input type="submit" tabindex="4" class="submit" value="登录" style="margin-left:10px">
             
             </div>
@@ -50,11 +51,10 @@
     
         <div class="cleft">
         
-            <h2>推荐小组<span class="pl">&nbsp;(<a href="{U('group','all')}">全部</a>) </span></h2>
+            <h2>推荐小组<span class="pl">&nbsp;(<a href="{:U('group/explore')}">全部</a>) </span></h2>
         
             <div style="overflow:hidden;">
-            <!--{if $arrRecommendGroup}-->
-            <!--{loop $arrRecommendGroup $key $item}-->
+            <foreach name="arrRecommendGroup" item="item">
             <div class="sub-item">
             <div class="pic">
             <a href="{U('group','show',array('id'=>$item[groupid]))}">
@@ -66,8 +66,7 @@
             <p>{$item[groupdesc]}</p>
             </div>
             </div>
-            <!--{/loop}-->
-            <!--{/if}-->
+            </foreach>
             </div>
             <div class="clear"></div>
         

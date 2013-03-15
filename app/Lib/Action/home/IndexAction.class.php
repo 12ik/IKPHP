@@ -11,12 +11,16 @@ class indexAction extends frontendAction {
 		$this->group_topic_mod = D ( 'group_topics' );
 	}
 	public function index() {
+		// 来路
+		$ret_url = isset ( $_SERVER ['HTTP_REFERER'] ) ? $_SERVER ['HTTP_REFERER'] : __APP__;
+		
 		// 最新10个小组
 		$arrNewGroup = $this->group_mod->getNewGroup ( 10 );
 		$arrHotTopic = $this->group_topic_mod->getHotTopic(15);
 		//活跃会员
 		$arrHotUser = $this->user_mod->getHotUser(12);
 		
+		$this->assign ( 'ret_url', $ret_url );
 		$this->assign ( 'arrNewGroup', $arrNewGroup );
 		$this->assign ( 'arrHotUser', $arrHotUser );
 		$this->assign ( 'arrHotTopic', $arrHotTopic );

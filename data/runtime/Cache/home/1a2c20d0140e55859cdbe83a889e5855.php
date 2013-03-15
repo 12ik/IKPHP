@@ -290,17 +290,17 @@ __EXTENDS_JS__
 <div id="footer">
 	<div class="f_content">
         <span class="fl gray-link" id="icp">
-            &copy; 2012－2015 12ik.com, all rights reserved
+            &copy; 2012－2015 IKPHP.COM, all rights reserved
         </span>
         
         <span class="fr">
-            <a href="{SITE_URL}{ikUrl('home','about')}">关于12IK</a>
-            · <a href="{SITE_URL}{ikUrl('home','contact')}">联系我们</a>
-            · <a href="{SITE_URL}{ikUrl('home','agreement')}">用户条款</a>
-            · <a href="{SITE_URL}{ikUrl('home','privacy')}">隐私申明</a>
+            <a href="<?php echo U('home/about');?>">关于爱客</a>
+            · <a href="<?php echo U('home/contact');?>">联系我们</a>
+            · <a href="<?php echo U('home/agreement');?>">用户条款</a>
+            · <a href="<?php echo U('home/privacy');?>">隐私申明</a>
         </span>
         <div class="cl"></div>
-        <p>Powered by <a class="softname" href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a> <?php echo ($IK_SOFT[info][version]); ?> <?php echo ($IK_SOFT[info][year]); ?> <?php echo ($IK_SITE[base][site_icp]); ?> <span style="color:green">ThinkPHP 版本 <?php echo (THINK_VERSION); ?></span><br /><span style="font-size:0.83em;">Processed in <?php echo ($runTime); ?> second(s)</span>
+        <p>Powered by <a class="softname" href="<?php echo (IKPHP_SITEURL); ?>"><?php echo (IKPHP_SITENAME); ?></a> <?php echo (IKPHP_VERSION); ?>  <?php echo C('site_icp');?> <span style="color:green">ThinkPHP 版本 <?php echo (THINK_VERSION); ?></span><br /><span style="font-size:0.83em;"></span>
         
         <!--<script src="http://s21.cnzz.com/stat.php?id=2973516&web_id=2973516" language="JavaScript"></script>-->
         </p>   

@@ -3,6 +3,9 @@
 class peopleAction extends frontendAction {
 	public function _initialize() {
 		parent::_initialize ();
+		if ($this->visitor->is_login) {
+			$this->userid = $this->visitor->info ['userid'] > 0 ? $this->visitor->info ['userid'] : 0;
+		}
 		$this->group_mod = D ( 'group' );
 		$this->user_mod = D ( 'user' );
 		$this->group_users_mod = D ( 'group_users' );
@@ -20,6 +23,9 @@ class peopleAction extends frontendAction {
 		}
 		
 		$strUser = $this->user_mod->getOneUser ( $userid );
+		$strUser['isfollow'] = $this->user_mod->isFollow($this->userid, $userid);
+		//他关注的用户
+		$strUser['followUser'] = $this->user_mod->getfollow_user($userid, 8);
 		// 发布的帖子
 		$arrMyTopic = $this->group_topics_mod->getUserTopic ( $userid, 10 );
 		// 用户喜欢的帖子

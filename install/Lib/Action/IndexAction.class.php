@@ -154,9 +154,9 @@ class indexAction extends Action {
 
 		
 		//更改网站信息
-		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `value`='".$temp_info ['site_title']."' where `name`='site_title'", $conn );
-		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `value`='".$temp_info ['site_subtitle']."' where `name`='site_subtitle'" , $conn );
-		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `value`='".$temp_info ['site_url']."' where `name`='site_url'" , $conn );
+		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `data`='".$temp_info ['site_title']."' where `name`='site_title'", $conn );
+		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `data`='".$temp_info ['site_subtitle']."' where `name`='site_subtitle'" , $conn );
+		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `data`='".$temp_info ['site_url']."' where `name`='site_url'" , $conn );
 
 		//修改配置文件
 		$config_file = './data/config/db.php';
@@ -175,6 +175,8 @@ class indexAction extends Action {
         touch('./data/install.lock');
         $temp_info = F ( 'temp_data' );
         $this->assign ( 'email', $temp_info['admin_email'] );
+        $this->assign ( 'home_url', $temp_info['site_url'] );
+        $this->assign ( 'admin_url', $temp_info['site_url'].'index.php?g=admin' );
         $this->assign ( 'password', $temp_info['admin_password'] );
         $this->display();
 	}

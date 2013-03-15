@@ -804,7 +804,7 @@ class groupAction extends frontendAction {
 	}
 	// 地区的话题 北京话题
 	public 	function nearby(){
-		
+		$this->show("内容还在建设中！");
 	}	
 	
 }

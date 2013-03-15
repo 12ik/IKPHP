@@ -106,20 +106,20 @@ __EXTENDS_JS__
             
             <strong>爱客社区</strong>
             <div>
-            <b>12ik创新社区新体验，内容互动性强，交流更方便</b><br><em>简单</em><em>快捷</em><em>方便</em><em>建设本地化，垂直型社区；目前已有<cite><?php echo ($count_user); ?></cite>位用户加入！</em>
+            <b>爱客网开源社区程序，内容互动性强，交流更方便</b><br><em>简单</em><em>快捷</em><em>方便</em><em>建设本地化，垂直型社区；目前已有<cite><?php echo ($count_user); ?></cite>位用户加入！</em>
             </div>
-            <a class="submit" href="{U('user','register')}">加入我们</a>
+            <a class="submit" href="<?php echo U('user/register');?>">加入我们</a>
             </div>
             
             <div class="login">
-            <form action="{U('user','login',array('ik'=>'do'))}" method="post" name="lzform" id="lzform">
+            <form action="<?php echo U('user/login');?>" method="post" name="lzform" id="lzform">
             <fieldset>
             <legend>登录</legend>
             <div class="item">
             <label>Email：</label><input type="email" tabindex="1" value="" name="email" class="txt">
             </div>
             <div class="item">
-            <label>密码：</label><input type="password" tabindex="2" class="txt" name="pwd" > <a href="{SITE_URL}index.php?app=user&a=forgetpwd">忘记密码？</a>
+            <label>密码：</label><input type="password" tabindex="2" class="txt" name="password" > <a href="<?php echo U('user/forgetpwd');?>">忘记密码？</a>
             </div>
             
             <div class="item1">
@@ -127,6 +127,7 @@ __EXTENDS_JS__
             </div>
             <div class="item1">
             <input type="hidden" name="cktime" value="2592000" />
+            <input type="hidden" name="ret_url" value="<?php echo ($ret_url); ?>" />
             <input type="submit" tabindex="4" class="submit" value="登录" style="margin-left:10px">
             
             </div>
@@ -141,12 +142,10 @@ __EXTENDS_JS__
     
         <div class="cleft">
         
-            <h2>推荐小组<span class="pl">&nbsp;(<a href="{U('group','all')}">全部</a>) </span></h2>
+            <h2>推荐小组<span class="pl">&nbsp;(<a href="<?php echo U('group/explore');?>">全部</a>) </span></h2>
         
             <div style="overflow:hidden;">
-            <!--{if $arrRecommendGroup}-->
-            <!--{loop $arrRecommendGroup $key $item}-->
-            <div class="sub-item">
+            <?php if(is_array($arrRecommendGroup)): foreach($arrRecommendGroup as $key=>$item): ?><div class="sub-item">
             <div class="pic">
             <a href="{U('group','show',array('id'=>$item[groupid]))}">
             <img src="<?php echo ($item[icon_48]); ?>" alt="<?php echo ($item[groupname]); ?>">
@@ -156,9 +155,7 @@ __EXTENDS_JS__
             <a href="{U('group','show',array('id'=>$item[groupid]))}"><?php echo ($item[groupname]); ?></a> (<?php echo ($item[count_user]); ?>/<font color="orange"><?php echo ($item[count_topic]); ?></font>)             
             <p><?php echo ($item[groupdesc]); ?></p>
             </div>
-            </div>
-            <!--{/loop}-->
-            <!--{/if}-->
+            </div><?php endforeach; endif; ?>
             </div>
             <div class="clear"></div>
         
@@ -209,17 +206,17 @@ __EXTENDS_JS__
 <div id="footer">
 	<div class="f_content">
         <span class="fl gray-link" id="icp">
-            &copy; 2012－2015 12ik.com, all rights reserved
+            &copy; 2012－2015 IKPHP.COM, all rights reserved
         </span>
         
         <span class="fr">
-            <a href="{SITE_URL}{ikUrl('home','about')}">关于12IK</a>
-            · <a href="{SITE_URL}{ikUrl('home','contact')}">联系我们</a>
-            · <a href="{SITE_URL}{ikUrl('home','agreement')}">用户条款</a>
-            · <a href="{SITE_URL}{ikUrl('home','privacy')}">隐私申明</a>
+            <a href="<?php echo U('home/about');?>">关于爱客</a>
+            · <a href="<?php echo U('home/contact');?>">联系我们</a>
+            · <a href="<?php echo U('home/agreement');?>">用户条款</a>
+            · <a href="<?php echo U('home/privacy');?>">隐私申明</a>
         </span>
         <div class="cl"></div>
-        <p>Powered by <a class="softname" href="<?php echo ($IK_SOFT[info][url]); ?>"><?php echo ($IK_SOFT[info][name]); ?></a> <?php echo ($IK_SOFT[info][version]); ?> <?php echo ($IK_SOFT[info][year]); ?> <?php echo ($IK_SITE[base][site_icp]); ?> <span style="color:green">ThinkPHP 版本 <?php echo (THINK_VERSION); ?></span><br /><span style="font-size:0.83em;">Processed in <?php echo ($runTime); ?> second(s)</span>
+        <p>Powered by <a class="softname" href="<?php echo (IKPHP_SITEURL); ?>"><?php echo (IKPHP_SITENAME); ?></a> <?php echo (IKPHP_VERSION); ?>  <?php echo C('site_icp');?> <span style="color:green">ThinkPHP 版本 <?php echo (THINK_VERSION); ?></span><br /><span style="font-size:0.83em;"></span>
         
         <!--<script src="http://s21.cnzz.com/stat.php?id=2973516&web_id=2973516" language="JavaScript"></script>-->
         </p>   

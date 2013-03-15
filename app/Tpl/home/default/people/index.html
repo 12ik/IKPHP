@@ -146,7 +146,7 @@
         <span class="user-rs"><a href="{:U('user/unfollow',array('userid'=>$strUser[userid]))}">取消关注</a></span>
     </div>
     <else/>
-    <a class="a-btn-add mr10 add_contact" href="{:U('user/follow',array('userid'=>$strUser[userid]))}">关注此人</a>
+    <a class="a-btn-add mr10 add_contact" href="{:U('user/userfollow',array('userid'=>$strUser[userid]))}">关注此人</a>
     </if>
     <a href="{:U('message/write',array('touserid'=>$strUser[userid]))}" rel="nofollow" class="a-btn mr5">发消息</a>
     <div id="divac"></div>
@@ -192,15 +192,15 @@
     ) </span>-->
 </h2>
 
-<!--{loop $arrFollowUser $key $item}-->
-<dl class="obu"><dt><a class="nbg" href="{U('hi','',array('id'=>$item[doname]))}"><img alt="{$item[username]}" class="m_sub_img" src="{$item[face]}"></a></dt>
-<dd><a href="{U('hi','',array('id'=>$item[doname]))}">{$item[username]}</a></dd>
+<foreach name="strUser[followUser]" item="item">
+<dl class="obu"><dt><a class="nbg" href="{:U('people/index',array('id'=>$item[doname]))}"><img alt="{$item[username]}" class="m_sub_img" src="{$item[face]}"></a></dt>
+<dd><a href="{:U('people/index',array('id'=>$item[doname]))}">{$item[username]}</a></dd>
 </dl>
-<!--{/loop}-->
+</foreach>
 
 <br clear="all">
 
-<a href="{U('user','followed',array(userid=>$strUser[userid]))}">&gt; 被{$strUser[count_followed]}人关注</a>
+<a href="{:U('user/followed',array(userid=>$strUser[userid]))}">&gt; 被{$strUser[count_followed]}人关注</a>
 
 </div>
 

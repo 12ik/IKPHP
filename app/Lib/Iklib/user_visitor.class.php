@@ -40,7 +40,7 @@ class user_visitor {
         $user_mod = M('user');
         //更新用户信息
         $user_mod->where(array('userid' => $uid))->save(array('uptime' => time(), 'ip' => get_client_ip()));
-        $user_info = $user_mod->field('userid,username,password')->find($uid);
+        $user_info = $user_mod->field('userid,username,password,doname')->find($uid);
         //保持状态
         $this->assign_info($user_info);
         $this->remember($user_info, $remember);

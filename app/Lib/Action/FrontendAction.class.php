@@ -2,9 +2,9 @@
 /**
  * 前台控制器基类
  *
- * @author andery
+ * @author 小麦
  */
-class FrontendAction extends BaseAction {
+class frontendAction extends baseAction {
 
     protected $visitor = null;
     
@@ -61,6 +61,17 @@ class FrontendAction extends BaseAction {
     		}
     	}
     	$this->assign('seo', $page_seo);
+    }
+    /**
+     * 前台分页统一
+     */
+    protected function _pager($count, $pagesize) {
+    	$pager = new Page($count, $pagesize);
+    	$pager->rollPage = 5;
+    	$pager->setConfig('prev', '<前页');
+    	$pager->setConfig('next', '后页>');
+    	$pager->setConfig('theme', '%upPage% %first% %linkPage% %end% %downPage%');
+    	return $pager;
     }  
   
 }

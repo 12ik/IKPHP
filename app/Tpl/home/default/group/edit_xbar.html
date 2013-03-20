@@ -1,0 +1,10 @@
+<h1>更改{$strGroup[groupname]}设置</h1>
+<div class="tabnav">
+<ul>
+<if condition="$d eq base">
+<li class="select"><a href="{:U('group/edit',array('d'=>'base','groupid'=>$strGroup['groupid']))}">基本信息</a></li>
+<
+
+<li <!--{if $ik=="icon"}-->class="select"<!--{/if}-->><a href="{U('group','edit',array('ik'=>'icon','groupid'=>$strGroup['groupid']))}">小组图标</a></li>
+</ul>
+</div>

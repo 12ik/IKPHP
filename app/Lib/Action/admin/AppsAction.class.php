@@ -1,5 +1,5 @@
 <?php
-class AppsAction extends BackendAction {
+class appsAction extends backendAction {
 
     public function _before_index() {
         $this->sort = 'ordid';

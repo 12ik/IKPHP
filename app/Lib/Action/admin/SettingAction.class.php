@@ -1,5 +1,5 @@
 <?php
-class SettingAction extends BackendAction {
+class settingAction extends backendAction {
 	public function _initialize() {
 		parent::_initialize ();
 		$this->_mod = D ( 'setting' );
@@ -7,9 +7,11 @@ class SettingAction extends BackendAction {
 	public function index() {
 		$arrTime = $this->getZone();
 		
-		$this->title ( '基本配置' );
+		$this->title ( '站点设置' );
 		$this->assign('arrTime', $arrTime);
-		$this->display ();
+      	$type = $this->_get('type', 'trim', 'index');
+      	$this->assign('type', $type);
+        $this->display($type);
 	}
 	public function url(){
 		$this->title ( '链接形式' );

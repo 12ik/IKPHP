@@ -2,9 +2,9 @@
 /**
  * 用户控制器基类
  *
- * @author charm
+ * @author 小麦
  */
-class UserbaseAction extends FrontendAction {
+class userbaseAction extends frontendAction {
 	
 	public function _initialize() {
 		parent::_initialize ();

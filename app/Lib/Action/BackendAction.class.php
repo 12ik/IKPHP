@@ -1,6 +1,6 @@
 <?php
 
-class BackendAction extends BaseAction
+class backendAction extends baseAction
 {
 	protected $_name = '';
 	protected $menuid = 0;

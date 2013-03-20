@@ -3,7 +3,7 @@
  * IKPHP爱客网 安装程序 @copyright (c) 2012-3000 IKPHP All Rights Reserved @author 小麦
  * @Email:160780470@qq.com
  */
-class IndexAction extends Action {
+class indexAction extends Action {
 	
 	public function _initialize() {
 		L ( include LANG_PATH . 'common.php' );
@@ -18,7 +18,9 @@ class IndexAction extends Action {
 				'./data/upload',
 				'./data/config/db.php',
 				'./data/config/url.php',
-				'./data/config/home/config.php' 
+				'./data/config/home/config.php',
+				'./install/Runtime',
+				'./install/Runtime/Data',
 		);
 		$error = array ();
 		foreach ( $check_file as $file ) {
@@ -64,7 +66,9 @@ class IndexAction extends Action {
 				$this->display ();
 				exit ();
 			}
+			
 			$selected_db = @mysql_select_db ( $dbname );
+			
 			if ($selected_db) {
 				// 如果数据库存在 并且里面安装过 提示是否覆盖
 				$query = @mysql_query ( "SHOW TABLES LIKE '{$dbprefix}%'" );
@@ -120,7 +124,7 @@ class IndexAction extends Action {
 		$charset = C ( 'DEFAULT_CHARSET' );
 		header ( 'Content-type:text/html;charset=' . $charset );
 		$temp_info = F ( 'temp_data' );
-		$conn = mysql_connect ( $temp_info ['dbhost'] . ':' . $temp_info ['dbport'], $temp_info ['dbuser'], $temp_info ['dbpass'] );
+		$conn = mysql_connect ( $temp_info ['dbhost'] . ':' . $temp_info ['dbport'], $temp_info ['dbuser'], $temp_info ['dbpwd'] );
 		$version = mysql_get_server_info ();
 	    $charset = str_replace('-', '', $charset);
         if ($version > '4.1') {
@@ -150,9 +154,9 @@ class IndexAction extends Action {
 
 		
 		//更改网站信息
-		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `value`='".$temp_info ['site_title']."' where `name`='site_title'", $conn );
-		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `value`='".$temp_info ['site_subtitle']."' where `name`='site_subtitle'" , $conn );
-		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `value`='".$temp_info ['site_url']."' where `name`='site_url'" , $conn );
+		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `data`='".$temp_info ['site_title']."' where `name`='site_title'", $conn );
+		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `data`='".$temp_info ['site_subtitle']."' where `name`='site_subtitle'" , $conn );
+		$run = mysql_query ( "UPDATE `" . $temp_info['dbprefix'] . "setting` set `data`='".$temp_info ['site_url']."' where `name`='site_url'" , $conn );
 
 		//修改配置文件
 		$config_file = './data/config/db.php';
@@ -165,14 +169,14 @@ class IndexAction extends Action {
 		$config_data['DB_PREFIX'] = $temp_info['dbprefix'];
 		file_put_contents($config_file, "<?php\r\nreturn " . var_export($config_data, true) . ";");
 		//安装完毕
-		$this->_set_temp ( array('admin_email'=>$temp_info['admin_email'],'admin_password'=>$temp_info['admin_password']) );
 		$this->redirect ( 'result');
 	}
 	public function result() {
         touch('./data/install.lock');
         $temp_info = F ( 'temp_data' );
-        echo $temp_info['admin_email'];
         $this->assign ( 'email', $temp_info['admin_email'] );
+        $this->assign ( 'home_url', $temp_info['site_url'] );
+        $this->assign ( 'admin_url', $temp_info['site_url'].'index.php?g=admin' );
         $this->assign ( 'password', $temp_info['admin_password'] );
         $this->display();
 	}

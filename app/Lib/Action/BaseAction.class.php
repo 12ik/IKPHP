@@ -2,9 +2,9 @@
 /**
  * 控制器基类
  *
- * @author andery
+ * @author 小麦
  */
-class BaseAction extends Action
+class baseAction extends Action
 {
     protected function _initialize() {
         //消除所有的magic_quotes_gpc转义
@@ -25,12 +25,12 @@ class BaseAction extends Action
      * 上传文件默认规则定义
      */
     protected function _upload_init($upload) {
-    	$allow_max = 2048;//C('ik_attr_allow_size'); //读取大小限制配置
-    	$allow_exts = explode(',', 'jpg,gif,png,jpeg,swf'); //读取附件类型配置
-    	$allow_max && $upload->maxSize = $allow_max * 1024;   //文件大小限制
-    	$allow_exts && $upload->allowExts = $allow_exts;  //文件类型限制
-    	$upload->saveRule = 'uniqid';
-    	return $upload;
+        $allow_max = C('ik_attr_allow_size'); //读取配置
+        $allow_exts = explode(',', C('ik_attr_allow_exts')); //读取配置
+        $allow_max && $upload->maxSize = $allow_max * 1024;   //文件大小限制
+        $allow_exts && $upload->allowExts = $allow_exts;  //文件类型限制
+        $upload->saveRule = 'uniqid';
+        return $upload;
     }  
     /**
      * 上传文件
@@ -62,5 +62,6 @@ class BaseAction extends Action
     		return array('error'=>1, 'info'=>$upload->getErrorMsg());
     	}
     }
+ 
    
 }

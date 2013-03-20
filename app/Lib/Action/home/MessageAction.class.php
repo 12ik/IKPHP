@@ -5,7 +5,7 @@
  * @author 小麦
  * @Email:160780470@qq.com
  */
-class MessageAction extends UserbaseAction {
+class messageAction extends userbaseAction {
 	public function inbox() {
 		$this->display ();
 	}

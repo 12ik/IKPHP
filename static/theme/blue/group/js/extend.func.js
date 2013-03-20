@@ -54,8 +54,8 @@ function savaTag(tid)
 {
 	var tag = $('#tags').val();
 		if(tag ==''){ tips('请输入标签哟^_^');$('#tagFrom').show('fast');}else{
-			var url = siteUrl+'index.php?app=tag&a=add_ajax&ik=do';
-			$.post(url,{objname:'topic',idname:'topicid',tags:tag,objid:tid},function(rs){  window.location.reload()   })
+			var url = siteUrl+'index.php?m=tag&a=add_ajax';
+			$.post(url,{objname:'topic',idname:'topicid',tags:tag,objid:tid},function(res){ window.location.reload(); })
 		}
 	
 }
@@ -173,7 +173,7 @@ function recomment(rid,tid){
 
 	c = $('#recontent_'+rid).val();
 	if(c==''){tips('回复内容不能为空');return false;}
-	var url = siteUrl+'index.php?app=group&a=do&ik=recomment';
+	var url = siteUrl+'index.php?m=group&a=topic&d=recomment';
 	$('#recomm_btn_'+rid).hide();
 	$.post(url,{referid:rid,topicid:tid,content:c} ,function(rs){
 				if(rs == 0)

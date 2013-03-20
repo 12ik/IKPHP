@@ -99,35 +99,80 @@ __EXTENDS_JS__
 <!--APP NAV-->
 
 </header>
+
 <!--main-->
 <div class="midder">
+
 <div class="mc">
-<h1 class="set_tit">用户信息管理</h1>
-<div class="tabnav">
-<ul>
-<?php if(is_array($user_menu_list)): $i = 0; $__LIST__ = $user_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i; if($user_menu_curr == $key): ?><li class="select"><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li>
-<?php else: ?>
-<li><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-</ul>
+<h1><?php echo ($strGroup[groupname]); ?>小组成员</h1>
+<div class="cleft">
+
+<h2><?php echo ($strGroup[role_leader]); ?> &nbsp; ·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;</h2>
+
+<div class="obss"><dl class="obu"><dt><a class="nbg" href="{U('hi','',array('id'=>$strLeader[doname]))}"><img alt="mido" class="m_sub_img" src="<?php echo ($strLeader[face]); ?>"></a></dt>
+<dd><?php echo ($strLeader[username]); ?><br><span class="pl">(<a href="{U('location','area',array(areaid=>$strLeader[area][areaid]))}"><?php echo ($strLeader[area][areaname]); ?></a>)</span></dd></dl><br clear="all">
 </div>
 
-    <div class="utable">
-    <form method="POST" action="<?php echo U('user/setdoname');?>">
-    <table cellpadding="5" cellspacing="5">
-    <tr>
-    <th>个性域名：</th>
-    <td>
-    <input type="text" disabled="true" value="<?php echo C('ik_site_url');?>/people/" class="txt" style="width:165px; font-family:Arial; font-size:12px"/> <input class="txt" name="doname" value="<?php echo ($strUser[doname]); ?>" type="text" />
-    </td>
-    </tr>
-    <tr><th></th><td><input class="submit" type="submit" value="好了，保存"  /></td></tr>
-    
-    </table>
-    </form>
-    </div>
+<h2><?php echo ($strGroup[role_admin]); ?> &nbsp; ·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;</h2>
+
+<div class="obss">
+
+<!--{loop $arrAdmin $key $item}-->
+<dl class="obu"><dt><a class="nbg" href="{U('hi','',array('id'=>$item[doname]))}"><img alt="<?php echo ($item[username]); ?>" class="imgg" src="<?php echo ($item[face]); ?>"></a>
+<!--{if $IK_USER[user][userid] == $strLeader[userid]}-->
+<span title="取消管理员" class="gact"><a title="取消<?php echo ($item[username]); ?>的管理员" class="j a_confirm_link" href="{SITE_URL}index.php?app=group&a=group_user_set&ik=isadmin&userid=<?php echo ($item[userid]); ?>&groupid=<?php echo ($strGroup[groupid]); ?>&isadmin=0" rel="nofollow">^</a></span>
+<!--{/if}-->
+</dt><dd><?php echo ($item[username]); ?><br><span class="pl">(<a href="{U('location','area',array(areaid=>$item[area][areaid]))}"><?php echo ($item[area][areaname]); ?></a>)</span></dd></dl>
+<!--{/loop}-->
+
+
+<br clear="all">
+</div>
+
+<h2><?php echo ($strGroup[role_user]); ?> &nbsp; ·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;</h2>
+
+<div class="page"><?php echo ($pageUrl); ?></div>
+
+<div class="obss">
+
+<!--{loop $arrGroupUser $key $item}-->
+<dl class="obu">
+<dt>
+<a class="nbg" href="{U('hi','',array('id'=>$item[doname]))}"><img alt="<?php echo ($item[username]); ?>" class="imgg" src="<?php echo ($item[face]); ?>"></a>
+
+<!--{if $IK_USER[user][userid] == $strLeader[userid]}-->
+<!--{if $item[isadmin] != '1'}-->
+<span title="提升为管理员" class="gact"><a title="把<?php echo ($item[username]); ?>提升为管理员" class="j a_confirm_link" href="{SITE_URL}index.php?app=group&a=group_user_set&ik=isadmin&userid=<?php echo ($item[userid]); ?>&groupid=<?php echo ($strGroup[groupid]); ?>&isadmin=1" rel="nofollow">^</a></span>
+<br />
+<!--{/if}-->
+<!--{if $item[userid] !=$strGroup[userid]}-->
+<span title="踢出小组" class="gact"><a title="把<?php echo ($item[username]); ?>踢出小组" class="j a_confirm_link" href="{SITE_URL}index.php?app=group&a=group_user_set&ik=isuser&userid=<?php echo ($item[userid]); ?>&groupid=<?php echo ($strGroup[groupid]); ?>" rel="nofollow">k</a></span>
+<br />
+<!--{/if}-->
+
+<!--{/if}-->
+</dt>
+<dd><?php echo ($item[username]); ?><br><span class="pl">(<a href="{U('location','area',array(areaid=>$item[area][areaid]))}"><?php echo ($item[area][areaname]); ?></a>)</span></dd></dl>
+<!--{/loop}-->
+
+<br clear="all">
+</div>
+
+<div class="page"><?php echo ($pageUrl); ?></div>
+
+<br />
+
+</div>
+
+
+<div class="cright">
+<p class="pl2">&gt; <a href="{U('group','show',array('id'=>$strGroup[groupid]))}">回<?php echo ($strGroup[groupname]); ?>小组</a></p>
 
 </div>
 </div>
+</div>
+
+
 
 <!--footer-->
 <footer>

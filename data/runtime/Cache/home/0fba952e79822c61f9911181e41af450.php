@@ -99,7 +99,41 @@ __EXTENDS_JS__
 <!--APP NAV-->
 
 </header>
+<!--main-->
+<div class="midder">
+<div class="mc">
+<h1 class="set_tit">用户信息管理</h1>
+<div class="tabnav">
+<ul>
+<?php if(is_array($user_menu_list)): $i = 0; $__LIST__ = $user_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i; if($user_menu_curr == $key): ?><li class="select"><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li>
+<?php else: ?>
+<li><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+</ul>
+</div>
 
+<div class="utable">
+<form method="POST" action="<?php echo U('user/setpassword');?>">
+<table cellpadding="5" cellspacing="5">
+<tr>
+<th>旧密码：</th><td><input class="uinput" name="oldpwd" value="" type="password" /></td>
+</tr>
+<tr>
+<th>新密码：</th><td><input class="uinput" name="newpwd" value="" type="password" /></td>
+</tr>
+<tr>
+<th>重复新密码：</th><td><input class="uinput" name="renewpwd" value="" type="password" /></td>
+</tr>
+
+<tr><th></th><td><input class="submit" type="submit" value="修改密码"  /></td></tr>
+
+</table>
+</form>
+</div>
+
+
+
+</div>
+</div>
 <!--footer-->
 <footer>
 <div id="footer">

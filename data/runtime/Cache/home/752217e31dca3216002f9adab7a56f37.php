@@ -99,35 +99,66 @@ __EXTENDS_JS__
 <!--APP NAV-->
 
 </header>
+
 <!--main-->
 <div class="midder">
+
 <div class="mc">
-<h1 class="set_tit">用户信息管理</h1>
+<h1>更改<?php echo ($strGroup[groupname]); ?>设置</h1>
 <div class="tabnav">
 <ul>
-<?php if(is_array($user_menu_list)): $i = 0; $__LIST__ = $user_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i; if($user_menu_curr == $key): ?><li class="select"><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li>
+<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i; if($type == $key): ?><li class="select"><a href="<?php echo ($item["url"]); ?>" ><?php echo ($item["text"]); ?></a></li>
 <?php else: ?>
-<li><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+<li><a href="<?php echo ($item["url"]); ?>" ><?php echo ($item["text"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 </ul>
 </div>
 
-    <div class="utable">
-    <form method="POST" action="<?php echo U('user/setdoname');?>">
-    <table cellpadding="5" cellspacing="5">
-    <tr>
-    <th>个性域名：</th>
-    <td>
-    <input type="text" disabled="true" value="<?php echo C('ik_site_url');?>/people/" class="txt" style="width:165px; font-family:Arial; font-size:12px"/> <input class="txt" name="doname" value="<?php echo ($strUser[doname]); ?>" type="text" />
-    </td>
+<div class="cleft">
+
+<form method="POST" action="<?php echo U('group/update',array('d'=>'base'));?>" onsubmit="return createGroup(this);">
+<table align="center" style="width:100%;clear: both;" class="table_1">
+	<tr><th>小组名称：</th>
+    <td><input type="text" value="<?php echo ($strGroup[groupname]); ?>" maxlength="63" size="31" name="groupname" gtbfieldid="13" class="txt" placeholder="请填写小组名称"></td></tr>
+    <tr><th>小组介绍：</th>
+    	<td><textarea style="width:100%;height:300px;" name="groupdesc" id="editor_mini" class="txt"   placeholder="请填写小组介绍"><?php echo ($strGroup[groupdesc]); ?></textarea></td>
     </tr>
-    <tr><th></th><td><input class="submit" type="submit" value="好了，保存"  /></td></tr>
+    <tr>
+        <th>小组标签：</th>
+        <td>
+            <input style="width:300px;" onKeyDown="checkTag(this)" onKeyUp="checkTag(this)"  onBlur="checkTag(this)" type="text" value="<?php echo ($strGroup[tags]); ?>"  name="tag" id="tag" tabindex="3" class="txt" placeholder="请填写小组标签"> <span class="tip">最多 5 个标签</span>
+        </td>
+    </tr> 
+    <tr>
+        <th>&nbsp;</th>
+        <td style="padding-top:0px ">
+            <p class="tips">标签作为关键词可以被用户搜索到，多个标签之间用空格分隔开。</p>
+        </td>
+    </tr>   
+    <tr>
+    	<th>&nbsp;</th>
+        <td>
+          <input type="hidden" name="groupid" value="<?php echo ($strGroup[groupid]); ?>" />
+          <input class="submit" type="submit" tabinde="8" value="更新小组设置" >
+        </td>
+    </tr>
     
-    </table>
-    </form>
-    </div>
+</table>
+</form>
+
 
 </div>
+
+<div class="cright">
+
+<p class="pl2">&gt; <a href="<?php echo U('group/show',array('id'=>$strGroup[groupid]));?>">返回<?php echo ($strGroup[groupname]); ?></a></p>
+
 </div>
+
+</div>
+
+</div>
+
+
 
 <!--footer-->
 <footer>

@@ -27,7 +27,6 @@ class userbaseAction extends frontendAction {
     				'setface' => array('text'=>'会员头像', 'url'=>U('user/setface')),
     				'setdoname' => array('text'=>'个性域名', 'url'=>U('user/setdoname')),
     				'setcity' => array('text'=>'常居地', 'url'=>U('user/setcity')),
-    				'settag' => array('text'=>'个人标签', 'url'=>U('user/settag')),
     				'setpassword' => array('text'=>'修改密码', 'url'=>U('user/setpassword')),
     			);
 		return $menu;

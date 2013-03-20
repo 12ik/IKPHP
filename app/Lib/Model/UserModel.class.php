@@ -25,6 +25,17 @@ class userModel extends Model
 			return false;
 		}
 	}
+	//唯一性判断存在doname
+	public function haveDoname($doname)
+	{
+		$donamenum =  $this->where(array('doname'=>$doname))->count('*');
+		if($donamenum==0)
+		{
+			return false;
+		}else{
+			return true;
+		}
+	}
 	//获取活跃会员
 	public function getHotUser($limit){
 		$where = array (

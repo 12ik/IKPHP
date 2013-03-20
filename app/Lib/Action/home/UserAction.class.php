@@ -34,6 +34,7 @@ class userAction extends userbaseAction {
 			$data ['username'] = $this->_post ( 'username', 'trim' );
 			$data ['sex'] = $this->_post ( 'sex', 'intval' );
 			$data ['signed'] = $this->_post ( 'signed', 'trim' );
+			$data ['address'] = $this->_post ( 'address', 'trim' );
 			$data ['phone'] = $this->_post ( 'phone', 'trim' );
 			$data ['blog'] = $this->_post ( 'blog', 'trim' );
 			$data ['about'] = $this->_post ( 'about', 'trim' );
@@ -65,7 +66,7 @@ class userAction extends userbaseAction {
 			
 			$this->assign ( 'info', $info );
 			$this->assign ( 'strarea', $strarea );
-			$this->_config_seo ();
+			$this->_config_seo (array('title'=>'基本设置','subtitle'=>'用户'));
 			$this->display ();
 		}
 	
@@ -109,16 +110,40 @@ class userAction extends userbaseAction {
 		}else{
 			$info = $this->visitor->get ();
 			$this->assign ( 'info', $info );
-			$this->_config_seo ();
+			$this->_config_seo (array('title'=>'会员头像','subtitle'=>'用户'));
 			$this->display ();			
 		} 
 	}
 	public function setdoname() {
+		$userid = $this->userid;
+		$strUser = $this->user_mod->getOneUser($userid);
+		
 		if (IS_POST) {
+			$doname = $this->_post ( 'doname', 'trim' );
+			if(empty($doname))
+			{
+				$this->error ("个性域名不能为空！");
+			}else if(strlen($doname)<2)
+			{
+				$this->error ("个性域名至少要2位数字、字母、或下划线(_)组成！");
+			
+			}else if(!preg_match ( '/^[A-Za-z0-9]+([._\-\+]*[A-Za-z0-9]+)*$/', $doname ))
+			{
+				$this->error ("个性域名必须是数字、字母或下划线(_)组成！");
+			}
+			$ishave = $this->user_mod->haveDoname($doname);
+			if($ishave)
+			{
+				$this->error ("该域名已经被其他人抢注了,请试试别的吧！");
+			}else{
+				$this->user_mod->where(array('userid'=>$userid))->save(array('doname'=>$doname));
+				$this->error ("个性域名修改成功！");
+			}
 		
 		} else {
-			$this->_config_seo ();
-			$this->display ();
+			$this->assign ( 'strUser', $strUser );
+			$this->_config_seo (array('title'=>'个性域名','subtitle'=>'用户'));
+			$this->display ();	
 		}
 	}
 	public function setcity() {
@@ -158,7 +183,7 @@ class userAction extends userbaseAction {
 			
 			$this->assign ( 'strarea', $strarea );
 			$this->assign ( 'arrOne', $arrOne );
-			$this->_config_seo ();
+			$this->_config_seo (array('title'=>'常居地修改','subtitle'=>'用户'));
 			$this->display ();
 		}
 	}
@@ -197,19 +222,30 @@ class userAction extends userbaseAction {
 				break;
 		}
 	}
-	public function settag() {
-		if (IS_POST) {
-		
-		} else {
-			$this->_config_seo ();
-			$this->display ();
-		}
-	}
+
 	public function setpassword() {
 		if (IS_POST) {
 		
+			$userid = $this->userid;
+			if($userid == 0) $this->error ('你应该出发去火星报到啦。');
+			
+			$oldpwd = $this->_post('oldpwd','trim');
+			$newpwd = $this->_post('newpwd','trim');
+			$renewpwd = $this->_post('renewpwd','trim');
+			if($oldpwd == '' || $newpwd=='' || $renewpwd=='')  $this->error ("所有项都不能为空！");
+			$strUser = $this->user_mod->getOneUser($userid);
+			
+			if(md5($oldpwd) != $strUser['password']) $this->error("旧密码输入有误！");
+			
+			if($newpwd != $renewpwd) $this->error('两次输入新密码密码不一样！');
+			
+			//更新密码	
+			$this->user_mod->where(array('userid'=>$userid))->save(array('password'=>md5($newpwd)));
+			
+			$this->error ("密码修改成功！");
+			
 		} else {
-			$this->_config_seo ();
+			$this->_config_seo (array('title'=>'密码修改','subtitle'=>'用户'));
 			$this->display ();
 		}
 	}

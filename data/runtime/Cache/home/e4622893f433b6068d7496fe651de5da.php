@@ -99,35 +99,48 @@ __EXTENDS_JS__
 <!--APP NAV-->
 
 </header>
+
 <!--main-->
 <div class="midder">
+
 <div class="mc">
-<h1 class="set_tit">用户信息管理</h1>
+<h1>更改<?php echo ($strGroup[groupname]); ?>设置</h1>
 <div class="tabnav">
 <ul>
-<?php if(is_array($user_menu_list)): $i = 0; $__LIST__ = $user_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i; if($user_menu_curr == $key): ?><li class="select"><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li>
+<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i; if($type == $key): ?><li class="select"><a href="<?php echo ($item["url"]); ?>" ><?php echo ($item["text"]); ?></a></li>
 <?php else: ?>
-<li><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+<li><a href="<?php echo ($item["url"]); ?>" ><?php echo ($item["text"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 </ul>
 </div>
 
-    <div class="utable">
-    <form method="POST" action="<?php echo U('user/setdoname');?>">
-    <table cellpadding="5" cellspacing="5">
-    <tr>
-    <th>个性域名：</th>
-    <td>
-    <input type="text" disabled="true" value="<?php echo C('ik_site_url');?>/people/" class="txt" style="width:165px; font-family:Arial; font-size:12px"/> <input class="txt" name="doname" value="<?php echo ($strUser[doname]); ?>" type="text" />
-    </td>
-    </tr>
-    <tr><th></th><td><input class="submit" type="submit" value="好了，保存"  /></td></tr>
+<div class="cleft">
+
+	<div class="face_form">
     
-    </table>
-    </form>
-    </div>
+        <form method="POST" action="<?php echo U('group/update',array('d'=>'icon'));?>" enctype="multipart/form-data" >
+          <img align="left" alt="<?php echo ($strGroup[groupname]); ?>" title="<?php echo ($strGroup[groupname]); ?>" valign="middle" src="<?php echo ($strGroup[icon_48]); ?>" class="pil">
+          <div class="file_info">
+    		<p>从你的电脑上选择图像文件：(仅支持jpg，gif，png格式的图片)</p>
+    		<p><input type="file" style="height:25px; " name="picfile">&nbsp;&nbsp;<input type="submit" value="上传照片" class="submit">
+               <input type="hidden" name="groupid" value="<?php echo ($strGroup[groupid]); ?>" /></p>
+    	  </div>
+        </form>
+        
+	</div>
 
 </div>
+
+<div class="cright">
+
+<p class="pl2">&gt; <a href="<?php echo U('group/show',array('id'=>$strGroup[groupid]));?>">返回<?php echo ($strGroup[groupname]); ?></a></p>
+
 </div>
+
+</div>
+
+</div>
+
+
 
 <!--footer-->
 <footer>

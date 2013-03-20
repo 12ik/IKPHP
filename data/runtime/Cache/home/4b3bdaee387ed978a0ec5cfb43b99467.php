@@ -194,9 +194,9 @@ __EXTENDS_JS__
         <?php if($visitor[userid] == $strGroup[userid]): ?><p class="pl2">&gt; <a href="<?php echo U('group/group_user',array(groupid=>$strGroup[groupid]));?>">成员管理 (<?php echo ($strGroup[count_user]); ?>)</a></p>
             
             <p class="pl2">&gt; <a href="<?php echo U('group/edit',array(d=>base,groupid=>$strGroup[groupid]));?>">修改小组设置 </a></p>
-            <p class="pl2">&gt; <a href="<?php echo U('group/recovery',array(groupid=>$strGroup[groupid]));?>">回收站 (<?php echo ($strGroup[recoverynum]); ?>)</a></p>
             
             <?php else: ?>
+            
             <p class="pl2"><a href="<?php echo U('group/group_user',array(groupid=>$strGroup[groupid]));?>">浏览所有成员 (<?php echo ($strGroup[count_user]); ?>)</a></p><?php endif; ?>
         
        <div class="clear"></div>
@@ -206,7 +206,7 @@ __EXTENDS_JS__
     
 	<p class="pl">本页永久链接: <a href="<?php echo U('group/show',array(id=>$strGroup[groupid]));?>"><?php echo U('group/show',array(id=>$strGroup[groupid]));?></a></p>
     
-    <p class="pl"><span class="feed"><a href="{U('group','rss',array(groupid=>$strGroup[groupid]))}">feed: rss 2.0</a></span></p>
+    <p class="pl"><span class="feed"><a href="<?php echo U('group/rss',array(groupid=>$strGroup[groupid]));?>">feed: rss 2.0</a></span></p>
     
     <div class="clear"></div>
     

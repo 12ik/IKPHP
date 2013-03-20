@@ -101,34 +101,55 @@ __EXTENDS_JS__
 </header>
 <!--main-->
 <div class="midder">
-<div class="mc">
-<h1 class="set_tit">用户信息管理</h1>
-<div class="tabnav">
-<ul>
-<?php if(is_array($user_menu_list)): $i = 0; $__LIST__ = $user_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i; if($user_menu_curr == $key): ?><li class="select"><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li>
-<?php else: ?>
-<li><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
-</ul>
-</div>
+    <h1>申请创建小组</h1>
+    <div class="mc">
 
-    <div class="utable">
-    <form method="POST" action="<?php echo U('user/setdoname');?>">
-    <table cellpadding="5" cellspacing="5">
-    <tr>
-    <th>个性域名：</th>
-    <td>
-    <input type="text" disabled="true" value="<?php echo C('ik_site_url');?>/people/" class="txt" style="width:165px; font-family:Arial; font-size:12px"/> <input class="txt" name="doname" value="<?php echo ($strUser[doname]); ?>" type="text" />
-    </td>
-    </tr>
-    <tr><th></th><td><input class="submit" type="submit" value="好了，保存"  /></td></tr>
+        <div class="cleft">
+        <form method="POST" action="<?php echo U('group/create');?>"  enctype="multipart/form-data" onsubmit="return createGroup(this);">
+        <table width="100%" cellpadding="0" cellspacing="0" class="table_1">
+            <tr>
+                <th>小组名称：</th>
+                <td><input type="text" value="" maxlength="63" size="31" name="groupname" tabindex="1" class="txt"    placeholder="请填写小组名称"></td>
+            </tr>
+            <tr>
+                <th>小组介绍：</th>
+                <td><textarea style="width:500px;height:200px;" name="groupdesc" tabindex="2" id="editor_mini" class="txt"   placeholder="请填写小组介绍"></textarea></td>
+            </tr>
+            <tr>
+                <th>小组标签：</th>
+                <td>
+                	<input style="width:300px;" onKeyDown="checkTag(this)" onKeyUp="checkTag(this)"  onBlur="checkTag(this)" type="text" value=""  name="tag" id="tag" tabindex="3" class="txt" placeholder="请填写小组标签"> <span class="tip">最多 5 个标签</span>
+                </td>
+            </tr> 
+            <tr>
+                <th>&nbsp;</th>
+                <td style="padding-top:0px ">
+                	<p class="tips">标签作为关键词可以被用户搜索到，多个标签之间用空格分隔开。</p>
+                </td>
+            </tr>                        
+            <tr>
+                <th>小组图标：</th>
+                <td><input type="file" name="picfile" class="txt" tabindex="4"><span class="tip">(仅支持jpg，gif，png格式图片)</span></td>
+            </tr>           
+            <tr>
+                <th>&nbsp;</th>
+                <td>
+                <label><input type="checkbox" checked  name="grp_agreement" id="grp_agreement" value="1" tabindex="5">&nbsp;我已认真阅读并同意《社区指导原则》和《免责声明》</label>
+                </td>
+            </tr>
+            <tr>
+                <th>&nbsp;</th>
+                <td><input class="submit" type="submit" value="创建小组" tabindex="6"/></td>
+            </tr>
+        </table>
+        </form>
+        </div>
     
-    </table>
-    </form>
-    </div>
+        <div class="cright"></div>
 
-</div>
-</div>
+	</div>
 
+</div>                
 <!--footer-->
 <footer>
 <div id="footer">

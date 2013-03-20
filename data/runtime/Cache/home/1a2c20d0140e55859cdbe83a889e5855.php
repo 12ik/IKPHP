@@ -149,16 +149,12 @@ __EXTENDS_JS__
       <div class="clear"></div>
 
       <div class="tags"> 
-        <!--{loop $strTopic[tags] $key $item}--> 
-        <a rel="tag" title="" class="post-tag" href="{U('group','topic_tag',array(tagname=>$item[tagname]))}"><?php echo ($item[tagname]); ?></a> 
-        <!--{/loop}--> 
-        <!--{if $isGroupUser}--> 
-        <a rel="tag" href="javascript:void(0);" onclick="showTagFrom()">+标签</a>
+        <?php if(is_array($strTopic[tags])): $i = 0; $__LIST__ = $strTopic[tags];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><a rel="tag" title="<?php echo ($item[tagname]); ?>" class="post-tag" href="<?php echo U('group/topic_tag',array(tagname=>$item[tagname]));?>"><?php echo ($item[tagname]); ?></a><?php endforeach; endif; else: echo "" ;endif; ?> 
+        <?php if($isGroupUser): ?><a rel="tag" href="javascript:void(0);" onclick="showTagFrom()">+标签</a>
         <p id="tagFrom" style="display:none">
           <input class="tagtxt" type="text" name="tags" id="tags" />
-          <button type="submit" class="subab" onclick="savaTag(<?php echo ($topicid); ?>)">添加</button>
-          <a href="javascript:void(0);" onclick="showTagFrom()">取消</a> </p>
-        <!--{/if}--> 
+          <button type="submit" class="subab" onclick="savaTag(<?php echo ($strTopic[topicid]); ?>)">添加</button>
+          <a href="javascript:void(0);" onclick="showTagFrom()">取消</a> </p><?php endif; ?> 
       </div>
       
 <?php } ?>
@@ -207,7 +203,7 @@ __EXTENDS_JS__
       <div class="page"><?php echo ($pageUrl); ?></div>
       <h2>你的回应&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·</h2>
       <div> 
-        <?php if(!$visitor['userid']): ?><div style="border:solid 1px #DDDDDD; text-align:center;padding:20px 0"><a href="{U('user','login')}">登录</a> | <a href="{U('user','register')}">注册</a></div>
+        <?php if(!$visitor['userid']): ?><div style="border:solid 1px #DDDDDD; text-align:center;padding:20px 0"><a href="<?php echo U('user/login');?>">登录</a> | <a href="<?php echo U('user/register');?>">注册</a></div>
         <?php elseif(!$isGroupUser): ?> 
         不是本组成员不能回应此贴哦 
         <?php elseif($strTopic[iscomment] == 1 && $strTopic[userid] != $visitor['userid']): ?>

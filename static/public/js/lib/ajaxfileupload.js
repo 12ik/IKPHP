@@ -163,7 +163,7 @@ jQuery.extend({
 
     },
 
-    uploadHttpData: function( r, type ) {
+    uploadHttpData: function( r, type ) { 
         var data = !type;
         data = type == "xml" || data ? r.responseXML : r.responseText;
         if ( type == "script" ) {

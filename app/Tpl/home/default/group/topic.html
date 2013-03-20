@@ -66,16 +66,16 @@
       <div class="clear"></div>
 
       <div class="tags"> 
-        <!--{loop $strTopic[tags] $key $item}--> 
-        <a rel="tag" title="" class="post-tag" href="{U('group','topic_tag',array(tagname=>$item[tagname]))}">{$item[tagname]}</a> 
-        <!--{/loop}--> 
-        <!--{if $isGroupUser}--> 
+        <volist name="strTopic[tags]" id="item"> 
+        <a rel="tag" title="{$item[tagname]}" class="post-tag" href="{:U('group/topic_tag',array(tagname=>$item[tagname]))}">{$item[tagname]}</a> 
+        </volist> 
+        <if condition="$isGroupUser"> 
         <a rel="tag" href="javascript:void(0);" onclick="showTagFrom()">+标签</a>
         <p id="tagFrom" style="display:none">
           <input class="tagtxt" type="text" name="tags" id="tags" />
-          <button type="submit" class="subab" onclick="savaTag({$topicid})">添加</button>
+          <button type="submit" class="subab" onclick="savaTag({$strTopic[topicid]})">添加</button>
           <a href="javascript:void(0);" onclick="showTagFrom()">取消</a> </p>
-        <!--{/if}--> 
+        </if> 
       </div>
       
 <php>}</php>
@@ -141,7 +141,7 @@
       <h2>你的回应&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·</h2>
       <div> 
         <if condition="!$visitor['userid']">
-        <div style="border:solid 1px #DDDDDD; text-align:center;padding:20px 0"><a href="{U('user','login')}">登录</a> | <a href="{U('user','register')}">注册</a></div>
+        <div style="border:solid 1px #DDDDDD; text-align:center;padding:20px 0"><a href="{:U('user/login')}">登录</a> | <a href="{:U('user/register')}">注册</a></div>
         <elseif condition="!$isGroupUser" /> 
         不是本组成员不能回应此贴哦 
         <elseif condition="$strTopic[iscomment] eq 1 && $strTopic[userid] neq $visitor['userid']" />

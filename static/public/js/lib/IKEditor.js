@@ -60,7 +60,7 @@ function addPhoto(ajaxurl, data){
             '<form>',
                 '<span class="pl">选择图片</span> ',
                 '<input id="file" type="file" name="file"/>',
-                '<br><br><br><input id="startup" type="button"  class="confirmbtn" onclick="ajaxFileUpload(\''+ajaxurl+'\','+data+'); return false;" value="开始上传">',
+				'<br><br><br><input id="startup" type="button"  class="confirmbtn" onclick="ajaxFileUpload(\''+ajaxurl+'\','+data+'); return false;" value="开始上传">',
                 '<input type="button" onclick="pop_win.close();" value="取消" class="cancellinkbtn">',
                 '</form>',
         '</div><div class="waiting">正在上传中......</div>'].join('') );
@@ -85,7 +85,8 @@ function ajaxFileUpload(ajaxurl, data){
                 complete : function(){
                   pop_win.close();
                 },
-                success : function(data, status){ 
+                success : function(data, status){
+					
                     if(data.r == 1){
                         //console.log(data.err_msg);
                         alert(data.html);
@@ -99,6 +100,7 @@ function ajaxFileUpload(ajaxurl, data){
                         var oText = $("textarea[name='content']");
                         oText.val(oText.val() + "[图片" + data.seq_id +"]");
                     }
+					
                 },
                 error : function(data, status, e){
                     // console.log(e);
@@ -111,24 +113,24 @@ function ajaxFileUpload(ajaxurl, data){
 function buildPhotoThumbDetail(data){
         var html = '<div class="thumblst">';
 
-        html += '<div class="details"><p>图片描述（30字以内）</p> <textarea maxlength="30" name="p_' + data.seq_id + '_title">'+ data.title + '</textarea><input type="hidden" name="p_' + data.seq_id + '_seqid" value="' + data.seq_id + '" ><br/><br/>图片位置<br/>'+ '<a name="rm_p_' + data.seq_id + '"   class="minisubmit rr j a_remove_pic"  onclick="javascript:removePhoto(this, \''+ data.seq_id +'\');return false;">删除</a>';
+        html += '<div class="details"><p>图片描述（30字以内）</p> <textarea maxlength="30" name="photodesc[]">'+ data.title + '</textarea><input type="hidden" name="seqid[]" value="' + data.seq_id + '" ><br/><br/>图片位置<br/>'+ '<a name="rm_p_' + data.seq_id + '"   class="minisubmit rr j a_remove_pic" ajaxurl="'+data.ajaxurl+'" imgid="'+data.id+'" onclick="javascript:removePhoto(this, \''+ data.seq_id +'\');return false;">删除</a>';
 
         if(data.layout == "L"){
-            html += '<label><input type="radio" value="' + "L" + '" name="p_' + data.seq_id + '_layout" checked="checked" /> <span class="alignleft">居左</span></label>';
+            html += '<label><input type="radio" value="' + "L" + '" name="layout_'+data.seq_id+'" checked="checked" /> <span class="alignleft">居左</span></label>';
         }else{
-            html += '<label><input type="radio" value="' + "L" + '" name="p_' + data.seq_id + '_layout" /> <span class="alignleft">居左</span></label>';
+            html += '<label><input type="radio" value="' + "L" + '" name="layout_'+data.seq_id+'" /> <span class="alignleft">居左</span></label>';
         }
 
         if(data.layout == "C") {
-            html += '<label><input type="radio" value="' + "C" + '" name="p_' + data.seq_id + '_layout" checked="checked" /> <span class="aligncenter">居中</span></label>';
+            html += '<label><input type="radio" value="' + "C" + '" name="layout_'+data.seq_id+'" checked="checked" /> <span class="aligncenter">居中</span></label>';
         }else{
-            html += '<label><input type="radio" value="' + "C" + '" name="p_' + data.seq_id + '_layout" /> <span class="aligncenter">居中</span></label>';
+            html += '<label><input type="radio" value="' + "C" + '" name="layout_'+data.seq_id+'" /> <span class="aligncenter">居中</span></label>';
         }
 
         if(data.layout == "R") {
-            html += '<label><input type="radio" value="' + "R" + '" name="p_' + data.seq_id + '_layout" checked="checked" /> <span class="alignright">居右</span></label>';
+            html += '<label><input type="radio" value="' + "R" + '" name="layout_'+data.seq_id+'" checked="checked" /> <span class="alignright">居右</span></label>';
         }else{
-            html += '<label><input type="radio" value="' + "R" + '" name="p_' + data.seq_id + '_layout" /> <span class="alignright">居右</span></label>';
+            html += '<label><input type="radio" value="' + "R" + '" name="layout_'+data.seq_id+'" /> <span class="alignright">居右</span></label>';
         }
 
         
@@ -139,10 +141,11 @@ function buildPhotoThumbDetail(data){
 }
 function removePhoto(obj, seq_id){
 	var ck = get_cookie('ck');
-    var data = "seq_id=" + seq_id + "&ck="+ck;
+	var url = $(obj).attr('ajaxurl'), imgid = $(obj).attr('imgid');
+    var data = "seq_id=" + seq_id + "&ck="+ck+ "&id="+imgid;
     $.ajax({
         type:       "post",
-        url:        "{SITE_URL}{ikUrl('group','add',array('ik'=>'remove_photo', 'topic_id'=>{$topic_id}))}",
+        url:        url,
         dataType:   "json",
         data:       data,
         success:    function(data, status){
@@ -150,7 +153,7 @@ function removePhoto(obj, seq_id){
             if(data.r == 0){
                 oText = $("textarea[name='content']");
                 oText.val(oText.val().replace('[图片' + seq_id + ']', ''));
-                 o.closest(".thumblst").slideUp('fast',function(){$(this).remove()});
+                o.closest(".thumblst").slideUp('fast',function(){$(this).remove()});
             }else{
                 // console.log('fail');
             }

@@ -260,27 +260,6 @@ CREATE TABLE `ik_group_topics` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ik_videos`
---
-DROP TABLE IF EXISTS `ik_videos`;
-CREATE TABLE `ik_videos` (
-  `videoid` int(11) NOT NULL AUTO_INCREMENT COMMENT '视频id',
-  `seqid` int(11) NOT NULL DEFAULT '0' COMMENT '顺序id',
-  `typeid` int(11) NOT NULL DEFAULT '0' COMMENT '日记ID或帖子id',
-  `type` char(64) NOT NULL DEFAULT '0' COMMENT '日记或帖子或其他组件',
-  `userid` int(11) NOT NULL DEFAULT '0',
-  `url` char(255) NOT NULL DEFAULT '' COMMENT '视频网址',
-  `imgurl` char(255) NOT NULL DEFAULT '' COMMENT '视频截图',
-  `videourl` char(255) NOT NULL DEFAULT '' COMMENT 'swf地址',
-  `title` char(120) NOT NULL DEFAULT '' COMMENT '视频标题',
-  `count_view` int(11) NOT NULL DEFAULT '0',
-  `addtime` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`videoid`),
-  KEY `typeid` (`typeid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
--- --------------------------------------------------------
-
---
 -- 表的结构 `ik_group_topics_collects`
 --
 DROP TABLE IF EXISTS `ik_group_topics_collects`;
@@ -331,7 +310,7 @@ CREATE TABLE `ik_group_topics_recommend` (
 -- --------------------------------------------------------
 
 --
--- 表的结构 `ik_attach`
+-- 表的结构 `ik_images`
 --
 DROP TABLE IF EXISTS `ik_images`;
 CREATE TABLE `ik_images` (
@@ -385,3 +364,56 @@ CREATE TABLE `ik_user_follow` (
   KEY `userid` (`userid`),
   KEY `userid_follow` (`userid_follow`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='用户关注跟随';
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_tag`
+--
+DROP TABLE IF EXISTS `ik_tag`;
+CREATE TABLE `ik_tag` (
+  `tagid` int(11) NOT NULL AUTO_INCREMENT,
+  `tagname` char(16) NOT NULL DEFAULT '',
+  `count_user` int(11) NOT NULL DEFAULT '0',
+  `count_group` int(11) NOT NULL DEFAULT '0',
+  `count_topic` int(11) NOT NULL DEFAULT '0',
+  `count_bang` int(11) NOT NULL DEFAULT '0',
+  `count_article` int(11) NOT NULL DEFAULT '0',
+  `count_note` int(11) NOT NULL DEFAULT '0',
+  `count_site` int(11) NOT NULL DEFAULT '0',
+  `isenable` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否可用',
+  `uptime` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间',
+  PRIMARY KEY (`tagid`),
+  UNIQUE KEY `tagname` (`tagname`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_tag_group_index`
+--
+DROP TABLE IF EXISTS `ik_tag_group_index`;
+CREATE TABLE `ik_tag_group_index` (
+  `groupid` int(11) NOT NULL DEFAULT '0',
+  `tagid` int(11) NOT NULL DEFAULT '0',
+  UNIQUE KEY `groupid_2` (`groupid`,`tagid`),
+  KEY `groupid` (`groupid`),
+  KEY `tagid` (`tagid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `ik_tag_group_index`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_tag_topic_index`
+--
+DROP TABLE IF EXISTS `ik_tag_topic_index`;
+CREATE TABLE `ik_tag_topic_index` (
+  `topicid` int(11) NOT NULL DEFAULT '0' COMMENT '帖子ID',
+  `tagid` int(11) NOT NULL DEFAULT '0',
+  UNIQUE KEY `topicid_2` (`topicid`,`tagid`),
+  KEY `topicid` (`topicid`),
+  KEY `tagid` (`tagid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

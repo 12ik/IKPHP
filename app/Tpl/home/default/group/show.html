@@ -121,7 +121,7 @@
         <if condition="$visitor[userid] eq $strGroup[userid]">
             <p class="pl2">&gt; <a href="{:U('group/group_user',array(groupid=>$strGroup[groupid]))}">成员管理 ({$strGroup[count_user]})</a></p>
             
-            <p class="pl2">&gt; <a href="{:U('group/edit',array(ik=>base,groupid=>$strGroup[groupid]))}">修改小组设置 </a></p>
+            <p class="pl2">&gt; <a href="{:U('group/edit',array(d=>base,groupid=>$strGroup[groupid]))}">修改小组设置 </a></p>
             <p class="pl2">&gt; <a href="{:U('group/recovery',array(groupid=>$strGroup[groupid]))}">回收站 ({$strGroup[recoverynum]})</a></p>
             
             <else />

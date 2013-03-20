@@ -253,10 +253,29 @@ function getsubstrutf8($string, $start = 0, $sublen, $append = true) {
 /**
  * 转换为安全的html文本
  */
-function h($text)
-{
+function h($text){
 
 	$text = htmlspecialchars($text, ENT_NOQUOTES, 'UTF-8');
 	$text = nl2br ( $text );
 	return $text;
+}
+// ik专用解析输出内容
+function ikhtml($type,$typeid,$content){
+	//图片
+	$arr_photo = array();
+	//匹配本地图片
+	$strcontent = $content;	
+	preg_match_all ( '/\[(图片)(\d+)\]/is', $strcontent, $photos );		
+	foreach ($photos [2] as $key=>$item) {
+		$strPhoto = D('images')->getImageByseqid($type,$typeid,$item);
+		$arr_photo[$key] = $strPhoto['mimg'];
+		
+		$htmlTpl = '<div class="img_'.$strPhoto['align'].'">
+						<a href="'.$strPhoto['bimg'].'" target="_blank" title="点击查看原图"><img alt="'.$strPhoto['title'].'" src="'.$strPhoto['mimg'].'"  title="点击查看原图"/></a>
+						<span class="img_title" >'.$strPhoto['title'].'</span>
+					</div><div class="clear"></div>';
+
+		$strcontent = str_replace ( '[图片'.$item.']', $htmlTpl, $strcontent );
+	}
+	return $strcontent;
 }

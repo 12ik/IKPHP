@@ -128,7 +128,7 @@ class group_topicsModel extends Model {
 			//删除tag标签表
 			
 			//删除图片
-			//$this->delete('group_topics_photo',array('topicid'=>$topicid));
+			D('images')->delAllImage('topic',$topicid);
 			//删除视频
 			//$this->delete('videos',array('typeid'=>$topicid,'type'=>'topic'));
 			return true;

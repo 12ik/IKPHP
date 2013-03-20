@@ -24,9 +24,10 @@ class groupAction extends frontendAction {
 				'publish',
 				'recomment',
 				'topic_edit',
+				'topic_istop',
+				'topic_recommend',
+				'topic_istop',
 
-				
-				
 				
 		) )) {
 			$this->redirect ( 'user/login' );
@@ -276,6 +277,7 @@ class groupAction extends frontendAction {
 		
 		}
 		$this->assign ( 'topic_id', $topic_id );
+		$this->assign ( 'action', U('group/publish') );
 		$this->assign ( 'strGroup', $group );
 		$this->assign ( 'isGroupUser', $isGroupUser );
 		$this->_config_seo (array('title'=>$strGroup['groupname'].'发布帖子','subtitle'=>'小组'));
@@ -300,13 +302,13 @@ class groupAction extends frontendAction {
 			} elseif (mb_strlen ( $content, 'utf8' ) > 20000) {
 				$this->error ( '发这么多内容干啥^_^' );
 			}
+
 			$uptime = time ();
 			// 查看是否有视频
 			$seqnum = D ( 'videos' )->countViedeos ( 'topic', $topic_id );
 			$seqnum > 0 ? $isvideo = 1 : $isvideo = 0;
 			$arrData = array (
 					'groupid' => $groupid,
-					'userid' => $userid,
 					'title' => htmlspecialchars($title),
 					'content' => $content,
 					'isvideo' => $isvideo,
@@ -316,9 +318,21 @@ class groupAction extends frontendAction {
 			);
 			// 执行更新帖子
 			$this->group_topics_mod->where ( array (
-					'userid' => $userid,
 					'topicid' => $topic_id 
 			) )->save ( $arrData );
+			// 执行更新图片信息
+			$arrSeqid = $this->_post ( 'seqid');
+			$arrTitle = $this->_post ( 'photodesc');
+			if(is_array($arrSeqid)){
+				foreach($arrSeqid as $key=>$item){
+					$seqid = $arrSeqid[$key];
+					$imgtitle = empty($arrTitle[$key]) ? '' : $arrTitle[$key];
+					$layout = $this->_post ( 'layout_'.$seqid);
+					$dataimg = array('title'=>$imgtitle, 'align'=> $layout);
+					$where = array('type'=>'topic','typeid'=>$topic_id,'seqid'=>$seqid);
+					D('images')->updateImage($dataimg,$where);
+				}
+			}
 			// 统计小组下帖子数并更新
 			$count_topic = $this->group_topics_mod->countTopic ( $groupid );
 			// 统计今天发布帖子数
@@ -335,7 +349,7 @@ class groupAction extends frontendAction {
 		}
 	
 	}
-	public function topic() {
+	public function topic() { 
 		$type = $this->_get ( 'd', 'trim' );
 		if (! empty ( $type )) {
 			switch ($type) {
@@ -386,7 +400,7 @@ class groupAction extends frontendAction {
 				case "topic_move" :
 					$this->topic_move();
 					break;
-				// 移动帖子
+				// 编辑帖子
 				case "topic_edit" :
 					$this->topic_edit();
 					break;					
@@ -399,7 +413,8 @@ class groupAction extends frontendAction {
 			! $strTopic && $this->error ( '呃...你想要的东西不在这儿' );
 			$strTopic ['user'] = $this->user_mod->getOneUser ( $strTopic ['userid'] );
 			$strTopic ['user'] ['signed'] = hview ( $strTopic ['user'] ['signed'] );
-			$strTopic ['content'] = nl2br ( $strTopic [content] );
+			$strTopic ['content'] = nl2br ( ikhtml('topic',$topic_id,$strTopic [content]) );
+			$strTopic['tags'] = D('tag')->getObjTagByObjid('topic','topicid',$topic_id);
 			// 小组信息
 			$strGroup = $this->_mod->getOneGroup ( $strTopic ['groupid'] );
 			// 是否已经加入
@@ -509,6 +524,23 @@ class groupAction extends frontendAction {
 	}
 	// 退出小组
 	public function quit() {
+		$groupid = $this->_get('id');
+		$userid = $this->userid;
+		//判断是否是组长，是组长不能退出小组
+		$strGroup = $this->_mod->getOneGroup($groupid);
+		if($strGroup['userid'] == $userid){
+			$this->error('组长任务艰巨，请坚持到底！');
+		}
+		// 删除小组会员
+		$this->group_users_mod->where(array('userid'=>$userid,'groupid'=>$groupid))->delete();
+		//计算小组会员数
+		$count_user = $this->group_users_mod->where(array('groupid'=>$groupid))->count('*');
+		//更新小组成员统计
+		$this->_mod->where(array('groupid'=>$groupid))->setField(array('count_user'=>$count_user));
+		
+		$this->redirect ( 'group/show', array (
+				'id' => $groupid
+		) );
 	
 	}
 	// 发现小组
@@ -792,19 +824,102 @@ class groupAction extends frontendAction {
 		$strGroup = $this->_mod->getOneGroup($strTopic['groupid']);
 		
 		$groupid = $strGroup['groupid'];
-		// 是否加入
-		$isGroupUser = $this->_mod->isGroupUser ( $userid, $groupid );
-		
-		$this->assign ( 'isGroupUser', $isGroupUser );
-		$this->assign ( 'strTopic', $strTopic );
-		$this->assign ( 'strGroup', $strGroup );
-		$this->assign ( 'topic_id', $topicid );
-		$this->_config_seo (array('title'=>'编辑“'.$strTopic['title'].'”','subtitle'=>'小组'));
-		$this->display ('add');
+		if($strTopic['userid']==$userid || $strGroup['userid']==$userid ){
+			// 是否加入
+			$isGroupUser = $this->_mod->isGroupUser ( $userid, $groupid );
+			//浏览该topic_id下的照片
+			$type = 'topic';
+			$arrPhotos = D('images')->getImagesByTypeid($type, $topicid);
+			
+			$this->assign ( 'action', U('group/updatetopic') );
+			$this->assign ( 'arrPhotos', $arrPhotos );
+			$this->assign ( 'isGroupUser', $isGroupUser );
+			$this->assign ( 'strTopic', $strTopic );
+			$this->assign ( 'strGroup', $strGroup );
+			$this->assign ( 'topic_id', $topicid );
+			$this->_config_seo (array('title'=>'编辑“'.$strTopic['title'].'”','subtitle'=>'小组'));
+			$this->display ('add');
+		}else{
+			$this->error("您没有权限编辑帖子！");
+		}
+
+	}
+	// 执行更新帖子
+	public function updatetopic(){
+		if(IS_POST){
+			$userid = $this->userid;
+			$topic_id = $this->_post ( 'topic_id' );
+			$groupid = $this->_post ( 'groupid' );
+				
+			$title = $this->_post ( 'title', 'trim' );
+			$content =  $this->_post ( 'content');
+			$iscomment = $this->_post ( 'iscomment'); // 是否允许评论
+
+			$strTopic = $this->group_topics_mod->getOneTopic($topic_id);
+			$strGroup = $this->_mod->getOneGroup($groupid);
+			// 只有小组管理员 或 帖子所有者 可以编辑
+			if($strTopic['userid']==$userid || $strGroup['userid']==$userid ){
+				
+				$uptime = time ();
+				$arrData = array (
+						'groupid' => $groupid,
+						'title' => htmlspecialchars($title),
+						'content' => $content,
+						'iscomment' => $iscomment,
+						'uptime' => $uptime
+				);
+				// 执行更新帖子
+				$this->group_topics_mod->where ( array (
+						'topicid' => $topic_id
+				) )->save ( $arrData );
+				// 执行更新图片信息
+				$arrSeqid = $this->_post ( 'seqid');
+				$arrTitle = $this->_post ( 'photodesc');
+				if(is_array($arrSeqid)){
+					foreach($arrSeqid as $key=>$item){
+						$seqid = $arrSeqid[$key];
+						$imgtitle = empty($arrTitle[$key]) ? '' : $arrTitle[$key];
+						$layout = $this->_post ( 'layout_'.$seqid);
+						$dataimg = array('title'=>$imgtitle, 'align'=> $layout);
+						$where = array('type'=>'topic','typeid'=>$topic_id,'seqid'=>$seqid);
+						D('images')->updateImage($dataimg,$where);
+					}
+				}
+				$this->redirect ( 'group/topic', array (
+						'id' => $topic_id
+				) );
+				
+			}else{
+				$this->redirect ( 'group/index' );
+			}
+		}else{
+			$this->redirect ( 'group/index' );
+		}
 	}
 	// 地区的话题 北京话题
 	public 	function nearby(){
 		$this->show("内容还在建设中！");
-	}	
-	
+	}
+	// 编辑小组信息
+	public function edit(){
+		$type = $this->_get ( 'd', 'trim' );
+		$groupid = $this->_get( 'groupid', 'intval');
+		//生成菜单
+		$menu = array(
+				'base' => array('text'=>'基本信息', 'url'=>U('group/edit',array('d'=>'base','groupid'=>$strGroup['groupid']))),
+				'icon' => array('text'=>'小组图标', 'url'=>U('group/edit',array('d'=>'icon','groupid'=>$strGroup['groupid']))),
+		);
+		if (! empty ( $type ) && $groupid > 0) {
+			switch ($type) {
+				case "base" :
+					
+					break;
+			}
+			$this->assign ( 'topic_id', $topicid );
+			$this->_config_seo (array('title'=>'编辑“'.$strTopic['title'].'”','subtitle'=>'小组'));
+		}else{
+			$this->redirect ( 'group/index' );
+		}
+	}
+		
 }

@@ -1,4 +1,23 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title><?php echo L('page_title');?></title><link rel="stylesheet" type="text/css" href="__TMPL__public/style.css" /><script type="text/javascript" src="__TMPL__public/jquery.js"></script></head><body><!--header--><div class="header"><div class="head"><div class="logo"><a href="index.php"><img src="__TMPL__public/logo.gif" alt="<?php echo L('page_title');?>" /></a></div><div class="menu"><?php echo L('page_title'); echo ($IK_VERSION); ?></div></div></div><style>h1 {
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo L('page_title');?></title>
+<link rel="stylesheet" type="text/css" href="__TMPL__public/style.css" />
+<script type="text/javascript" src="__TMPL__public/jquery.js"></script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+<div class="head">
+<div class="logo"><a href="index.php"><img src="__TMPL__public/logo.gif" alt="<?php echo L('page_title');?>" /></a></div>
+<div class="menu"><?php echo L('page_title');?> <?php echo ($IK_VERSION); ?>
+</div>
+</div>
+</div>
+
+<style>
+h1 {
     border-bottom: 1px solid #DADADA;
     clear: both;
     color: #666666;
@@ -134,4 +153,33 @@ p, li, dd, dt {
     padding: 0.3em 0.6em;
 }
 
-</style><!--main--><div class="midder"><div class="main"><h1>成功安装完成！</h1><p><?php echo L('step_finish_desc');?></p><table class="form-table"><tbody><tr><th>登录Email：</th><td><code><?php echo ($email); ?></code></td></tr><tr><th>登录密码：</th><td><code><?php echo ($password); ?></code></td></tr></tbody></table><p class="step"><a class="button" href="<?php echo U('index');?>">进入前台</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="button" href="<?php echo U('admin');?>">进入后台</a></p></div></div><!--footer--><div class="footer">Powered by <a href="<?php echo (IKPHP_SITEURL); ?>" target="_blank"><?php echo (IKPHP_SITENAME); ?></a>&nbsp;版本 <?php echo (IKPHP_VERSION); ?> &copy; <?php echo (IKPHP_YEAR); ?></div></body></html>
+</style>
+
+<!--main-->
+<div class="midder">
+
+<div class="main">
+
+<h1>成功安装完成！</h1>
+<p><?php echo L('step_finish_desc');?></p>
+<table class="form-table">
+	<tbody><tr>
+		<th>登录Email：</th>
+		<td><code><?php echo ($email); ?></code></td>
+	</tr>
+	<tr>
+		<th>登录密码：</th>
+		<td><code><?php echo ($password); ?></code></td>
+	</tr>
+</tbody></table>
+<p class="step"><a class="button" href="<?php echo ($home_url); ?>">进入前台</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="button" href="<?php echo ($admin_url); ?>">进入后台</a></p>
+
+</div>
+
+</div>
+
+<!--footer-->
+<div class="footer">Powered by <a href="<?php echo (IKPHP_SITEURL); ?>" target="_blank"><?php echo (IKPHP_SITENAME); ?></a>&nbsp;版本 <?php echo (IKPHP_VERSION); ?> &copy; <?php echo (IKPHP_YEAR); ?>
+</div>
+</body>
+</html>

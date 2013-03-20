@@ -12865,3 +12865,9 @@ SQL: SHOW COLUMNS FROM `ik_group_topics` [ RunTime:0.004388s ]
 SQL: SHOW COLUMNS FROM `ik_group_topics_collects` [ RunTime:0.004026s ]
 SQL: SHOW COLUMNS FROM `ik_group_topics_comments` [ RunTime:0.003639s ]
 
+[ 2013-03-20T23:30:15+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-03-20T23:30:21+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-03-20T23:30:22+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-03-20T23:30:22+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-03-20T23:30:22+08:00 ] ERR: (ThinkException) 无法加载模块:index
+[ 2013-03-20T23:30:23+08:00 ] ERR: (ThinkException) 无法加载模块:index

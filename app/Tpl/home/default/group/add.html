@@ -43,6 +43,22 @@
     </tr>
 </table>
 <include file="public:IKEditor" />
+<script language="javascript">
+$(function(){
+	$('#addImg').bind('click',function(){
+		var ajaxurl = "{:U('images/add')}";
+		var typeid = '{$topic_id}';
+		var data = "{'type':'topic','typeid':'"+typeid+"'}";		
+		addPhoto(ajaxurl, data);
+	});
+	$('#addLink').bind('click',function(){	
+		addLink();
+	})
+	$('#addVideo').bind('click',function(){
+		addVideo();	
+	})
+});
+</script>
 </form>
 
 

@@ -15,7 +15,7 @@
 				</div>
 				<ul class="list categories-list">
                     <foreach name="arrCate" item="item">
-						<li><a href="{:U('article/list',array('cateid'=>$item[catid]))}">{$item[name]}</a></li>
+						<li><a href="{:U('article/category',array('cateid'=>$item[cateid]))}">{$item[catename]}</a></li>
 					</foreach>
 				</ul>
 			</section>
@@ -42,26 +42,26 @@
 						<foreach name="arrArticle" item="item">
 						<li class="item" id="article-407582">
 							<div class="title">
-								<a href="{:U('article/show',array('id'=>$item[news][nid]))}">{$item[subject]} 
-                                {if $item[attach]}
+								<a href="{:U('article/show',array('id'=>$item[aid]))}">{$item[subject]} 
+                                <if condition="$item[isphoto]">
                                 [图文]
-                                {/if}
+                                </if>
                                 </a>
 							</div>
-                            {if $item[attach]} 
+                           <if condition="$item[isphoto]">
 							<div class="cover">
-                                <a class="pic" href="{U('article','show',array('id'=>$item[news][nid]))}">
+                                <a class="pic" href="{:U('article/show',array('id'=>$item[aid]))}">
 									<img src="{$item[attach]}" />
 								</a> 
 							</div>
-                            {/if}                            
+                            </if>                           
 							<div class="info">
 								<div class="article-desc-brief">
-									{php echo getsubstrutf8(t($item[news][message]),0,150);}...<a
-										href="{U('article','show',array('id'=>$item[news][nid]))}">（更多）</a>
+									<php> echo getsubstrutf8(t($item[content]),0,150);</php>...<a
+										href="{:U('article/show',array('id'=>$item[aid]))}">（更多）</a>
 								</div>
 							</div>
-							<span class="time"> {php echo date('Y-m-d H:i:s',$item[dateline])}</span> 
+							<span class="time"> <php> echo date('Y-m-d H:i',$item[addtime])</php></span> 
 						</li>
 						</foreach>
 

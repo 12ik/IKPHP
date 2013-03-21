@@ -15,7 +15,7 @@ class imagesAction extends frontendAction {
 		$this->_mod = D('images');		
 	}
 	public function add() {
-		$typeid  = $this->_post('typeid','intval');
+		$typeid  = $this->_post('typeid','intval','0');
 		$file = $_FILES ['file'];
 		$type = $this->_post('type','trim');
 		$userid = $this->userid;

@@ -448,7 +448,7 @@ class groupAction extends frontendAction {
 			! $strTopic && $this->error ( '呃...你想要的东西不在这儿' );
 			$strTopic ['user'] = $this->user_mod->getOneUser ( $strTopic ['userid'] );
 			$strTopic ['user'] ['signed'] = hview ( $strTopic ['user'] ['signed'] );
-			$strTopic ['content'] = nl2br ( ikhtml('topic',$topic_id,$strTopic [content]) );
+			
 			$strTopic['tags'] = D('tag')->getObjTagByObjid('topic','topicid',$topic_id);
 			// 小组信息
 			$strGroup = $this->_mod->getOneGroup ( $strTopic ['groupid'] );

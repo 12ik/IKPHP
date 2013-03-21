@@ -116,14 +116,14 @@ __EXTENDS_JS__
 
 	<tr>
     	<th>标题：</th>
-		<td><input style="width:400px;" type="text" value="" maxlength="100" size="50" name="title" tabindex="1" class="txt" placeholder="请填写标题"></td>
+		<td><input style="width:400px;" type="text" value="<?php echo ($strArticle[title]); ?>" maxlength="100" size="50" name="title" tabindex="1" class="txt" placeholder="请填写标题"></td>
     </tr>	
     <tr>
         <th>发表到：</th>
         <td>
             <select name="cateid" class="txt" id="cate_select" style="float:left;" tabindex="2" >
                 <option  value="0">默认分类</option>
-                <?php if(is_array($arrCate)): foreach($arrCate as $key=>$item): ?><option  value="<?php echo ($item[cateid]); ?>"><?php echo ($item[catename]); ?></option><?php endforeach; endif; ?>
+                <?php echo ($arrCate); ?>
             </select>            
         </td>
     </tr>
@@ -137,7 +137,7 @@ __EXTENDS_JS__
     <tr>
         <th>内容：</th>
         <td style="padding-bottom:0px">
-        <textarea tabindex="3"  style="width:99.5%;height:300px;" maxlength="10000" id="editor_full" cols="55" rows="20" name="content" class="txt"   placeholder="请填写内容"></textarea>
+        <textarea tabindex="3"  style="width:99.5%;height:300px;" maxlength="10000" id="editor_full" cols="55" rows="20" name="content" class="txt"   placeholder="请填写内容"><?php echo ($strArticle[content]); ?></textarea>
         <div class="ik_toolbar" id="ik_toolbar"><span class="textnum" id="textnum"><em>0</em> / <em>10000</em> 受欢迎的字数 </span></div>
         </td>
     </tr> 
@@ -204,12 +204,13 @@ __EXTENDS_JS__
 <!--加载编辑器-->
 <script type="text/javascript" src="__STATIC__/public/js/lib/ajaxfileupload.js"></script>
 <script type="text/javascript" src="__STATIC__/public/js/lib/IKEditor.js"></script>
+
 <script language="javascript">
 $(function(){
 	$('#addImg').bind('click',function(){
 		var ajaxurl = "<?php echo U('images/add');?>";
-		var typeid = '<?php echo ($topic_id); ?>';
-		var data = "{'type':'topic','typeid':'"+typeid+"'}";		
+		var typeid = '<?php echo ($strArticle[aid]); ?>';
+		var data = "{'type':'article','typeid':'"+typeid+"'}";		
 		addPhoto(ajaxurl, data);
 	});
 	$('#addLink').bind('click',function(){	

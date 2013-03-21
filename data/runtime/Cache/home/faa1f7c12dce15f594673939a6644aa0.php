@@ -197,6 +197,7 @@ __EXTENDS_JS__
 <!--加载编辑器-->
 <script type="text/javascript" src="__STATIC__/public/js/lib/ajaxfileupload.js"></script>
 <script type="text/javascript" src="__STATIC__/public/js/lib/IKEditor.js"></script>
+
 <script language="javascript">
 $(function(){
 	$('#addImg').bind('click',function(){

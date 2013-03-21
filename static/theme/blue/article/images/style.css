@@ -78,7 +78,13 @@ section .hd{padding-bottom:5px;border-bottom:1px solid #ddd;margin-bottom:9px}
 #g-user-profile .info a:hover {
 	color:#fff
 }
-
+.create-group a:link, .create-group a:visited {
+	color:#ca6445;
+}
+.create-group a:hover, .create-group a:active {
+	background:#ca6445;
+	color:#fff;
+}
 /*comment评论列表*/
 .comment{width: 100%;overflow:hidden;}
 .comment li {margin: 0 0 0px 0px;overflow:hidden; display:block;}

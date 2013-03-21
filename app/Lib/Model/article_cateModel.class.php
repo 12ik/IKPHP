@@ -1,10 +1,11 @@
 <?php
 class article_cateModel extends Model {
 	
-	// 获取全部分类
-	public function getAllCate($userid = 0, $referid = 0){
-		$where = array('userid'=>$userid,'referid'=>$referid);
+	// 根据频道nameid获取全部分类
+	public function getCateByNameid($nameid){
+		$where = array('nameid'=>$nameid);
 		$result = $this->where ( $where )->select ();
 		return $result;
 	}
+
 }

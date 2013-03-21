@@ -425,25 +425,44 @@ CREATE TABLE `ik_tag_topic_index` (
 --
 DROP TABLE IF EXISTS `ik_article`;
 CREATE TABLE `ik_article` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '文章ID',
-  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
-  `cateid` int(11) NOT NULL DEFAULT '0' COMMENT '分类ID',
-  `title` char(64) NOT NULL DEFAULT '' COMMENT '标题',
+  `aid` int(11) NOT NULL AUTO_INCREMENT COMMENT '文章ID',
+  `itemid` int(11) NOT NULL DEFAULT '0' COMMENT '信息ID',
   `content` text NOT NULL COMMENT '内容',
-  `author` char(64) NOT NULL DEFAULT '' COMMENT '作者',
-  `from` char(64) NOT NULL DEFAULT '' COMMENT '来源',
+  `postip` varchar(15) NOT NULL DEFAULT '' COMMENT '发布者ip',
+  `newsauthor` varchar(20) NOT NULL DEFAULT '' COMMENT '作者',
+  `newsfrom` varchar(50) NOT NULL DEFAULT '' COMMENT '来源',
+  `newsfromurl` varchar(150) NOT NULL DEFAULT '' COMMENT '来源连接',
+  PRIMARY KEY (`aid`),
+  KEY `itemid` (`itemid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_article_item`
+--
+DROP TABLE IF EXISTS `ik_article_item`;
+CREATE TABLE `ik_article_item` (
+  `itemid` int(11) NOT NULL AUTO_INCREMENT COMMENT '文章ID',
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户id',
+  `cateid` int(11) NOT NULL DEFAULT '0' COMMENT '分类ID',
+  `username` char(32) NOT NULL DEFAULT '' COMMENT '发布者',
+  `title` char(64) NOT NULL DEFAULT '' COMMENT '标题',
   `count_comment` int(11) NOT NULL DEFAULT '0' COMMENT '回复统计',
   `count_view` int(11) NOT NULL DEFAULT '0' COMMENT '展示数',
+  `photoid` int(11) NOT NULL DEFAULT '0' COMMENT '文章主图id',
   `isphoto` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有图片',
-  `isattach` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有附件',
-  `isaudit` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否审核',
-  `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '时间',
-  `uptime` int(11) NOT NULL DEFAULT '0' COMMENT '时间',
-  PRIMARY KEY (`id`),
+  `isvideo` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有视频',  
+  `istop` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否置顶',
+  `isshow` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否显示',
+  `iscomment` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否允许评论',
+  `isdigest` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否精华帖子',
+  `isaudit` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否审核', 
+  `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '发布时间',
+  `uptime` int(11) NOT NULL DEFAULT '0' COMMENT '更新时间',
+  PRIMARY KEY (`itemid`),
   KEY `userid` (`userid`),
   KEY `cateid` (`cateid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
 -- --------------------------------------------------------
 
 --
@@ -452,17 +471,26 @@ CREATE TABLE `ik_article` (
 DROP TABLE IF EXISTS `ik_article_cate`;
 CREATE TABLE `ik_article_cate` (
   `cateid` int(11) NOT NULL AUTO_INCREMENT COMMENT '分类ID',
-  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
-  `referid` int(11) NOT NULL DEFAULT '0' COMMENT '父分类ID',
   `catename` char(32) NOT NULL DEFAULT '' COMMENT '分类名称',
-  `catename_en` char(32) NOT NULL DEFAULT '' COMMENT '分类英文名称',
+  `nameid` char(30) NOT NULL DEFAULT '' COMMENT '频道id',  
+  `orderid` tinyint(3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`cateid`),
-  KEY `userid` (`userid`),
-  KEY `referid` (`referid`)
+  KEY `nameid` (`nameid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
+--
+-- 表的结构 `ik_article_channel`
+--
+DROP TABLE IF EXISTS `ik_article_channel`;
+CREATE TABLE `ik_article_channel` (
+  `nameid` char(30) NOT NULL DEFAULT '' COMMENT '频道英文名称',
+  `name` char(50) NOT NULL DEFAULT '' COMMENT '频道名',
+  PRIMARY KEY (`nameid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='文章频道';
+
+-- --------------------------------------------------------
 --
 -- 表的结构 `ik_article_comment`
 --

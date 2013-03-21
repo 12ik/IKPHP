@@ -22,6 +22,8 @@ class group_topicsModel extends Model {
 					'topicid' => $topic_id
 			);
 			$result = $this->where ( $where )->find ();
+			$result ['content'] = nl2br ( ikhtml('topic',$topic_id,$result ['content']) );
+			
 			return $result;
 		}
 	}

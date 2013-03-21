@@ -114,7 +114,7 @@ __EXTENDS_JS__
 					<h3>全部分类</h3>
 				</div>
 				<ul class="list categories-list">
-                    <?php if(is_array($arrCate)): foreach($arrCate as $key=>$item): ?><li><a href="<?php echo U('article/list',array('cateid'=>$item[catid]));?>"><?php echo ($item[name]); ?></a></li><?php endforeach; endif; ?>
+                    <?php if(is_array($arrCate)): foreach($arrCate as $key=>$item): ?><li><a href="<?php echo U('article/category',array('cateid'=>$item[cateid]));?>"><?php echo ($item[catename]); ?></a></li><?php endforeach; endif; ?>
 				</ul>
 			</section>
 			<section class="personal-publish">
@@ -139,26 +139,22 @@ __EXTENDS_JS__
 					<ul class="list-lined article-list">
 						<?php if(is_array($arrArticle)): foreach($arrArticle as $key=>$item): ?><li class="item" id="article-407582">
 							<div class="title">
-								<a href="<?php echo U('article/show',array('id'=>$item[news][nid]));?>"><?php echo ($item[subject]); ?> 
-                                {if $item[attach]}
-                                [图文]
-                                {/if}
+								<a href="<?php echo U('article/show',array('id'=>$item[aid]));?>"><?php echo ($item[subject]); ?> 
+                                <?php if($item[isphoto]): ?>[图文]<?php endif; ?>
                                 </a>
 							</div>
-                            {if $item[attach]} 
-							<div class="cover">
-                                <a class="pic" href="{U('article','show',array('id'=>$item[news][nid]))}">
+                           <?php if($item[isphoto]): ?><div class="cover">
+                                <a class="pic" href="<?php echo U('article/show',array('id'=>$item[aid]));?>">
 									<img src="<?php echo ($item[attach]); ?>" />
 								</a> 
-							</div>
-                            {/if}                            
+							</div><?php endif; ?>                           
 							<div class="info">
 								<div class="article-desc-brief">
-									{php echo getsubstrutf8(t($item[news][message]),0,150);}...<a
-										href="{U('article','show',array('id'=>$item[news][nid]))}">（更多）</a>
+									<?php echo getsubstrutf8(t($item[content]),0,150); ?>...<a
+										href="<?php echo U('article/show',array('id'=>$item[aid]));?>">（更多）</a>
 								</div>
 							</div>
-							<span class="time"> {php echo date('Y-m-d H:i:s',$item[dateline])}</span> 
+							<span class="time"> <?php echo date('Y-m-d H:i',$item[addtime]) ?></span> 
 						</li><?php endforeach; endif; ?>
 
 					</ul>

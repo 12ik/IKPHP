@@ -63,19 +63,3 @@
 <!--加载编辑器-->
 <script type="text/javascript" src="__STATIC__/public/js/lib/ajaxfileupload.js"></script>
 <script type="text/javascript" src="__STATIC__/public/js/lib/IKEditor.js"></script>
-<script language="javascript">
-$(function(){
-	$('#addImg').bind('click',function(){
-		var ajaxurl = "{:U('images/add')}";
-		var typeid = '{$topic_id}';
-		var data = "{'type':'topic','typeid':'"+typeid+"'}";		
-		addPhoto(ajaxurl, data);
-	});
-	$('#addLink').bind('click',function(){	
-		addLink();
-	})
-	$('#addVideo').bind('click',function(){
-		addVideo();	
-	})
-});
-</script>

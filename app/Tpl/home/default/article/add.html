@@ -16,16 +16,14 @@
 
 	<tr>
     	<th>标题：</th>
-		<td><input style="width:400px;" type="text" value="" maxlength="100" size="50" name="title" tabindex="1" class="txt" placeholder="请填写标题"></td>
+		<td><input style="width:400px;" type="text" value="{$strArticle[title]}" maxlength="100" size="50" name="title" tabindex="1" class="txt" placeholder="请填写标题"></td>
     </tr>	
     <tr>
         <th>发表到：</th>
         <td>
             <select name="cateid" class="txt" id="cate_select" style="float:left;" tabindex="2" >
                 <option  value="0">默认分类</option>
-                <foreach name="arrCate" item="item">
-                	<option  value="{$item[cateid]}">{$item[catename]}</option>
-                </foreach>
+                {$arrCate}
             </select>            
         </td>
     </tr>
@@ -39,7 +37,7 @@
     <tr>
         <th>内容：</th>
         <td style="padding-bottom:0px">
-        <textarea tabindex="3"  style="width:99.5%;height:300px;" maxlength="10000" id="editor_full" cols="55" rows="20" name="content" class="txt"   placeholder="请填写内容"></textarea>
+        <textarea tabindex="3"  style="width:99.5%;height:300px;" maxlength="10000" id="editor_full" cols="55" rows="20" name="content" class="txt"   placeholder="请填写内容">{$strArticle[content]}</textarea>
         <div class="ik_toolbar" id="ik_toolbar"><span class="textnum" id="textnum"><em>0</em> / <em>10000</em> 受欢迎的字数 </span></div>
         </td>
     </tr> 
@@ -52,6 +50,22 @@
 </table>
 
 <include file="public:IKEditor" />
+<script language="javascript">
+$(function(){
+	$('#addImg').bind('click',function(){
+		var ajaxurl = "{:U('images/add')}";
+		var typeid = '{$strArticle[aid]}';
+		var data = "{'type':'article','typeid':'"+typeid+"'}";		
+		addPhoto(ajaxurl, data);
+	});
+	$('#addLink').bind('click',function(){	
+		addLink();
+	})
+	$('#addVideo').bind('click',function(){
+		addVideo();	
+	})
+});
+</script>
 
 </form>
 

@@ -51,7 +51,10 @@ __EXTENDS_JS__
              <li>
              <a href="<?php echo U('group/index');?>">小组</a>
              </li>
-             <li>                                             
+             
+             <li>
+             <a href="<?php echo U('article/index');?>">文章</a>
+             </li>                                          
 
         </ul>
     </div>
@@ -74,12 +77,16 @@ __EXTENDS_JS__
             <a href="__ROOT__/" title="<?php echo ($IK_SITE[base][site_title]); ?>"><?php echo ($IK_SITE[base][site_title]); ?></a>
         </div><?php endif; ?> 
 		<div class="appnav">
-		    <ul id="nav_bar">
-		        <li><a href="<?php echo U('group/index');?>">我的小组</a></li>
-		        <li><a href="<?php echo U('group/explore');?>">发现小组</a></li>
-		        <li><a href="<?php echo U('group/explore_topic');?>">发现话题</a></li>
-		        <li><a href="<?php echo U('group/nearby');?>">北京话题</a></li>
-		    </ul>
+		   <?php if($module_name == group): ?><ul id="nav_bar">
+	           		<?php if($visitor[userid]): ?><li><a href="<?php echo U('group/index');?>">我的小组</a></li><?php endif; ?>    
+			        <li><a href="<?php echo U('group/explore');?>">发现小组</a></li>
+			        <li><a href="<?php echo U('group/explore_topic');?>">发现话题</a></li>
+			        <li><a href="<?php echo U('group/nearby');?>">北京话题</a></li>
+			    </ul><?php endif; ?>
+		   <?php if($module_name == article): ?><ul id="nav_bar">
+			    <li><a href="<?php echo U('article/index');?>">文章</a></li>
+			    <li><a href="<?php echo U('group/index');?>">小组</a></li>
+			   </ul><?php endif; ?>
 		   <form onsubmit="return searchForm(this);" method="get" action="http://www.ik.com/index.php">
 		   <input type="hidden" value="search" name="app"><input type="hidden" value="q" name="ac">
 		    <div id="search_bar">
@@ -99,7 +106,72 @@ __EXTENDS_JS__
 <!--APP NAV-->
 
 </header>
+<div class="midder">
+	<div class="mc">
+		<aside class="w190 fl">
+			<section class="categories">
+				<div class="hd">
+					<h3>全部分类</h3>
+				</div>
+				<ul class="list categories-list">
+                    <?php if(is_array($arrCate)): foreach($arrCate as $key=>$item): ?><li><a href="<?php echo U('article/list',array('cateid'=>$item[catid]));?>"><?php echo ($item[name]); ?></a></li><?php endforeach; endif; ?>
+				</ul>
+			</section>
+			<section class="personal-publish">
+				<div class="hd">
+					<h3>作品投稿</h3>
+				</div>
+				<div class="bd">
+					<p>个人作者可以在爱客上直接发布作品。 内容领域不限，唯一要求是保证质量优秀。 发表后，作者可直接从中获得分成。</p>
+					<p class="entrance">
+						<a href="<?php echo U('article/add');?>" class="btn btn-large">去投稿<i class="arrow-right"></i></a>
+					</p>
+				</div>
+			</section>
+		</aside>
+		<article class="w770 fr">
+			<section>
+				<div class="hd tag-heading">
+					<h3 class="the-tag-name"><?php echo ($seo["title"]); ?></h3>
+				</div>
 
+				<div class="bd">
+					<ul class="list-lined article-list">
+						<?php if(is_array($arrArticle)): foreach($arrArticle as $key=>$item): ?><li class="item" id="article-407582">
+							<div class="title">
+								<a href="<?php echo U('article/show',array('id'=>$item[news][nid]));?>"><?php echo ($item[subject]); ?> 
+                                {if $item[attach]}
+                                [图文]
+                                {/if}
+                                </a>
+							</div>
+                            {if $item[attach]} 
+							<div class="cover">
+                                <a class="pic" href="{U('article','show',array('id'=>$item[news][nid]))}">
+									<img src="<?php echo ($item[attach]); ?>" />
+								</a> 
+							</div>
+                            {/if}                            
+							<div class="info">
+								<div class="article-desc-brief">
+									{php echo getsubstrutf8(t($item[news][message]),0,150);}...<a
+										href="{U('article','show',array('id'=>$item[news][nid]))}">（更多）</a>
+								</div>
+							</div>
+							<span class="time"> {php echo date('Y-m-d H:i:s',$item[dateline])}</span> 
+						</li><?php endforeach; endif; ?>
+
+					</ul>
+				</div>
+
+
+			</section>
+            
+             <div class="page"><?php echo ($pageUrl); ?></div>   
+             
+		</article>
+	</div>
+</div>
 <!--footer-->
 <footer>
 <div id="footer">

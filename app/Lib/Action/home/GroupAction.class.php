@@ -26,7 +26,8 @@ class groupAction extends frontendAction {
 				'topic_edit',
 				'topic_istop',
 				'topic_recommend',
-				'topic_istop',
+				'update',
+				'updatetopic',
 
 				
 		) )) {
@@ -44,9 +45,9 @@ class groupAction extends frontendAction {
 	public function index() {
 		if ($this->visitor->is_login) {
 			$this->redirect ( 'group/my_group_topics' );
+		}else{
+			$this->redirect ( 'group/explore' );
 		}
-		$this->_config_seo ();
-		$this->display ();
 	}
 	//我管理的小组
 	public function mine(){
@@ -155,8 +156,21 @@ class groupAction extends frontendAction {
 	}
 	// 我回应的话题
 	public function my_replied_topics(){
-		
+		$userid = $this->userid;
+		// 用户信息
+		$strUser = $this->user_mod->getOneUser ( $userid );
+		$arrTopics = $this->group_topics_mod->getUserRepliedTopic($userid, 20);
+		foreach($arrTopics as $key=>$item){
+			$arrTopic[] = $item;
+			$arrTopic[$key]['user'] = $this->user_mod->getOneUser($item['userid']);
+			$arrTopic[$key]['group'] = $this->_mod->getOneGroup($item['groupid']);
+		}
+		$this->assign ( 'strUser', $strUser );
+		$this->assign ( 'arrTopic', $arrTopic );
+		$this->_config_seo (array('title'=>'我回应的话题','subtitle'=>'小组'));
+		$this->display ();		
 	}
+	// 创建小组
 	public function create() {
 		if (IS_POST) {
 			foreach ( $_POST as $key => $val ) {
@@ -597,7 +611,8 @@ class groupAction extends frontendAction {
 	// 发现话题
 	public function explore_topic(){
 		//查询是否显示
-		$map = array('ishow'=>0);
+		$map['ishow']  = '0';
+		$map['groupid'] =  array('gt',0);
 		//显示列表
 		$pagesize = 3;
 		$count = $this->group_topics_mod->where($map)->order('addtime DESC')->count('topicid');
@@ -919,6 +934,7 @@ class groupAction extends frontendAction {
 	}
 	// 地区的话题 北京话题
 	public 	function nearby(){
+		
 		$this->show("内容还在建设中！");
 	}
 	// 编辑小组信息
@@ -1026,10 +1042,93 @@ class groupAction extends frontendAction {
 	}
 	// 浏览所有成员
 	public function group_user(){
-		$groupid = $groupid = $this->_get( 'groupid', 'intval');
+		$groupid = $this->_get( 'groupid', 'intval');
+		$strGroup = $this->_mod->getOneGroup ( $groupid );
+		// 存在性检查
+		! $strGroup && $this->error ( '呃...你想要的东西不在这儿' );
 		
-		$this->_config_seo (array('title'=>'修改小组头像','subtitle'=>'小组'));
+		//小组组长信息
+		$leaderId = $strGroup['userid'];
+		$strLeader = $this->user_mod->getOneUser($leaderId);
+		//管理员信息
+		$strAdmin =  $this->group_users_mod->field('userid')->where(array('groupid'=>$groupid,'isadmin'=>'1'))->select();		
+		if(is_array($strAdmin)){
+			foreach($strAdmin as $item){
+				$arrAdmin[] = $this->user_mod->getOneUser($item['userid']);
+			}
+		}
+		//小组会员分页
+		$page = $this->_get('p','intval',1);
+		//查询条件 是否显示
+		$map = array('groupid'=>$groupid);
+		//显示列表
+		$pagesize = 10;
+		$count = $this->group_users_mod->where($map)->count('*');
+		$pager = $this->_pager($count, $pagesize);
+		$groupUser =  $this->group_users_mod->where($map)->order('userid desc')->limit($pager->firstRow.','.$pager->listRows)->select();
+		if(is_array($groupUser)){
+			foreach($groupUser as $key=>$item){
+				$arrGroupUser[] = $this->user_mod->getOneUser($item['userid']);
+				$arrGroupUser[$key]['isadmin'] = $item['isadmin'];
+			}
+		}
+			
+		$this->assign('pageUrl', $pager->fshow());
+		$this->assign('arrGroupUser', $arrGroupUser);
+		$this->assign('arrAdmin', $arrAdmin);
+		$this->assign('strLeader', $strLeader);
+		$this->assign('strGroup', $strGroup);
+		
+		if($page > '1'){
+			$titlepage = " - 第".$page."页";
+		}else{
+			$titlepage='';
+		}
+		
+		$this->_config_seo (array('title'=>$strGroup['groupname'].'小组成员'.$titlepage,'subtitle'=>'小组'));
 		$this->display();
+		
+	}
+	// 设置成员
+	public function group_user_set(){
+		$type = $this->_get ( 'd', 'trim' );
+		if (! empty ( $type )) {
+			switch ($type) {
+				// 设置为管理员和取消为管理员
+				case "isadmin" :
+					
+					$userid  = $this->_get( 'userid', 'intval');
+					$groupid = $this->_get( 'groupid', 'intval');
+					$isadmin = $this->_get( 'isadmin', 'intval');					
+					
+					if($userid == '' && $groupid=='' && $isadmin=='') $this->error("请不要冒险进入危险境地！");
+					
+					$strGroup = $this->_mod->getOneGroup ( $groupid );					
+					if($this->userid != $strGroup['userid']) $this->error("机房重地，闲人免进！");
+					
+					$this->group_users_mod->where(array('userid'=>$userid,'groupid'=>$groupid))->save(array('isadmin'=>$isadmin));
+					$this->redirect ( 'group/group_user', array('groupid'=>$groupid));
+				break;
+				// 踢出小组成员
+				case "isuser" :
+					$userid  = $this->_get( 'userid', 'intval');
+					$groupid = $this->_get( 'groupid', 'intval');
+					$isuser =  $this->_get( 'isuser', 'intval');
+					if($userid == '' && $groupid=='' && $isuser=='') $this->error("请不要冒险进入危险境地！");
+					$strGroup = $this->_mod->getOneGroup ( $groupid );
+					if($this->userid != $strGroup['userid']) $this->error("机房重地，闲人免进！");
+					
+					$this->group_users_mod->where(array('userid'=>$userid, 'groupid'=>$groupid))->delete();
+					
+					//计算小组会员数
+					$groupUserNum = $this->group_users_mod->where(array('groupid'=>$groupid))->count();
+					
+					//更新小组成员统计
+					$this->_mod->where(array('groupid'=>$groupid))->save(array('count_user'=>$groupUserNum));
+					$this->redirect ( 'group/group_user', array('groupid'=>$groupid));
+				break;	
+			}
+		}
 		
 	}
 		

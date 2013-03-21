@@ -75,7 +75,7 @@ __EXTENDS_JS__
         </div><?php endif; ?> 
 		<div class="appnav">
 		    <ul id="nav_bar">
-		        <li><a href="<?php echo U('group/index');?>">我的小组</a></li>
+           		<?php if($visitor[userid]): ?><li><a href="<?php echo U('group/index');?>">我的小组</a></li><?php endif; ?>    
 		        <li><a href="<?php echo U('group/explore');?>">发现小组</a></li>
 		        <li><a href="<?php echo U('group/explore_topic');?>">发现话题</a></li>
 		        <li><a href="<?php echo U('group/nearby');?>">北京话题</a></li>

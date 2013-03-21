@@ -79,8 +79,8 @@
                                 <if condition="$item[isattach] eq 1">
                                 <img src="__STATIC__/public/images/attach.gif" title="[附件]" alt="[附件]" />
                                 </if> 
-                                <if condition="$item[isposts] eq 1">
-                                <img src="__SITE_URL__/public/images/posts.gif" title="[精华]" alt="[精华]" />
+                                <if condition="$item[isdigest] eq 1">
+                                <img src="__STATIC__/public/images/posts.gif" title="[精华]" alt="[精华]" />
                                 </if>
             					</td>
                                 <td nowrap="nowrap"><a href="{:U('people/index',array('id'=>$item[user][doname]))}">{$item[user][username]}</a></td>

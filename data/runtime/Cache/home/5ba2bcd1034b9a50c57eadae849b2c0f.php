@@ -119,7 +119,8 @@ __EXTENDS_JS__
                 <?php if($item[addtime] > (strtotime(date('Y-m-d 00:00:00')))): ?><img src="__STATIC__/public/images/topic_new.gif" align="absmiddle"  title="[新帖]" alt="[新帖]" /><?php endif; ?> 
                 <?php if($item[isphoto] == 1): ?><img src="__STATIC__/public/images/image_s.gif" title="[图片]" alt="[图片]" align="absmiddle" /><?php endif; ?> 
                 <?php if($item[isattach] == 1): ?><img src="__STATIC__/public/images/attach.gif" title="[附件]" alt="[附件]" /><?php endif; ?> 
-                <?php if($item[isposts] == 1): ?><img src="__SITE_URL__/public/images/posts.gif" title="[精华]" alt="[精华]" /><?php endif; ?>
+                <?php if($item[isdigest] == 1): ?><img src="__STATIC__/public/images/posts.gif" title="[精华]" alt="[精华]" /><?php endif; ?>
+
                 </td>
                 <td class="td-reply" nowrap="nowrap"><?php if($item[count_comment] > 0): echo ($item[count_comment]); ?> 回应<?php endif; ?></td>
                 <td class="td-time" nowrap="nowrap"><?php echo getTime($item[uptime],time()); ?></td>

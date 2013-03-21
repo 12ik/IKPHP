@@ -51,7 +51,10 @@ __EXTENDS_JS__
              <li>
              <a href="<?php echo U('group/index');?>">小组</a>
              </li>
-             <li>                                             
+             
+             <li>
+             <a href="<?php echo U('article/index');?>">文章</a>
+             </li>                                          
 
         </ul>
     </div>
@@ -74,12 +77,16 @@ __EXTENDS_JS__
             <a href="__ROOT__/" title="<?php echo ($IK_SITE[base][site_title]); ?>"><?php echo ($IK_SITE[base][site_title]); ?></a>
         </div><?php endif; ?> 
 		<div class="appnav">
-		    <ul id="nav_bar">
-		        <li><a href="<?php echo U('group/index');?>">我的小组</a></li>
-		        <li><a href="<?php echo U('group/explore');?>">发现小组</a></li>
-		        <li><a href="<?php echo U('group/explore_topic');?>">发现话题</a></li>
-		        <li><a href="<?php echo U('group/nearby');?>">北京话题</a></li>
-		    </ul>
+		   <?php if($module_name == group): ?><ul id="nav_bar">
+	           		<?php if($visitor[userid]): ?><li><a href="<?php echo U('group/index');?>">我的小组</a></li><?php endif; ?>    
+			        <li><a href="<?php echo U('group/explore');?>">发现小组</a></li>
+			        <li><a href="<?php echo U('group/explore_topic');?>">发现话题</a></li>
+			        <li><a href="<?php echo U('group/nearby');?>">北京话题</a></li>
+			    </ul><?php endif; ?>
+		   <?php if($module_name == article): ?><ul id="nav_bar">
+			    <li><a href="<?php echo U('article/index');?>">文章</a></li>
+			    <li><a href="<?php echo U('group/index');?>">小组</a></li>
+			   </ul><?php endif; ?>
 		   <form onsubmit="return searchForm(this);" method="get" action="http://www.ik.com/index.php">
 		   <input type="hidden" value="search" name="app"><input type="hidden" value="q" name="ac">
 		    <div id="search_bar">
@@ -100,79 +107,57 @@ __EXTENDS_JS__
 
 </header>
 
-<!--main-->
 <div class="midder">
-
 <div class="mc">
-<h1><?php echo ($strGroup[groupname]); ?>小组成员</h1>
-<div class="cleft">
+    <div class="cleft">
+        <div class="art-body">
+            <h1 class="title"><?php echo ($strArticle[title]); ?></h1>
+            <div class="art-info">
+            作者：<?php echo ($strArticle[user][username]); ?>&nbsp;&nbsp;<?php echo date('Y-m-d H:i',$strArticle[addtime]) ?>&nbsp;&nbsp;<a href="#comments"><?php echo ($strArticle[count_comment]); ?>条回复</a>&nbsp;&nbsp;浏览<?php echo ($strArticle[count_view]); ?>次&nbsp;&nbsp;<a href="#formMini">我要回复</a> 
+            </div>
+        
+            <div class="art-text">
+                 <?php echo ($strArticle[content]); ?>
+            </div>
+        <div class="clear"></div>
+      </div>
+    
+    
+    
+    </div>
 
-<h2><?php echo ($strGroup[role_leader]); ?> &nbsp; ·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;</h2>
 
-<div class="obss"><dl class="obu"><dt><a class="nbg" href="{U('hi','',array('id'=>$strLeader[doname]))}"><img alt="mido" class="m_sub_img" src="<?php echo ($strLeader[face]); ?>"></a></dt>
-<dd><?php echo ($strLeader[username]); ?><br><span class="pl">(<a href="{U('location','area',array(areaid=>$strLeader[area][areaid]))}"><?php echo ($strLeader[area][areaname]); ?></a>)</span></dd></dl><br clear="all">
+    <div class="cright">
+    
+        <div class="mod" id="g-user-profile">
+
+    <div class="usercard">
+      <div class="pic">
+            <a href="<?php echo U('people/index',array('id'=>$strUser[doname]));?>"><img alt="<?php echo ($strUser[username]); ?>" src="<?php echo ($strUser[face]); ?>"></a>
+      </div>
+      <div class="info">
+           <div class="name">
+               <a href="<?php echo U('people/index',array('id'=>$strUser[doname]));?>"><?php echo ($strUser[username]); ?></a>
+           </div>
+                <?php if($strUser[area] != ''): echo ($strUser[area][areaname]); else: ?>火星<?php endif; ?>                        
+                <br>
+       </div>
+    </div>
+               
+  
+             
+</div> 
+         
+<div class="mod">
+    <?php if($visitor): ?><div class="create-group">
+    <a href="<?php echo U('article/add');?>"><i>+</i>去投稿</a>
+    </div><?php endif; ?>
 </div>
-
-<h2><?php echo ($strGroup[role_admin]); ?> &nbsp; ·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;</h2>
-
-<div class="obss">
-
-<!--{loop $arrAdmin $key $item}-->
-<dl class="obu"><dt><a class="nbg" href="{U('hi','',array('id'=>$item[doname]))}"><img alt="<?php echo ($item[username]); ?>" class="imgg" src="<?php echo ($item[face]); ?>"></a>
-<!--{if $IK_USER[user][userid] == $strLeader[userid]}-->
-<span title="取消管理员" class="gact"><a title="取消<?php echo ($item[username]); ?>的管理员" class="j a_confirm_link" href="{SITE_URL}index.php?app=group&a=group_user_set&ik=isadmin&userid=<?php echo ($item[userid]); ?>&groupid=<?php echo ($strGroup[groupid]); ?>&isadmin=0" rel="nofollow">^</a></span>
-<!--{/if}-->
-</dt><dd><?php echo ($item[username]); ?><br><span class="pl">(<a href="{U('location','area',array(areaid=>$item[area][areaid]))}"><?php echo ($item[area][areaname]); ?></a>)</span></dd></dl>
-<!--{/loop}-->
-
-
-<br clear="all">
-</div>
-
-<h2><?php echo ($strGroup[role_user]); ?> &nbsp; ·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;</h2>
-
-<div class="page"><?php echo ($pageUrl); ?></div>
-
-<div class="obss">
-
-<!--{loop $arrGroupUser $key $item}-->
-<dl class="obu">
-<dt>
-<a class="nbg" href="{U('hi','',array('id'=>$item[doname]))}"><img alt="<?php echo ($item[username]); ?>" class="imgg" src="<?php echo ($item[face]); ?>"></a>
-
-<!--{if $IK_USER[user][userid] == $strLeader[userid]}-->
-<!--{if $item[isadmin] != '1'}-->
-<span title="提升为管理员" class="gact"><a title="把<?php echo ($item[username]); ?>提升为管理员" class="j a_confirm_link" href="{SITE_URL}index.php?app=group&a=group_user_set&ik=isadmin&userid=<?php echo ($item[userid]); ?>&groupid=<?php echo ($strGroup[groupid]); ?>&isadmin=1" rel="nofollow">^</a></span>
-<br />
-<!--{/if}-->
-<!--{if $item[userid] !=$strGroup[userid]}-->
-<span title="踢出小组" class="gact"><a title="把<?php echo ($item[username]); ?>踢出小组" class="j a_confirm_link" href="{SITE_URL}index.php?app=group&a=group_user_set&ik=isuser&userid=<?php echo ($item[userid]); ?>&groupid=<?php echo ($strGroup[groupid]); ?>" rel="nofollow">k</a></span>
-<br />
-<!--{/if}-->
-
-<!--{/if}-->
-</dt>
-<dd><?php echo ($item[username]); ?><br><span class="pl">(<a href="{U('location','area',array(areaid=>$item[area][areaid]))}"><?php echo ($item[area][areaname]); ?></a>)</span></dd></dl>
-<!--{/loop}-->
-
-<br clear="all">
-</div>
-
-<div class="page"><?php echo ($pageUrl); ?></div>
-
-<br />
-
-</div>
-
-
-<div class="cright">
-<p class="pl2">&gt; <a href="{U('group','show',array('id'=>$strGroup[groupid]))}">回<?php echo ($strGroup[groupname]); ?>小组</a></p>
+        
+    </div>
 
 </div>
 </div>
-</div>
-
-
 
 <!--footer-->
 <footer>

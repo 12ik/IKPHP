@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<include file="public:head" />
+</head>
+
+<body>
+<include file="public:header" />
+
+<div class="midder">
+<div class="mc">
+    <div class="cleft">
+        <div class="art-body">
+            <h1 class="title">{$strArticle[title]}</h1>
+            <div class="art-info">
+            作者：{$strArticle[user][username]}&nbsp;&nbsp;<php>echo date('Y-m-d H:i',$strArticle[addtime])</php>&nbsp;&nbsp;<a href="#comments">{$strArticle[count_comment]}条回复</a>&nbsp;&nbsp;浏览{$strArticle[count_view]}次&nbsp;&nbsp;<a href="#formMini">我要回复</a> 
+            </div>
+        
+            <div class="art-text">
+                 {$strArticle[content]}
+            </div>
+        <div class="clear"></div>
+      </div>
+    
+    
+    
+    </div>
+
+
+    <div class="cright">
+    
+        <include file="right_menu" />
+        
+    </div>
+
+</div>
+</div>
+
+<include file="public:footer" />
+</body>
+</html>

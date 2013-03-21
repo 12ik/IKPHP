@@ -56,12 +56,11 @@ class baseAction extends Action
     		$upload->saveRule = $save_rule;
     	}
     
-    	if ($result = $upload->uploadOne($file)) {
-    		return array('error'=>0, 'info'=>$result);
-    	} else {
-    		return array('error'=>1, 'info'=>$upload->getErrorMsg());
-    	}
+        if ($result = $upload->uploadOne($file)) {
+            return array('error'=>0, 'info'=>$result);
+        } else {
+            return array('error'=>1, 'info'=>$upload->getErrorMsg());
+        }
     }
  
-   
 }

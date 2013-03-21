@@ -57,7 +57,7 @@ class group_topicsModel extends Model {
 				'groupid' => $groupid,
 				'isshow' =>0,
 		);
-		$results = $this->where ( $where )->order('addtime desc')->limit($limit)->select();
+		$results = $this->where ( $where )->order('istop desc,addtime desc')->limit($limit)->select();
 		foreach($results as $key=>$item){
 			$result[] = $item;
 			$result[$key]['user'] = D('user')->getOneUser($item['userid']);
@@ -70,6 +70,15 @@ class group_topicsModel extends Model {
 		$where['isshow'] = 0;
 		$result = $this->where ( $where )->order('uptime desc')->limit($limit)->select();
 		return $result;	
+	}
+	// 获取用户回应的话题
+	public function getUserRepliedTopic($userid, $limit){
+		$myTopics = D('group_topics_comments')->field('topicid')->where(array('userid'=>$userid))->group('topicid')->order('addtime desc')->limit($limit)->select();		
+		foreach($myTopics as $item){
+			$strTopic = $this->getOneTopic($item['topicid']);
+			$arrTopics[] = $strTopic;
+		}
+		return $arrTopics;
 	}
 	// 获取用户发表话题
 	public function getUserTopic($userid, $limit){

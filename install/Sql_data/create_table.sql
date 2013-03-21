@@ -417,3 +417,65 @@ CREATE TABLE `ik_tag_topic_index` (
   KEY `topicid` (`topicid`),
   KEY `tagid` (`tagid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_article`
+--
+DROP TABLE IF EXISTS `ik_article`;
+CREATE TABLE `ik_article` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '文章ID',
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
+  `cateid` int(11) NOT NULL DEFAULT '0' COMMENT '分类ID',
+  `title` char(64) NOT NULL DEFAULT '' COMMENT '标题',
+  `content` text NOT NULL COMMENT '内容',
+  `author` char(64) NOT NULL DEFAULT '' COMMENT '作者',
+  `from` char(64) NOT NULL DEFAULT '' COMMENT '来源',
+  `count_comment` int(11) NOT NULL DEFAULT '0' COMMENT '回复统计',
+  `count_view` int(11) NOT NULL DEFAULT '0' COMMENT '展示数',
+  `isphoto` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有图片',
+  `isattach` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否有附件',
+  `isaudit` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否审核',
+  `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '时间',
+  `uptime` int(11) NOT NULL DEFAULT '0' COMMENT '时间',
+  PRIMARY KEY (`id`),
+  KEY `userid` (`userid`),
+  KEY `cateid` (`cateid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_article_cate`
+--
+DROP TABLE IF EXISTS `ik_article_cate`;
+CREATE TABLE `ik_article_cate` (
+  `cateid` int(11) NOT NULL AUTO_INCREMENT COMMENT '分类ID',
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
+  `referid` int(11) NOT NULL DEFAULT '0' COMMENT '父分类ID',
+  `catename` char(32) NOT NULL DEFAULT '' COMMENT '分类名称',
+  `catename_en` char(32) NOT NULL DEFAULT '' COMMENT '分类英文名称',
+  PRIMARY KEY (`cateid`),
+  KEY `userid` (`userid`),
+  KEY `referid` (`referid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `ik_article_comment`
+--
+DROP TABLE IF EXISTS `ik_article_comment`;
+CREATE TABLE `ik_article_comment` (
+  `commentid` int(11) NOT NULL AUTO_INCREMENT,
+  `aid` int(11) NOT NULL DEFAULT '0' COMMENT '文章ID',
+  `referid` int(11) NOT NULL DEFAULT '0',
+  `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户ID',
+  `content` text NOT NULL COMMENT '评论内容',
+  `addtime` int(11) NOT NULL DEFAULT '0' COMMENT '时间',
+  PRIMARY KEY (`commentid`),
+  KEY `aid` (`aid`),
+  KEY `userid` (`userid`),
+  KEY `referid` (`referid`,`aid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='文章评论' AUTO_INCREMENT=1 ;

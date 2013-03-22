@@ -37,6 +37,7 @@
     <tr>
         <th>内容：</th>
         <td style="padding-bottom:0px">
+        <input type="hidden" name="id" value="{$strArticle[aid]}"/>
         <textarea tabindex="3"  style="width:99.5%;height:300px;" maxlength="10000" id="editor_full" cols="55" rows="20" name="content" class="txt"   placeholder="请填写内容">{$strArticle[content]}</textarea>
         <div class="ik_toolbar" id="ik_toolbar"><span class="textnum" id="textnum"><em>0</em> / <em>10000</em> 受欢迎的字数 </span></div>
         </td>
@@ -44,7 +45,7 @@
     <tr>
     	<th>&nbsp;</th>
         <td style="padding-top:0px">
-        <input class="submit" type="submit" value="好啦，发表" tabindex="4" > <a href="{:U('article/show',array('id'=>$strArticle[id]))}">返回</a>
+        <input class="submit" type="submit" value="好啦，发表" tabindex="4" > <a href="{:U('article/index')}">返回</a>
         </td>
     </tr>
 </table>

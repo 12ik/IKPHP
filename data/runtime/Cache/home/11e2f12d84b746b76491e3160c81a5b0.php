@@ -69,24 +69,13 @@ __EXTENDS_JS__
 <div id="header">
     
 	<div class="site_nav">
-    	<?php if($module_name == 'group'): ?><div class="site_logo nav_logo">
-            <a href="<?php echo U('group/index');?>">爱客小组</a>
+        <div class="<?php echo ($logo[style]); ?>">
+            <a href="<?php echo ($logo[url]); ?>"><?php echo ($logo[name]); ?></a>
         </div>
-        <?php else: ?>
-        <div class="site_logo">
-            <a href="__ROOT__/" title="<?php echo ($IK_SITE[base][site_title]); ?>"><?php echo ($IK_SITE[base][site_title]); ?></a>
-        </div><?php endif; ?> 
 		<div class="appnav">
-		   <?php if($module_name == group): ?><ul id="nav_bar">
-	           		<?php if($visitor[userid]): ?><li><a href="<?php echo U('group/index');?>">我的小组</a></li><?php endif; ?>    
-			        <li><a href="<?php echo U('group/explore');?>">发现小组</a></li>
-			        <li><a href="<?php echo U('group/explore_topic');?>">发现话题</a></li>
-			        <li><a href="<?php echo U('group/nearby');?>">北京话题</a></li>
-			    </ul><?php endif; ?>
-		   <?php if($module_name == article): ?><ul id="nav_bar">
-			    <li><a href="<?php echo U('article/index');?>">文章</a></li>
-			    <li><a href="<?php echo U('group/index');?>">小组</a></li>
-			   </ul><?php endif; ?>
+			    <ul id="nav_bar">
+                    <?php if(is_array($arrNav)): foreach($arrNav as $key=>$item): ?><li><a href="<?php echo ($item[url]); ?>"><?php echo ($item[name]); ?></a></li><?php endforeach; endif; ?>
+			    </ul>
 		   <form onsubmit="return searchForm(this);" method="get" action="http://www.ik.com/index.php">
 		   <input type="hidden" value="search" name="app"><input type="hidden" value="q" name="ac">
 		    <div id="search_bar">
@@ -154,12 +143,12 @@ __EXTENDS_JS__
             <div style="overflow:hidden;">
             <?php if(is_array($arrRecommendGroup)): foreach($arrRecommendGroup as $key=>$item): ?><div class="sub-item">
             <div class="pic">
-            <a href="{U('group','show',array('id'=>$item[groupid]))}">
+            <a href="<?php echo U('group/show',array('id'=>$item[groupid]));?>">
             <img src="<?php echo ($item[icon_48]); ?>" alt="<?php echo ($item[groupname]); ?>">
             </a>
             </div>
             <div class="info">
-            <a href="{U('group','show',array('id'=>$item[groupid]))}"><?php echo ($item[groupname]); ?></a> (<?php echo ($item[count_user]); ?>/<font color="orange"><?php echo ($item[count_topic]); ?></font>)             
+            <a href="<?php echo U('group/show',array('id'=>$item[groupid]));?>"><?php echo ($item[groupname]); ?></a> (<?php echo ($item[count_user]); ?>/<font color="orange"><?php echo ($item[count_topic]); ?></font>)             
             <p><?php echo ($item[groupdesc]); ?></p>
             </div>
             </div><?php endforeach; endif; ?>

@@ -445,7 +445,6 @@ CREATE TABLE `ik_article_item` (
   `itemid` int(11) NOT NULL AUTO_INCREMENT COMMENT '文章ID',
   `userid` int(11) NOT NULL DEFAULT '0' COMMENT '用户id',
   `cateid` int(11) NOT NULL DEFAULT '0' COMMENT '分类ID',
-  `username` char(32) NOT NULL DEFAULT '' COMMENT '发布者',
   `title` char(64) NOT NULL DEFAULT '' COMMENT '标题',
   `count_comment` int(11) NOT NULL DEFAULT '0' COMMENT '回复统计',
   `count_view` int(11) NOT NULL DEFAULT '0' COMMENT '展示数',

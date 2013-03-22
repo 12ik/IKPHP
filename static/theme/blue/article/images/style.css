@@ -1,5 +1,17 @@
-.btn,.btn:hover{display:inline-block;*display:inline;*zoom:1;font-size:13px;color:#fff;padding:4px 12px;
-margin-bottom:0;line-height:1.1;background-color:#6DBC1D;border:1px solid #5AA710;-webkit-border-radius:3px;border-radius:3px;cursor:pointer;vertical-align:middle;text-decoration:none}
+#header {background-color:#F6F6F1;}
+#header .site_nav .nav_logo{ background:url(logo.png) no-repeat 0px 0px;}
+#nav_bar li a{ color:#834343}
+#nav_bar li a:hover{ background-color:#825d5b; color:#fff;}
+
+body{background:#fffff9}
+.link{background-color:transparent;border:0;cursor:pointer}
+.link,.link:hover,a,a:hover{text-decoration:none}
+.link,a:link,a,a:visited{color:#825d5b}
+.link:hover,a:hover{color:#fff;background-color:#825d5b}
+
+.btn,.btn:hover{display:inline-block;*display:inline;*zoom:1;font-size:13px;color:#fff;padding:4px 12px;margin-bottom:0;
+line-height:1.1;background-color:#825d5b;border:1px solid #825d5b;-webkit-border-radius:3px;border-radius:3px;
+cursor:pointer;vertical-align:middle;text-decoration:none}
 .btn-large,.btn-large:hover{padding:6px 14px}
 
 .mc p{ line-height:1.8em}
@@ -41,6 +53,8 @@ section .hd{padding-bottom:5px;border-bottom:1px solid #ddd;margin-bottom:9px}
 .art-text p{ text-indent:2em; line-height:23px; text-align:justify; word-wrap:break-word; }
 .art-text p img{ display:block; margin:10px auto}
 .art-info{text-align:center;color:#999999;padding-bottom: 10px;border-bottom: 1px solid #DDDDDD; margin-bottom:10px}
+.control-btns{ text-align:right;}
+.art-titles{ margin: 20px 0 5px 0;padding: 10px;border-top: 1px dashed #D9D9D9;border-bottom: 1px dashed #D9D9D9; overflow:hidden}
 
 #g-user-profile .usercard {
 	overflow:hidden;

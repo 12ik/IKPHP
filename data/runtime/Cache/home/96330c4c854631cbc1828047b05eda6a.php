@@ -95,28 +95,103 @@ __EXTENDS_JS__
 <!--APP NAV-->
 
 </header>
-<div style="margin:150px auto; width:350px;">
-  <img src="__STATIC__/public/images/ik_error.gif" style="float:left;">
-  <ul style="margin-left:10px; list-style-type:none; list-style-image: none; list-style-position:outside;">
-    <li style="font-size:14px; line-height: 32px; padding-left:30px"><?php echo ($message); ?></li>
-    <li style="color:#666;line-height: 10px;">&nbsp;</li>
+<script>
+$(document).ready(function() {
+//选择一级区域
+$('#oneid').change(function(){
+	$("#stwoid").html('<img src="'+siteUrl+'static/public/images/loading.gif" />');
+	var oneid = $(this).children('option:selected').val();  //弹出select的值
+	
+	if(oneid==0){
+		$("#stwoid").html('');
+		$("#sthreeid").html('');
+	}else{
+		$("#sthreeid").html('');
+		$.ajax({
+			type: "GET",
+			url:  "<?php echo U('user/area',array('ik'=>'two'));?>",
+			data: "oneid="+oneid,
+			success: function(msg){
+				$("#stwoid").html(msg);
+				
+				//选择二级区域
+				$('#twoid').change(function(){
+					$("#sthreeid").html('<img src="'+siteUrl+'static/public/images/loading.gif" />');
+					var twoid = $(this).children('option:selected').val();  //弹出select的值
+					
+					if(twoid == 0){
+						$("#sthreeid").html('');
+					}else{
+					
+						//ajax
+						$.ajax({
+							type: "GET",
+							url:  "<?php echo U('user/area',array('ik'=>'three'));?>",
+							data: "twoid="+twoid,
+							success: function(msg){
+								$('#sthreeid').html(msg);
+							}
+						});
+					
+					}
 
-    <li style="color:#666;"> 
-        &gt; <span id="f3s">3</span>秒后 <a href="<?php echo ($jumpUrl); ?>">点击返回</a>
-        <script type="text/javascript">
-            (function(){
-                var secs=5,si=setInterval(function(){
-                    if(--secs){
-                        document.getElementById('f3s').innerHTML = secs;
-                    }
-                    else{
-                        location.href="<?php echo ($jumpUrl); ?>";clearInterval(si);
-                    }
-            }, 1000)})();
-        </script>
- 	</li>
+				});
+				
+			}
+		});
+	
+	}
+	
+});
 
-  </ul>
+});
+</script>
+
+<!--main-->
+<div class="midder">
+<div class="mc">
+<h1 class="set_tit">用户信息管理</h1>
+<div class="tabnav">
+<ul>
+<?php if(is_array($user_menu_list)): $i = 0; $__LIST__ = $user_menu_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$menu): $mod = ($i % 2 );++$i; if($user_menu_curr == $key): ?><li class="select"><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li>
+<?php else: ?>
+<li><a href="<?php echo ($menu["url"]); ?>" ><?php echo ($menu["text"]); ?></a></li><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+</ul>
+</div>
+
+<div class="utable">
+<form method="POST" action="<?php echo U('user/setcity');?>">
+<table cellpadding="0" cellspacing="0" width="100%" class="table_1">
+<tr>
+<th>常居地：</th>
+<td>
+<?php if(!empty($strarea)): echo ($strarea[one][areaname]); ?> 
+<?php echo ($strarea[two][areaname]); ?> 
+<?php echo ($strarea[three][areaname]); endif; ?>
+</td>
+</tr>
+
+<tr>
+<th>修改常居地：</th>
+<td>
+<select id="oneid" name="oneid" class="txt">
+<option value="0">请选择</option>
+<?php if(is_array($arrOne)): $i = 0; $__LIST__ = $arrOne;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo[areaid]); ?>"><?php echo ($vo[areaname]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+</select>
+<span id="stwoid"></span>
+<span id="sthreeid"></span>
+</td>
+</tr>
+<tr>
+	<th></th>
+    <td><input class="submit" type="submit" value="修改"  /></td>
+</tr>
+</table>
+</form>
+
+
+</div>
+</div>
 </div>
 <!--footer-->
 <footer>

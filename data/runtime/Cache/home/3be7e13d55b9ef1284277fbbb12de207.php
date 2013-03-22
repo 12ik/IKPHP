@@ -69,24 +69,13 @@ __EXTENDS_JS__
 <div id="header">
     
 	<div class="site_nav">
-    	<?php if($module_name == 'group'): ?><div class="site_logo nav_logo">
-            <a href="<?php echo U('group/index');?>">爱客小组</a>
+        <div class="<?php echo ($logo[style]); ?>">
+            <a href="<?php echo ($logo[url]); ?>"><?php echo ($logo[name]); ?></a>
         </div>
-        <?php else: ?>
-        <div class="site_logo">
-            <a href="__ROOT__/" title="<?php echo ($IK_SITE[base][site_title]); ?>"><?php echo ($IK_SITE[base][site_title]); ?></a>
-        </div><?php endif; ?> 
 		<div class="appnav">
-		   <?php if($module_name == group): ?><ul id="nav_bar">
-	           		<?php if($visitor[userid]): ?><li><a href="<?php echo U('group/index');?>">我的小组</a></li><?php endif; ?>    
-			        <li><a href="<?php echo U('group/explore');?>">发现小组</a></li>
-			        <li><a href="<?php echo U('group/explore_topic');?>">发现话题</a></li>
-			        <li><a href="<?php echo U('group/nearby');?>">北京话题</a></li>
-			    </ul><?php endif; ?>
-		   <?php if($module_name == article): ?><ul id="nav_bar">
-			    <li><a href="<?php echo U('article/index');?>">文章</a></li>
-			    <li><a href="<?php echo U('group/index');?>">小组</a></li>
-			   </ul><?php endif; ?>
+			    <ul id="nav_bar">
+                    <?php if(is_array($arrNav)): foreach($arrNav as $key=>$item): ?><li><a href="<?php echo ($item[url]); ?>"><?php echo ($item[name]); ?></a></li><?php endforeach; endif; ?>
+			    </ul>
 		   <form onsubmit="return searchForm(this);" method="get" action="http://www.ik.com/index.php">
 		   <input type="hidden" value="search" name="app"><input type="hidden" value="q" name="ac">
 		    <div id="search_bar">
@@ -137,6 +126,7 @@ __EXTENDS_JS__
     <tr>
         <th>内容：</th>
         <td style="padding-bottom:0px">
+        <input type="hidden" name="id" value="<?php echo ($strArticle[aid]); ?>"/>
         <textarea tabindex="3"  style="width:99.5%;height:300px;" maxlength="10000" id="editor_full" cols="55" rows="20" name="content" class="txt"   placeholder="请填写内容"><?php echo ($strArticle[content]); ?></textarea>
         <div class="ik_toolbar" id="ik_toolbar"><span class="textnum" id="textnum"><em>0</em> / <em>10000</em> 受欢迎的字数 </span></div>
         </td>
@@ -144,7 +134,7 @@ __EXTENDS_JS__
     <tr>
     	<th>&nbsp;</th>
         <td style="padding-top:0px">
-        <input class="submit" type="submit" value="好啦，发表" tabindex="4" > <a href="<?php echo U('article/show',array('id'=>$strArticle[id]));?>">返回</a>
+        <input class="submit" type="submit" value="好啦，发表" tabindex="4" > <a href="<?php echo U('article/index');?>">返回</a>
         </td>
     </tr>
 </table>

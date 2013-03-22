@@ -14,14 +14,21 @@ class indexAction extends frontendAction {
 		// 来路
 		$ret_url = isset ( $_SERVER ['HTTP_REFERER'] ) ? $_SERVER ['HTTP_REFERER'] : __APP__;
 		
-		// 最新10个小组
+		//最新10个小组
 		$arrNewGroup = $this->group_mod->getNewGroup ( 10 );
 		$arrHotTopic = $this->group_topic_mod->getHotTopic(15);
 		//活跃会员
 		$arrHotUser = $this->user_mod->getHotUser(12);
+		//推荐小组10个
+		$arrRecommendGroups = $this->group_mod->getRecommendGroup ( 10 );
+		foreach ( $arrRecommendGroups as $key => $item ) {
+			$arrRecommendGroup [] = $item;
+			$arrRecommendGroup [$key] ['groupdesc'] = getsubstrutf8 ( t ( $item ['groupdesc'] ), 0, 35 );
+		}
 		
 		$this->assign ( 'ret_url', $ret_url );
 		$this->assign ( 'arrNewGroup', $arrNewGroup );
+		$this->assign ( 'arrRecommendGroup', $arrRecommendGroup );
 		$this->assign ( 'arrHotUser', $arrHotUser );
 		$this->assign ( 'arrHotTopic', $arrHotTopic );
 		$this->_config_seo ();

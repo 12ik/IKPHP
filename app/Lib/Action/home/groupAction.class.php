@@ -855,7 +855,7 @@ class groupAction extends frontendAction {
 		$topicid = $this->_get('topicid','intval');
 		$userid = $this->userid;
 		
-		$strTopic = $this->group_topics_mod->getOneTopic($topicid);
+		$strTopic = $this->group_topics_mod->where(array('topicid' => $topicid))->find();
 		//$strTopic['content'] = 
 		$strGroup = $this->_mod->getOneGroup($strTopic['groupid']);
 		

@@ -57,12 +57,12 @@
             <foreach name="arrRecommendGroup" item="item">
             <div class="sub-item">
             <div class="pic">
-            <a href="{U('group','show',array('id'=>$item[groupid]))}">
+            <a href="{:U('group/show',array('id'=>$item[groupid]))}">
             <img src="{$item[icon_48]}" alt="{$item[groupname]}">
             </a>
             </div>
             <div class="info">
-            <a href="{U('group','show',array('id'=>$item[groupid]))}">{$item[groupname]}</a> ({$item[count_user]}/<font color="orange">{$item[count_topic]}</font>)             
+            <a href="{:U('group/show',array('id'=>$item[groupid]))}">{$item[groupname]}</a> ({$item[count_user]}/<font color="orange">{$item[count_topic]}</font>)             
             <p>{$item[groupdesc]}</p>
             </div>
             </div>

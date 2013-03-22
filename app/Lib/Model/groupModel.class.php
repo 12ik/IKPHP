@@ -109,5 +109,18 @@ class groupModel extends Model {
 		}
 		return $result;
 	}
+	//获取推荐的小组
+	public function getRecommendGroup($limit){
+		$where = array (
+				'isrecommend' => 1,
+		);
+		$arrGroup = $this->where ( $where )->order('groupid asc')->limit($limit)->select();	
+		if(is_array($arrGroup)){
+			foreach($arrGroup as $item){
+				$result[] = $this->getOneGroup($item['groupid']);
+			}
+		}
+		return $result;
+	}
 
 }

@@ -69,24 +69,13 @@ __EXTENDS_JS__
 <div id="header">
     
 	<div class="site_nav">
-    	<?php if($module_name == 'group'): ?><div class="site_logo nav_logo">
-            <a href="<?php echo U('group/index');?>">爱客小组</a>
+        <div class="<?php echo ($logo[style]); ?>">
+            <a href="<?php echo ($logo[url]); ?>"><?php echo ($logo[name]); ?></a>
         </div>
-        <?php else: ?>
-        <div class="site_logo">
-            <a href="__ROOT__/" title="<?php echo ($IK_SITE[base][site_title]); ?>"><?php echo ($IK_SITE[base][site_title]); ?></a>
-        </div><?php endif; ?> 
 		<div class="appnav">
-		   <?php if($module_name == group): ?><ul id="nav_bar">
-	           		<?php if($visitor[userid]): ?><li><a href="<?php echo U('group/index');?>">我的小组</a></li><?php endif; ?>    
-			        <li><a href="<?php echo U('group/explore');?>">发现小组</a></li>
-			        <li><a href="<?php echo U('group/explore_topic');?>">发现话题</a></li>
-			        <li><a href="<?php echo U('group/nearby');?>">北京话题</a></li>
-			    </ul><?php endif; ?>
-		   <?php if($module_name == article): ?><ul id="nav_bar">
-			    <li><a href="<?php echo U('article/index');?>">文章</a></li>
-			    <li><a href="<?php echo U('group/index');?>">小组</a></li>
-			   </ul><?php endif; ?>
+			    <ul id="nav_bar">
+                    <?php if(is_array($arrNav)): foreach($arrNav as $key=>$item): ?><li><a href="<?php echo ($item[url]); ?>"><?php echo ($item[name]); ?></a></li><?php endforeach; endif; ?>
+			    </ul>
 		   <form onsubmit="return searchForm(this);" method="get" action="http://www.ik.com/index.php">
 		   <input type="hidden" value="search" name="app"><input type="hidden" value="q" name="ac">
 		    <div id="search_bar">
@@ -113,13 +102,23 @@ __EXTENDS_JS__
         <div class="art-body">
             <h1 class="title"><?php echo ($strArticle[title]); ?></h1>
             <div class="art-info">
-            作者：<?php echo ($strArticle[user][username]); ?>&nbsp;&nbsp;<?php echo date('Y-m-d H:i',$strArticle[addtime]) ?>&nbsp;&nbsp;<a href="#comments"><?php echo ($strArticle[count_comment]); ?>条回复</a>&nbsp;&nbsp;浏览<?php echo ($strArticle[count_view]); ?>次&nbsp;&nbsp;<a href="#formMini">我要回复</a> 
+            作者：<a href="<?php echo U('people/index',array('id'=>$strArticle[user][doname]));?>"><?php echo ($strArticle[newsauthor]); ?></a>&nbsp;&nbsp;<?php echo date('Y-m-d H:i',$strArticle[addtime]) ?>&nbsp;&nbsp;<a href="#comments"><?php echo ($strArticle[count_comment]); ?>条回复</a>&nbsp;&nbsp;浏览<?php echo ($strArticle[count_view]); ?>次&nbsp;&nbsp;<a href="#formMini">我要回复</a> 
             </div>
         
             <div class="art-text">
                  <?php echo ($strArticle[content]); ?>
             </div>
-        <div class="clear"></div>
+            <div class="control-btns">
+            <?php if($visitor[userid] == $strArticle[userid]): ?><a href="<?php echo U('article/edit',array('id'=>$strArticle['aid']));?>">编辑</a>&nbsp; &gt;&nbsp; <a href="<?php echo U('article/delete',array('id'=>$strArticle['aid']));?>">删除</a><?php endif; ?>
+            <br/>
+            本文由<a href="<?php echo U('people/index',array('id'=>$strArticle[user][doname]));?>"><?php echo ($strArticle[user][username]); ?></a>授权（爱客网）发表，文章著作权为原作者所有
+            </div>
+            
+      	  <div class="clear"></div>
+          <div class="art-titles"> 
+             <span class="fl"><?php if(!empty($upArticle)): ?>上一篇：<a href="<?php echo U('article/show',array('id'=>$upArticle['aid']));?>"><?php echo ($upArticle['title']); ?></a><?php endif; ?></span>
+             <span class="fr"><?php if(!empty($downArticle)): ?>下一篇：<a href="<?php echo U('article/show',array('id'=>$downArticle['aid']));?>"><?php echo ($downArticle['title']); ?></a><?php endif; ?></span>
+          </div>
       </div>
     
     

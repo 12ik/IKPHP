@@ -44,32 +44,15 @@
 <div id="header">
     
 	<div class="site_nav">
-    	<if condition="$module_name eq 'group'">
-        <div class="site_logo nav_logo">
-            <a href="{:U('group/index')}">爱客小组</a>
+        <div class="{$logo[style]}">
+            <a href="{$logo[url]}">{$logo[name]}</a>
         </div>
-        <else />
-        <div class="site_logo">
-            <a href="__ROOT__/" title="{$IK_SITE[base][site_title]}">{$IK_SITE[base][site_title]}</a>
-        </div>        
-        </if> 
 		<div class="appnav">
-		   <if condition="$module_name eq group"> 
 			    <ul id="nav_bar">
-	           		<if condition="$visitor[userid]">
-			        <li><a href="{:U('group/index')}">我的小组</a></li>
-	                </if>    
-			        <li><a href="{:U('group/explore')}">发现小组</a></li>
-			        <li><a href="{:U('group/explore_topic')}">发现话题</a></li>
-			        <li><a href="{:U('group/nearby')}">北京话题</a></li>
+                    <foreach name="arrNav" item="item">
+                    <li><a href="{$item[url]}">{$item[name]}</a></li>
+                    </foreach>
 			    </ul>
-		   </if>
-		   <if condition="$module_name eq article">  
-			   <ul id="nav_bar">
-			    <li><a href="{:U('article/index')}">文章</a></li>
-			    <li><a href="{:U('group/index')}">小组</a></li>
-			   </ul>
-		   </if>
 		   <form onsubmit="return searchForm(this);" method="get" action="http://www.ik.com/index.php">
 		   <input type="hidden" value="search" name="app"><input type="hidden" value="q" name="ac">
 		    <div id="search_bar">
